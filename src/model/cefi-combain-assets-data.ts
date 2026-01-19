@@ -91,6 +91,7 @@ export const $assetsListData = combine(
 
       result.push(<CombinedObject>combinedObject)
     })
+    console.log('result1', result)
     return result
   }
 )

@@ -61,13 +61,13 @@ const mockCryptoDepositWithdrawAssets: AssetWithNetworks[] = [
   },
 ]
 
-export const $cefiCryptoDepositWithdrawAssets = createStore<AssetWithNetworks[]>([])
+export const $cefiCryptoDepositWithdrawAssets = createStore<AssetWithNetworks[]>(mockCryptoDepositWithdrawAssets)
 export const $cefiCryptoDepositWithdrawAssetsError = createStore<Error | null>(null)
 export const cefiCryptoDepositWithdrawAssetsEv = createEvent<AssetWithNetworks[]>()
 
 export const cefiCryptoDepositWithdrawAssetsFx = createEffect(async () => {
-  const list = await AssetsServices.getCryptoDepositWithdrawal()
-  return list.assets
+  const list = await mockCryptoDepositWithdrawAssets // AssetsServices.getCryptoDepositWithdrawal()
+  return list
 })
 
 // Обновление store при успешном запросе

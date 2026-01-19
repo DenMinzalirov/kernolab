@@ -227,7 +227,7 @@ const mockAssetsRates: ExchangeRateRaw[] = [
 export const $assetsRates = createStore<ExchangeRateRaw[]>(mockAssetsRates)
 
 export const assetsRatesFx = createEffect(async () => {
-  return await mockAssetsRates // AssetsServices.getAssetsRatesUsdEur()
+  return await AssetsServices.getAssetsRatesUsdEur()
 })
 
 $assetsRates.on(assetsRatesFx.doneData, (_, repos) => repos)

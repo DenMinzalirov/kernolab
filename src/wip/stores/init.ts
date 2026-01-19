@@ -106,7 +106,7 @@ export async function initApp() {
 
     try {
       if (scope.includes('KYC')) {
-        await getTravelRuleDataFx()
+        // await getTravelRuleDataFx()
 
         await getAllocationsLaunchpadsFx({ page: '0', size: '2000' })
 

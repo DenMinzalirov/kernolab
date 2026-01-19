@@ -32,7 +32,7 @@ export function IndividualToken() {
   const { isTabletPairs, isMobilePairs } = useCurrentBreakpointPairs()
 
   const asset = assets.find(assetItem => assetItem.assetId === assetId)
-
+  console.log('asset1', asset)
   const depositEnabled = asset?.networksInfo.length
     ? asset.networksInfo.find(networkInfo => networkInfo.depositAvailable)
     : null
