@@ -1,0 +1,117 @@
+@import '/src/styles/index';
+
+.closeWrap {
+  display: flex;
+  align-self: end;
+}
+
+.closeIcon {
+  margin-top: 33px;
+  margin-right: 33px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.title {
+  @include set-font($size: 1.875rem, $weight: 700, $family: 'Lexend');
+  text-align: center;
+  color: #262832;
+  margin-bottom: 4rem;
+}
+
+.content {
+  width: 436px;
+}
+
+.unstoppable {
+  background-color: var(--mainBlue);
+  color: #fff;
+  height: 32px;
+  border-radius: 100px;
+  line-height: 24px;
+  @include set-font($size: 0.875rem, $weight: 400, $family: 'Inter');
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.copyWhiteIcon {
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.supportedTitle {
+  @include set-font($size: 1rem, $weight: 500, $family: 'Inter');
+  color: #445374;
+  margin-left: 8px;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.resultList {
+  padding: 12px 25px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.resultItem {
+  @include set-font($size: 0.75rem, $weight: 500, $family: 'Inter');
+  color: #445374;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.contentWrap {
+  width: 544px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.copyBtn.copyBtn {
+  width: 440px;
+  align-self: center;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+  }
+
+  .contentWrap {
+    width: 100%;
+  }
+
+  .copyBtn {
+    width: auto;
+    align-self: auto;
+    margin: 15px;
+  }
+
+  .unstoppable {
+    margin-left: 15px;
+  }
+
+  .supportedTitle {
+    margin-left: 15px;
+  }
+
+  .closeWrap {
+    display: none;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-top: 64px;
+    margin-bottom: 29px;
+  }
+
+  .resultItem {
+    word-break: break-word;
+  }
+}

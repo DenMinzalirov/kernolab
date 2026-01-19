@@ -1,0 +1,19 @@
+@import '/src/styles';
+
+.tradesCounter {
+  @include ag-s14-semiB;
+  color: $navy;
+  margin: 16px 0;
+  padding: 12px 16px;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $dark-grey-20;
+  display: inline-flex;
+  gap: 20px;
+
+  @include respond-to-biz(md) {
+    @include ag-s12-semiB;
+    margin: 12px 0;
+    padding: 8px 12px;
+  }
+}

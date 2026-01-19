@@ -1,0 +1,251 @@
+@import '/src/styles/index';
+
+.title {
+  margin-bottom: 48px;
+  @include ag-s30-medium;
+  color: $navy;
+  text-align: center;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+    margin-bottom: 36px;
+  }
+}
+
+.enterAmount {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.width50 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  //flex-grow: 1;
+  width: 50%;
+  position: relative;
+}
+
+.dropDownPlaceholderText {
+  padding-left: 20px;
+  opacity: 0.3;
+  color: $navy;
+  @include ag-s14-0;
+}
+
+.dropDownCleareWrap {
+  height: 290px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $dark-grey;
+  @include ag-s14-0;
+}
+
+.itemWrap {
+  padding: 0 20px;
+  @include ag-s14-medium;
+  color: $navy;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.inputBlock {
+  display: flex;
+  gap: 12px;
+  background-color: $white;
+  height: 64px;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.focusAmount {
+  border-color: var(--mainBlue);
+}
+
+.assetName {
+  @include ag-s14-semiB;
+  color: $navy;
+  display: flex;
+  align-items: center;
+}
+
+.assetNameMax {
+  color: $blue;
+  cursor: pointer;
+}
+
+.input {
+  @include ag-s14-medium;
+  line-height: 14px;
+  border: 0;
+  text-align: right;
+  background-color: var(--amountInputBackgroundNew);
+  color: $navy;
+  width: 100%;
+
+  ::placeholder {
+    color: $text-color-2;
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+}
+
+.currencyBlock {
+  @include ag-s14-medium;
+  color: $navy;
+  align-self: end;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textConversion {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.inputWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileBlockInputWrap {
+  display: none;
+  @include respond-to-biz(md) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+}
+
+.mobileBlockInput {
+  background-color: $white;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mobileInputFromWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.exchangeMobileInputWrap {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--amountInputBackgroundNew);
+  display: flex;
+  padding-left: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 6px;
+  cursor: pointer;
+  height: 95%;
+  align-items: center;
+}
+
+.inputAsset {
+  @include ag-s16-reg;
+  color: $navy;
+}
+.inputIcon {
+  width: 15px;
+  height: 15px;
+  rotate: 90deg;
+}
+
+.mobileChangeLineWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 17px);
+}
+
+.mobileChangeLine {
+  border: 0.5px solid $blue-20;
+  flex-grow: 1;
+}
+
+.summaryWrap {
+  flex: 1;
+}
+
+.backWrap {
+  display: block;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.confirmDataWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 10px;
+}
+
+.fromToRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fromToAmountWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cryptoAmount {
+  @include ag-s16-semiB;
+  color: $navy;
+}
+
+.ratesWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.conversionRate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conversionAmount {
+  @include ag-s12-semiB;
+  color: $navy;
+}
+
+.contentSuccessfully {
+  flex: 1;
+}
+
+.backBtn {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: block;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,15 @@
+@import 'src/styles';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.errorMessage {
+  @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+  color: #ff3b30;
+  line-height: 17.7px;
+  text-align: center;
+}

@@ -1,0 +1,164 @@
+@import 'src/styles';
+
+.topUpCardWrap {
+  //background-color: $white;
+  //display: flex;
+  //flex-direction: column;
+  //flex: 1 1 auto;
+  //padding: 40px;
+  //align-items: center;
+  // min-height: 700px; //TODO Зачем тут ?
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+  }
+}
+
+.isSuccessIconWrap {
+  height: 159px;
+  margin-bottom: 79px;
+  display: flex;
+  justify-content: center;
+  margin-top: 160px;
+
+  @include respond-to(p-mobile) {
+    margin-top: 50px;
+  }
+}
+
+.section {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+.sectionAddress {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 100px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  text-align: center;
+}
+
+.summaryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.summaryLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.summaryText {
+  @include ag-H12;
+  color: $p-deep-space;
+  text-align: end;
+  width: 200px;
+}
+
+.summaryTextPrimary {
+  @include ag-H12;
+  color: $p-system-green;
+  text-align: end;
+  width: 200px;
+}
+
+.countryDropDownWrap {
+  position: relative;
+  width: 434px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+  }
+}
+
+.itemTextPlaceholder {
+  @include ag-P14;
+  color: $p-deep-space;
+  opacity: 0.3;
+  margin-left: 20px;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.itemTextTitle {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.itemTextDescription {
+  @include ag-P12;
+  color: $p-deep-space;
+}
+
+.itemTextAmount {
+  @include ag-H12;
+  color: $p-deep-space;
+}
+
+.inputLabelText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+
+  margin-bottom: 10px;
+}
+
+.lineThroughP10 {
+  text-decoration: line-through;
+  @include ag-H12;
+  color: $p-deep-space;
+}
+
+.tierDiscountText {
+  @include ag-P10;
+  color: $p-deep-space-80;
+}
+
+.btnsGroupDeliveryMethod {
+  display: flex;
+  gap: 16px;
+}
+
+.height100 {
+  height: 100px;
+}

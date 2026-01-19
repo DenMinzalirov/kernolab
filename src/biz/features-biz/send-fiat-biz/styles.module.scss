@@ -1,0 +1,227 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  padding: 24px 0;
+
+  @include respond-to-biz(md) {
+    align-items: flex-start;
+    background-color: $light-grey;
+    padding: 24px 15px;
+  }
+}
+
+.contentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 70px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 840px;
+
+  @include respond-to-biz(lg) {
+    width: 570px;
+    padding: 70px 50px;
+  }
+  @include respond-to-biz(md) {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    min-height: 670px;
+  }
+}
+
+.contentWrapFix {
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  @include ag-s30-medium;
+  color: $navy;
+  text-align: center;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+  }
+}
+
+.description {
+  @include ag-s12-medium;
+  color: $dark-grey;
+  text-align: start;
+}
+
+.descriptionNotAvailable {
+  @include ag-s12-medium;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.label {
+  @include ag-s12;
+  color: $dark-grey;
+  text-align: start;
+}
+
+.link {
+  @include ag-s12-medium;
+  color: $blue;
+  text-decoration: underline;
+}
+
+.switcherWrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: $lg-white-100-dark-grey-20;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.switcherItem {
+  border-radius: 20px;
+  padding: 8px 10px;
+  flex-grow: 1;
+  text-align: center;
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.switcherItemActive {
+  background-color: $white;
+  color: $navy;
+}
+
+.bankName {
+  @include ag-s14-medium;
+  color: $navy;
+}
+
+.addressBookIconWrap {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--amountInputBackgroundNew);
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 15px;
+  cursor: pointer;
+  height: 95%;
+  align-items: center;
+}
+
+.inputAsset {
+  @include ag-s14-semiB;
+  color: $navy;
+}
+
+.inputMax {
+  @include ag-s14-semiB;
+  color: $blue;
+}
+
+.confirmDataWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include respond-to-biz(md) {
+    padding: 0 10px;
+  }
+}
+
+.confirmData {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.confirmTitle {
+  @include ag-s14-0;
+  color: $navy;
+}
+
+.confirmDescriptionWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmDescription {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.confirmValue {
+  @include ag-s12-semiB;
+  color: $navy;
+}
+
+.confirmAsset {
+  @include ag-s16-semiB;
+  color: $navy;
+}
+
+.buttonsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.dynamicHeight {
+  height: 48px;
+
+  @include respond-to-biz(md) {
+    height: 24px;
+  }
+}
+
+.height12 {
+  height: 12px;
+}
+
+.height24 {
+  height: 24px;
+}
+
+.heightMd12Lg24 {
+  height: 24px;
+
+  @include respond-to-biz(md) {
+    height: 12px;
+  }
+}
+
+.hideMd {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.showMd {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: flex;
+  }
+}
+.showMdInline {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: inline;
+  }
+}

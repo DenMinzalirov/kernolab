@@ -1,0 +1,43 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  max-width: 540px;
+  height: 290px;
+  //justify-content: center;
+  //align-items: center;
+  padding: 60px;
+  background-color: $white;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    max-width: 100%;
+    width: 100%;
+    padding: 55px 20px;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  //max-width: 420px;
+  //justify-content: center;
+  //align-items: center;
+  //gap: 36px;
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  //text-align: center;
+  margin-bottom: 12px;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  //text-align: center;
+}

@@ -1,0 +1,128 @@
+@import '/src/styles';
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  border-radius: 10px;
+  padding: 32px 24px;
+  background-color: $white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.headerTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.headerTitle {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.headerSubTitle {
+  @include ag-P12;
+  color: $p-simple-grey;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 15px;
+  background-color: $p-bg;
+}
+.cardWithButtonWrap {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 15px;
+  background-color: $p-bg;
+}
+.cardWithButtonBody {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.cardTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardTitle {
+  @include ag-H20;
+  color: $p-deep-space;
+}
+.cardSubTitle {
+  @include ag-P12;
+  color: $p-simple-grey;
+}
+
+.cardsWrap {
+  display: flex;
+  gap: 8px;
+}
+
+.progressWrap {
+  margin-top: 13px;
+}
+
+.flexGrow1 {
+  flex-grow: 1;
+}
+.circleButton {
+  width: 32px;
+  height: 32px;
+  background-color: $p-ivory;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
+
+.circleButton::before,
+.circleButton::after {
+  content: '';
+  position: absolute;
+  background-color: $p-deep-space;
+  width: 13px;
+  height: 2.5px;
+  border-radius: 10px;
+}
+
+.circleButton::after {
+  transform: rotate(90deg);
+}
+
+.circleButtonDisabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,313 @@
+@import '/src/styles/index';
+
+.contentWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $xanova-white;
+  border-radius: 30px;
+  padding: 30px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 30px 20px;
+  }
+}
+
+.formWrap {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 36px;
+  min-height: 0;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 23px;
+  color: $xanova-black;
+
+  @include respond-to-xanova(tablet) {
+    gap: 20px;
+  }
+
+  @include respond-to-xanova(mobile) {
+    padding-bottom: 10px;
+    padding-top: 30px;
+    gap: 20px;
+  }
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnHeaderGroup {
+  display: flex;
+  gap: 5px;
+}
+
+.contentGutter {
+  padding: 0 30px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 0 10px;
+  }
+}
+
+.tabRow {
+  display: flex;
+  gap: 26px;
+  @include xanova-p16-medium;
+}
+
+.tabActive {
+  color: $xanova-black;
+  cursor: pointer;
+  border-bottom: 1px solid $xanova-black;
+}
+
+.tabNotActive {
+  color: $xanova-black-40;
+  cursor: pointer;
+}
+
+.tabDisabled {
+  color: $xanova-black-40;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.contentGrid {
+  display: grid;
+  gap: 5px;
+  min-height: 0;
+
+  grid-template-areas:
+    'a b'
+    'c d';
+  grid-template-columns: 1fr 1fr;
+
+  @include respond-to-xanova(tablet) {
+    grid-template-areas:
+      'a b'
+      'c d';
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to-xanova(mobile) {
+    grid-template-areas:
+      'a'
+      'b'
+      'c'
+      'd';
+    grid-template-columns: 1fr;
+  }
+}
+
+.gridBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: $xanova-bg;
+  min-width: 0;
+}
+
+.topLeftWidget {
+  grid-area: a;
+}
+.topRightWidget {
+  grid-area: b;
+}
+.bottomLeftWidget {
+  grid-area: c;
+}
+.bottomRightWidget {
+  grid-area: d;
+}
+
+.cardTitle {
+  @include xanova-p12-regular;
+}
+
+.cardTitle2 {
+  @include xanova-h20-semiBold;
+}
+
+.cardData {
+  @include xanova-h40-medium;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.periodButtons {
+  display: flex;
+  gap: 5px;
+}
+
+.periodButton {
+  @include xanova-p14-regular;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: rgba(253, 215, 92, 0.3);
+  color: $xanova-black;
+
+  &:hover {
+    background-color: rgba(253, 215, 92, 0.5);
+  }
+
+  &.active {
+    background-color: $xanova-gold;
+    color: $xanova-black;
+  }
+}
+
+// Investment Profile styles
+.profileContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  flex: 1;
+
+  @include respond-to-xanova(tablet) {
+    padding: 20px 10px;
+  }
+
+  @include respond-to-xanova(mobile) {
+    padding: 20px 10px;
+  }
+}
+
+.profileCard {
+  background-color: $xanova-white;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 30px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 30px 20px;
+    gap: 24px;
+  }
+}
+
+.profileSpinner {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerIcon {
+  width: 80px;
+  height: 80px;
+  // animation: spin 2s linear infinite;
+}
+
+// @keyframes spin {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+.profileTitle {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+  text-align: center;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.profileDescription {
+  @include xanova-p16-regular;
+  color: $xanova-black-80;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.profileInfoBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.profileInfoString {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+
+  @include respond-to-xanova(mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.profileInfoTitle {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+}
+
+.profileInfoData {
+  @include xanova-p16-medium;
+  color: $xanova-black;
+  text-align: right;
+
+  @include respond-to-xanova(mobile) {
+    text-align: left;
+  }
+}
+
+.profileContactSupport {
+  @include xanova-h14-medium;
+  color: $xanova-black;
+  text-align: center;
+  margin: 0;
+
+  a {
+    color: $xanova-black;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $xanova-black-60;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ai.blockbank.bbexpoapp",
+      "sha256_cert_fingerprints":
+      ["D3:4D:17:07:BD:AB:B6:B6:91:74:52:F3:68:CD:44:4D:BA:F2:BE:99:40:5F:8D:DD:57:14:A2:82:7A:A6:B2:28"]
+    }
+  }
+]

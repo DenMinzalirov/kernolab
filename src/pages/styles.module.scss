@@ -1,0 +1,10 @@
+@import '/src/styles';
+
+.wrap {
+  background-color: $p-bg;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 1582px;
+  max-width: 2700px;
+}

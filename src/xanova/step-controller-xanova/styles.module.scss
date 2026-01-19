@@ -1,0 +1,125 @@
+@import '/src/styles/index';
+
+.containerWrap {
+  width: 100%;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  flex-direction: column;
+  max-width: 440px;
+}
+
+.header {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.label {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+
+  margin-bottom: 12px;
+}
+
+.qrCodeContainer {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.errorLabel {
+  color: $xanova-red;
+}
+
+.qrBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 250px;
+  align-items: center;
+  align-self: center;
+}
+
+.secretText {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+
+  @include respond-to-xanova(tablet) {
+    @include xanova-p12-regular;
+  }
+}
+
+.secretWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  gap: 12px;
+  padding: 0 20px;
+  background-color: #f8f8f8;
+  border-radius: 50px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.accentText {
+  @include xanova-p16-medium;
+  color: $xanova-black;
+}
+
+.errorWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.errorIcon {
+  width: 15px;
+  height: 15px;
+}
+
+.errorText {
+  @include xanova-p12-regular;
+  color: $xanova-red;
+}
+
+// ResendViewXanova
+.resendCodeLabel {
+  @include xanova-p14-regular;
+  color: $xanova-black-60;
+}
+
+.link {
+  @include xanova-p14-regular;
+  cursor: pointer;
+  color: $xanova-black;
+  text-decoration: underline;
+
+  &:hover {
+    color: $xanova-black;
+  }
+}
+
+.linkDisabled {
+  cursor: default;
+  color: $xanova-black-60;
+
+  &:hover {
+    color: $xanova-black-60;
+    cursor: default;
+  }
+}

@@ -1,0 +1,130 @@
+@import '/src/styles/index';
+
+.referralProgramContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: $xanova-black;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(tablet) {
+    background-color: $xanova-bg;
+    height: 180px;
+  }
+
+  @include respond-to-xanova(mobile) {
+    background-color: transparent;
+    padding: 0;
+    height: auto;
+  }
+}
+
+.referralProgramTitle {
+  @include xanova-h20-semiBold;
+  color: $xanova-white;
+
+  margin-bottom: 24px;
+
+  @include respond-to-xanova(tablet) {
+    color: $xanova-black;
+  }
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h16-semiBold;
+  }
+}
+
+.referralProgramContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @include respond-to-xanova(mobile) {
+    background-color: $xanova-black;
+    border-radius: 30px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.referralProgramRowWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+
+  @include respond-to-xanova(tablet) {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  @include respond-to-xanova(mobile) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.referralProgramRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.referralProgramRowText {
+  @include xanova-p12-regular;
+  color: $xanova-white;
+  opacity: 0.7;
+
+  @include respond-to-xanova(tablet) {
+    color: $xanova-black;
+  }
+
+  @include respond-to-xanova(mobile) {
+    color: $xanova-white;
+  }
+}
+
+.referralProgramRowSubTextWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to-xanova(tablet) {
+    gap: 20px;
+  }
+}
+
+.referralProgramRowSubText {
+  @include xanova-p16-medium;
+  color: $xanova-white;
+
+  @include respond-to-xanova(tablet) {
+    color: $xanova-black;
+  }
+
+  @include respond-to-xanova(mobile) {
+    color: $xanova-white;
+  }
+}
+
+.customCopy {
+  cursor: pointer;
+  --copy-button-width: 20px;
+  --copy-button-height: 24px;
+}
+
+.marginTopAuto {
+  margin-top: auto;
+}
+
+.ellipsis {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

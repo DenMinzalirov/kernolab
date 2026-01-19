@@ -1,0 +1,36 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+  gap: 50px;
+  min-width: 540px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    background-color: $p-bg;
+    width: 100%;
+    min-width: auto;
+    padding: 70px 20px 60px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  max-width: 421px;
+}

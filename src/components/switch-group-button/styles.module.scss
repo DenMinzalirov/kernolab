@@ -1,0 +1,20 @@
+@import '/src/styles';
+
+.container {
+  background-color: var(--Ivory); // 'rgba(156, 136, 253, 0.1)',
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.itemWrap {
+  @include ag-H12;
+  color: $p-deep-space;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

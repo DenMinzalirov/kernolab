@@ -1,0 +1,40 @@
+@import '/src/styles/index';
+
+.backBtnWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include ag-s12;
+  color: $dark-grey;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.backBtn {
+  box-sizing: border-box;
+  width: 74px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 6px 12px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: $dark-grey;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.arrowBack {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border: solid var(--Dark-Grey);
+  border-width: 0 1px 1px 0;
+  transform: rotate(135deg);
+  margin-left: 2px;
+}

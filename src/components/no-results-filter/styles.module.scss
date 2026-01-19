@@ -1,0 +1,27 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 6px;
+
+  @include respond-to(p-mobile) {
+    padding: 16px;
+    min-height: 620px;
+  }
+}
+
+.title {
+  @include ag-H20;
+  color: $p-deep-space;
+  text-align: center;
+}
+
+.subTitle {
+  @include ag-P14;
+  color: $p-deep-space-80;
+  text-align: center;
+}

@@ -1,0 +1,66 @@
+@import '/src/styles/index';
+
+.inputWrap {
+  display: flex;
+  gap: 11px;
+
+  @include respond-to(p-mobile) {
+    //gap: 3px;
+    justify-content: space-between;
+  }
+}
+
+.input {
+  height: 62px;
+  width: 64px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid $p-deep-space-20;
+  box-sizing: border-box;
+  @include ag-H14;
+  color: $p-deep-space;
+
+  //@include respond-to-biz(md) {
+  //  min-width: 40px;
+  //  max-width: 62px;
+  //  width: 100%;
+  //}
+
+  @include respond-to(p-mobile) {
+    height: 62px;
+    width: 43px;
+  }
+
+  &::placeholder {
+    color: $p-simple-soft-grey;
+  }
+
+  &:focus-visible {
+    border: 1px solid $p-simple-soft-grey;
+    outline: 1px solid $p-simple-soft-grey;
+  }
+
+  &:-moz-placeholder {
+    // Firefox 4–18
+    color: $p-deep-space-20;
+  }
+
+  &::-moz-placeholder {
+    // Firefox
+    color: $p-deep-space-20;
+  }
+
+  &:-ms-input-placeholder {
+    // Internet Explorer
+    color: $p-deep-space-20;
+  }
+
+  &::-webkit-input-placeholder {
+    // Chrome, Safari
+    color: $p-deep-space-20;
+  }
+}
+
+.error {
+  border: 1px solid $p-system-red;
+}

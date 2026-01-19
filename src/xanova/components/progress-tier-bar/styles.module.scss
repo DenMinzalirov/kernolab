@@ -1,0 +1,119 @@
+@import '/src/styles';
+
+.progressTier {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 563px;
+
+  @include respond-to-xanova(tablet) {
+    max-width: none;
+  }
+
+  @include respond-to-xanova(mobile) {
+    max-width: none;
+  }
+}
+
+.progressTierHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressTierLabel {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+  margin: 0;
+}
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.progressSegment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 45px;
+  border-radius: 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  flex: 0 1 auto;
+  @include xanova-p16-regular;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-p12-regular;
+  }
+}
+
+.progressSegmentAchieved {
+  background-color: $xanova-black;
+  color: $xanova-white;
+  min-width: 139px;
+}
+
+.progressSegmentLeft {
+  background-color: transparent;
+  color: $xanova-black;
+  border: 1px solid $xanova-white;
+  background-image: repeating-linear-gradient(-45deg, var(--Xanova-White) 0 1.7px, transparent 1.7px 5px);
+  min-width: 97px;
+  min-inline-size: max-content;
+}
+
+// Skeleton
+.skeletonHeader {
+  gap: 12px;
+}
+
+.skeletonBar {
+  display: inline-block;
+  inline-size: 120px;
+  block-size: 14px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.08);
+  animation: skeletonPulse 1.4s ease-in-out infinite;
+}
+
+.skeletonHeaderBar:last-child {
+  inline-size: 80px;
+}
+
+.skeletonProgressBar {
+  gap: 10px;
+}
+
+.skeletonSegment {
+  display: block;
+  flex: 1 1 0;
+  block-size: 45px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.08);
+  animation: skeletonPulse 1.4s ease-in-out infinite;
+}
+
+.skeletonSegmentAchieved {
+  flex-grow: 2;
+}
+
+.skeletonSegmentRemaining {
+  flex-grow: 1;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

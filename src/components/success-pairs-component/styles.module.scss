@@ -1,0 +1,46 @@
+@import '/src/styles';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.isSuccessIconWrap {
+  height: 159px;
+  margin-bottom: 79px;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+
+  margin-bottom: 16px;
+
+  @include respond-to(p-mobile) {
+    @include ag-H24;
+  }
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  max-width: 514px;
+  text-align: center;
+}
+
+.btnIconLeft {
+  width: 10px;
+  height: 10px;
+  margin-right: 12px;
+}
+
+.btnIconRight {
+  width: 10px;
+  height: 10px;
+  margin-left: 12px;
+  transform: rotate(180deg);
+}

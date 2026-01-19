@@ -1,0 +1,20 @@
+@import '/src/styles';
+
+.copiedBlock {
+  background-color: $dark-grey;
+  height: 36px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  @include ag-s12-medium;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.icon {
+  margin-left: 10px;
+  margin-bottom: 4px;
+}

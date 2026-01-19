@@ -1,0 +1,864 @@
+@import '/src/styles';
+
+.earnHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 20px 27px 20px;
+}
+
+.titleEarnHeader {
+  @include ag-H34;
+  color: $p-deep-space;
+}
+
+.transactionsBtn {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: $white;
+  padding: 0 16px;
+
+  @include ag-H16;
+  color: $p-deep-space-80;
+}
+
+.tableContainer {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: $white;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.tableContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.tableTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom-width: 1px;
+  border-color: $p-bg;
+  border-bottom-style: solid;
+
+  @include respond-to(p-mobile) {
+    padding: 12px;
+  }
+}
+
+.btnGetStarted.btnGetStarted {
+  width: 174px;
+  min-height: 60px;
+  margin-top: 54px;
+  min-width: 200px;
+
+  @include respond-to(p-desktop-s) {
+    margin-top: 36px;
+  }
+
+  @include respond-to(p-mobile) {
+    min-height: 48px;
+    width: 100%;
+  }
+}
+
+.earnInfoBlock {
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+  gap: 24px;
+
+  @include respond-to(p-tablet) {
+    gap: 12px;
+  }
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.earnInfoItem {
+  background-color: $p-bg;
+  padding: 38.5px 25px;
+  border-radius: 10px;
+  @include ag-H24;
+  color: $p-deep-space;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-grow: 1;
+
+  @include respond-to(p-desktop-s) {
+    padding: 30.5px 25px;
+    @include ag-H20;
+  }
+  @include respond-to(p-tablet) {
+    padding: 17px 20px;
+    @include ag-H20;
+  }
+}
+
+.earnInfoItemOrder1 {
+  flex: 1;
+}
+.earnInfoItemOrder2 {
+  flex: 1;
+}
+.earnInfoItemOrder3 {
+  flex: 1;
+}
+
+.earnInfoData {
+  display: flex;
+  align-items: center;
+  @include ag-P12;
+  color: $p-deep-space-80;
+
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.earnInfoItemTitle {
+  //opacity: 0.8;
+}
+
+.earnInfoItemTitleGreen {
+  color: $p-system-green;
+}
+
+.tierInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dot2 {
+  background-color: $p-deep-space;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  margin: 0 12px;
+
+  @include respond-to(p-desktop-s) {
+    display: none;
+  }
+}
+
+.earnLastInfoItem {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reachNextTier {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.lockInputWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include ag-H14;
+  color: $p-deep-space;
+
+  &:hover {
+    background-color: $p-bg;
+    border-radius: 5px;
+  }
+}
+
+.header {
+  @include ag-P12;
+  color: $p-deep-space-80;
+
+  &:hover {
+    background-color: $white;
+    cursor: auto;
+  }
+}
+
+.actionBtn {
+  position: relative;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $p-deep-space-10;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: $white;
+
+  &:hover {
+    background-color: $p-deep-space-10;
+  }
+}
+
+.actionBtnDisabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.clearStakeWrap {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  padding: 12px;
+  min-height: 513px;
+}
+
+.clearStake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 496px;
+  text-align: center;
+}
+
+.clearStakeWrapTitle {
+  @include ag-H30;
+  color: $p-deep-space;
+  margin-bottom: 16px;
+
+  @include respond-to(p-mobile) {
+    @include ag-H24;
+  }
+}
+
+.clearStakeWrapDescription {
+  @include ag-P16;
+  color: $p-deep-space-80;
+
+  @include respond-to(p-mobile) {
+    @include ag-P14;
+  }
+}
+
+.rowMobile {
+  display: none;
+}
+
+.noSpinners::-webkit-outer-spin-button,
+.noSpinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.noSpinners {
+  -moz-appearance: textfield;
+}
+
+.manageCardSwitchBlock {
+  display: flex;
+  gap: 24px;
+}
+
+.manageCardBtn {
+  @include ag-H14;
+  color: $p-simple-soft-grey;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.manageCardBtnActive {
+  color: $p-deep-space;
+  border-bottom: 1px solid $p-system-green;
+}
+
+.superchargeClearWrap {
+  display: flex;
+  align-items: center;
+  background-image: url('superchargeLogo.png');
+  background-size: cover;
+  flex-grow: 1;
+  margin: 24px;
+  padding: 100px;
+  border-radius: 10px;
+
+  @include respond-to(p-desktop-s) {
+    padding: 50px;
+  }
+
+  @include respond-to(p-tablet) {
+    justify-content: center;
+  }
+
+  @include respond-to(p-mobile) {
+    padding: 24px;
+    margin: 12px;
+    min-height: 513px;
+  }
+}
+
+.superchargeTextWrap {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(p-tablet) {
+    align-items: center;
+  }
+}
+
+.superchargeTitle {
+  @include ag-H60;
+  color: $p-deep-space;
+  max-width: 672px;
+  margin-bottom: 28px;
+
+  @include respond-to(p-desktop-s) {
+    @include ag-H34;
+    max-width: 453px;
+    margin-bottom: 12px;
+  }
+
+  @include respond-to(p-tablet) {
+    max-width: 419px;
+    text-align: center;
+  }
+
+  @include respond-to(p-mobile) {
+    @include ag-H24;
+    max-width: 277px;
+  }
+}
+
+.superchargeDescription {
+  @include ag-P24;
+  color: $p-deep-space-80;
+  max-width: 622px;
+
+  @include respond-to(p-desktop-s) {
+    @include ag-P16;
+    max-width: 431px;
+  }
+
+  @include respond-to(p-tablet) {
+    @include ag-P16;
+    max-width: 612px;
+    text-align: center;
+  }
+
+  @include respond-to(p-mobile) {
+    @include ag-P12;
+    max-width: 277px;
+  }
+}
+
+// new table
+.topBarActions {
+  display: flex;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px;
+
+  @include respond-to(p-mobile) {
+    padding: 0px;
+  }
+}
+.tableHeader {
+  display: flex;
+  padding-bottom: 16px;
+  gap: 17px;
+
+  @include respond-to(p-desktop-s) {
+    gap: 50px;
+  }
+
+  @include respond-to(p-tablet) {
+    gap: 31px;
+  }
+}
+.tableHeaderText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.tableRowsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+
+  @include respond-to(p-mobile) {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  border-radius: 10px;
+  min-height: 46px;
+
+  @include ag-H14;
+  color: $p-deep-space;
+
+  @include respond-to(p-desktop-s) {
+    gap: 50px;
+  }
+
+  @include respond-to(p-tablet) {
+    gap: 31px;
+  }
+
+  @include respond-to(p-mobile) {
+    min-height: 56px;
+    padding: 0 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $p-bg;
+    }
+  }
+}
+
+.cell1 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 200px;
+
+  @include respond-to(p-desktop-s) {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  @include respond-to(p-tablet) {
+  }
+}
+
+.cell2 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    flex: 1;
+  }
+
+  @include respond-to(p-tablet) {
+    display: none;
+  }
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.cell3 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    display: none;
+  }
+}
+
+.cell4 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60px;
+
+  @include respond-to(p-desktop-s) {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  @include respond-to(p-tablet) {
+    display: none;
+  }
+}
+
+.cell5 {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    display: none;
+  }
+
+  @include respond-to(p-tablet) {
+    display: block;
+  }
+
+  @include respond-to(p-mobile) {
+    text-align: end;
+  }
+}
+
+.cell6 {
+  flex: 1.15;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  justify-content: space-between;
+  max-width: 170px;
+  width: 100%;
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+.cell7 {
+  flex: 1;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    display: none;
+  }
+}
+.cell8 {
+  flex: 0.5;
+  min-width: 150px;
+
+  @include respond-to(p-desktop-s) {
+    flex: 1;
+    max-width: 150px;
+  }
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+.assetIcon {
+  width: 46px;
+  height: 46px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.cell1Content {
+  margin-left: 18px;
+  gap: 18px;
+  width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-left: 12px;
+  }
+
+  @include respond-to(p-mobile) {
+    gap: 8px;
+  }
+}
+
+.assetName {
+  @include ag-H14;
+  color: $p-deep-space;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.assetId {
+  @include ag-P12;
+  color: $p-simple-grey;
+  margin-left: 18px;
+
+  @include respond-to(p-desktop-s) {
+    margin-left: 0;
+  }
+}
+
+.tableSubText {
+  @include ag-P12;
+  color: $p-simple-grey;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-mobile) {
+    @include ag-P10;
+  }
+}
+
+.newEarnMobileBtn {
+  padding: 4px 12px;
+  height: 27px;
+  background-color: $p-ivory;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  @include ag-P12;
+  color: $p-deep-space;
+
+  @include respond-to(p-mobile) {
+    height: 22px;
+  }
+}
+
+//earnInfoBlockMobile
+.earnInfoBlockMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  padding: 30px 12px 10px 12px;
+  margin-bottom: 2px;
+}
+
+.earnInfoBlockMobileItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.earnInfoBlockMobileItemText {
+  @include ag-P12;
+  color: $p-simple-grey;
+}
+.earnInfoBlockMobileItemSubText {
+  @include ag-H30;
+  color: $p-deep-space;
+}
+.earnInfoBlockMobileItem2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.earnInfoBlockMobileItem2 {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+.earnInfoBlockMobileItemBtn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: $p-ivory;
+  text-wrap: nowrap;
+}
+.earnInfoBlockMobileItemBtnText {
+  @include ag-P12;
+  color: $p-deep-space;
+}
+.earnInfoBlockMobileItemBtnSubText {
+  @include ag-H12;
+  color: $p-deep-space;
+}
+
+//Supercharge
+.tableHeaderSupercharge {
+  display: flex;
+  padding-bottom: 16px;
+  gap: 40px;
+
+  @include respond-to(p-desktop-s) {
+    gap: 35px;
+  }
+
+  @include respond-to(p-tablet) {
+    gap: 30px;
+  }
+}
+
+.tableRowSupercharge {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+  min-height: 46px;
+
+  @include ag-H14;
+  color: $p-deep-space;
+
+  @include respond-to(p-desktop-s) {
+    gap: 35px;
+  }
+
+  @include respond-to(p-tablet) {
+    gap: 30px;
+  }
+
+  @include respond-to(p-mobile) {
+    min-height: 56px;
+    padding: 0 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $p-bg;
+    }
+  }
+}
+
+.tableRowsWrapSupercharge {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+
+  @include respond-to(p-mobile) {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+
+.cellS1 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 200px;
+
+  @include respond-to(p-desktop-s) {
+    flex: 1;
+    min-width: 150px;
+  }
+}
+
+.cellS2 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.cellS3 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-tablet) {
+    display: none;
+  }
+}
+
+.cellS4 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    display: none;
+  }
+}
+
+.cellS5 {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 170px;
+  max-width: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.cellS6 {
+  flex: 0.5;
+  min-width: 150px;
+
+  @include respond-to(p-desktop-s) {
+    flex: 1;
+    max-width: 150px;
+  }
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.progressBarWrap {
+  max-width: 82px;
+  width: 100%;
+
+  @include respond-to(p-desktop-s) {
+    width: 75px;
+  }
+}
+
+//other
+.hideMobile {
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}

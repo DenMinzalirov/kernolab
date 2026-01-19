@@ -1,0 +1,29 @@
+@import '/src/styles';
+
+.containerModal {
+  width: 540px;
+  height: 515px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    width: auto;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: $white;
+    padding: 50px 20px 40px 20px;
+  }
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  margin-bottom: 8px;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}

@@ -1,0 +1,30 @@
+@import '/src/styles/index';
+
+// HintText
+.hint {
+  @include ag-P10;
+  position: absolute;
+  background-color: $p-deep-space;
+  top: 0;
+  border-radius: 10px;
+  color: $white;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: auto;
+  left: -80px;
+  width: 150px;
+}
+
+.hint::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $p-deep-space;
+}

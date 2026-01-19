@@ -1,0 +1,84 @@
+@import '/src/styles/index';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  color: $xanova-black;
+  width: 100%;
+  overflow: auto;
+  padding: 0 30px 40px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 0 20px 20px;
+  }
+}
+
+.title {
+  margin: 0;
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  margin: 0;
+  @include xanova-h14-medium;
+  color: $xanova-black;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkboxWrap {
+  width: fit-content;
+}
+
+.statusPill {
+  pointer-events: none;
+}
+
+.placeholder {
+  @include xanova-p14-regular;
+  color: $xanova-black-60;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px dashed $xanova-black-20;
+  background: $xanova-white-20;
+}
+
+.dateRangeSection {
+  gap: 20px;
+}
+
+.dateRangeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.actions {
+  margin-top: auto;
+  flex-direction: column;
+  display: flex;
+  gap: 12px;
+}

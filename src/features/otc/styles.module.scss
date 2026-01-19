@@ -1,0 +1,343 @@
+@import '/src/styles';
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  overflow: auto;
+}
+.mainContent {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  overflow: auto;
+}
+
+.contentOneWrap {
+  min-width: 570px;
+  max-width: 570px;
+  margin-right: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.contentOne {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px #a3a3a30d;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.contentOneHeader {
+  padding: 20px;
+}
+.contentOneHeaderTitle {
+  @include set-font($size: 1rem, $weight: 500, $family: 'Lexend');
+  color: #445374;
+}
+.contentOneSection {
+  padding: 48px 60px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.contentOneSectionFix {
+  justify-content: center;
+  gap: 50px;
+}
+
+.stepFormWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.stepFormWrapperFix {
+  flex-grow: 0;
+}
+
+.stepProgressContainer {
+  width: 259px;
+  margin: 0 auto 25px;
+}
+.stepProgress {
+  display: flex;
+  justify-content: space-between;
+  // margin-top: 36px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: var(--mainBlue);
+    opacity: 0.2;
+    height: 4px;
+    width: 100%;
+    top: 7px;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.stepProgressStepWrapper {
+  position: relative;
+}
+.stepProgressStepStyle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--mainBlue);
+}
+.stepProgressLabelContainer {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-wrap: nowrap;
+}
+.stepProgressLabel {
+  @include set-font($size: 12px, $weight: 700, $family: 'Inter');
+  color: #1f1d3a;
+  opacity: 0.4;
+}
+.stepProgressLabelActive {
+  opacity: 1;
+  color: #1f1d3a;
+  @include set-font($size: 12px, $weight: 700, $family: 'Inter');
+}
+.stepProgressActiveLine {
+  position: absolute;
+  background-color: var(--mainBlue);
+  height: 4px;
+  top: 5px;
+  transition: 0.4s ease;
+}
+
+.summaryTitle {
+  @include set-font($size: 16px, $weight: 400, $family: 'Inter');
+  color: #445374;
+  opacity: 0.8;
+}
+
+.horizontalLine {
+  border: none;
+  border-top: 1px solid #f5f4fa;
+}
+
+.stepOneTitle {
+  @include set-font($size: 30px, $weight: 700, $family: 'Lexend');
+  color: #262832;
+  text-align: center;
+}
+.stepOneContainer {
+  position: relative;
+}
+
+.stepDescription {
+  @include set-font($size: 16px, $weight: 400, $family: 'Inter');
+  line-height: 27.2px;
+  text-align: center;
+  color: #445374;
+}
+
+.stepSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stepSuccessTitle {
+  @include set-font($size: 24px, $weight: 600, $family: 'Lexend');
+  color: #1f1d3a;
+  line-height: 33.6px;
+  text-align: center;
+}
+.stepSuccessSubTitle {
+  @include set-font($size: 14px, $weight: 400, $family: 'Inter');
+  color: #585562;
+  line-height: 24px;
+  text-align: center;
+}
+
+.itemComponent {
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.itemComponentPlaceholder {
+  @include set-font($size: 14px, $weight: 400, $family: 'Inter');
+  color: #1f1d3a;
+  line-height: 24px;
+  text-align: left;
+  opacity: 0.3;
+  margin-left: 20px;
+}
+
+.icon {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.assetSelection {
+  display: flex;
+  gap: 20px;
+  margin-top: 58px;
+}
+.inputLabel {
+  @include set-font($size: 16px, $weight: 500, $family: 'Inter');
+  color: #445374;
+  line-height: 19.36px;
+
+  margin-bottom: 12px;
+}
+.assetSelectionItem {
+  position: relative;
+  width: 50%;
+}
+
+.summaryTitle {
+  @include set-font($size: 16px, $weight: 600, $family: 'Inter');
+  line-height: 19.36px;
+  color: #1f1d3a;
+}
+.summaryKeyText {
+  @include set-font($size: 14px, $weight: 400, $family: 'Inter');
+  line-height: 24px;
+  color: #445374;
+}
+.summaryValueText {
+  @include set-font($size: 14px, $weight: 600, $family: 'Inter');
+  line-height: 24px;
+  color: #1f1d3a;
+}
+
+.backBtnWrap {
+  display: inline-block;
+  background-color: var(--amountInputBackground);
+  padding: 4px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+form .btnDisabled {
+  opacity: 0.5;
+}
+
+form .submitBtnText {
+  @include set-font($size: 16px, $weight: 700, $family: 'Lexend');
+  color: #ffffff;
+  line-height: 24px;
+}
+.backBtnText {
+  @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+  color: #99a1b2;
+  line-height: 17.7px;
+}
+
+.availableBalance {
+  @include set-font($size: 11px, $weight: 400, $family: 'Inter');
+  line-height: 22.28px;
+  color: #445374;
+
+  margin-top: 10px;
+}
+
+.minAmoutErrorText {
+  @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+  line-height: 17.7px;
+  text-align: center;
+  color: #ff3b30;
+
+  margin-bottom: 16px;
+}
+.colorRed {
+  color: #ff3b30;
+}
+
+.amountContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  @include set-font($mapKey: 0, $weight: 400, $family: 'Inter');
+  background-color: #f9f8ff; //var(--amountInputBackground);
+  padding: 1rem;
+  border-radius: 0.625rem;
+  border: 1px solid #e2dcff;
+  flex-grow: 1;
+  outline: none;
+  color: $text-color-2;
+  box-shadow: 0px 1px 2px -1px #110c2214;
+
+  &:focus-visible {
+    border: 1px solid $link-color;
+  }
+
+  &:focus-within {
+    outline: 0;
+    border: 1px solid $link-color;
+  }
+}
+
+.inputError {
+  border: 1px solid #ff3b30;
+  color: #ff3b30;
+
+  &:focus-visible {
+    border: 1px solid #ff3b30;
+  }
+
+  &:focus-within {
+    outline: 0;
+    border: 1px solid #ff3b30;
+  }
+}
+
+.inputErrorLabel {
+  color: #ff3b30;
+}
+
+.actionContainer {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  display: flex;
+  padding: 19px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 15px;
+}
+
+.inputBtnText {
+  @include set-font($size: 14px, $weight: 600, $family: 'Inter');
+  cursor: pointer;
+  line-height: 24px;
+  color: var(--mainBlue);
+}
+.inputAssetId {
+  @include set-font($size: 14px, $weight: 600, $family: 'Inter');
+  line-height: 24px;
+  color: #1f1d3a;
+}

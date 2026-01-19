@@ -1,0 +1,117 @@
+@import '/src/styles/index';
+
+.boldText {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.contentQrCode {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  max-width: 440px;
+  flex-grow: 1;
+}
+
+.formWrap {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 0 10px 0;
+  flex-grow: 1;
+  min-width: 440px;
+  gap: 100px;
+
+  @include respond-to(p-mobile) {
+    min-width: auto;
+  }
+}
+
+.formWrapModal {
+  align-self: center;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 0;
+  flex-grow: 1;
+  min-width: 440px;
+  gap: 0;
+  width: 100%;
+
+  @include respond-to(p-mobile) {
+    min-width: 100%;
+  }
+}
+
+.formWrapFixBiz {
+  padding: 0;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  text-align: center;
+}
+.descriptionModal {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  text-align: start;
+}
+
+.button {
+  width: 100%;
+}
+
+.buttonDisable {
+  opacity: 50%;
+}
+
+.errorWrap {
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+
+.errorText {
+  @include ag-P16;
+  color: $p-system-red;
+}
+
+.height30 {
+  height: 30px;
+}
+
+.contentCenter {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.dinamicHeight {
+  flex-grow: 0.1;
+}
+
+.flexGrow1 {
+  flex-grow: 1;
+}
+
+.inputCodeLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.codeInputWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.width100 {
+  width: 100%;
+}

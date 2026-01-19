@@ -1,0 +1,14 @@
+{
+  "hideZeroBalanceAssetsIds": ["ZEEK", "ZEEKNODE", "AZURA"],
+  "customIcons": {
+    "ZEEK": "/static/media/zeekret.png",
+    "ZNODE": "/static/media/zeek.png"
+  },
+  "launchpadConfig": {
+    "hideBlocks": ["launchDate", "claimAvailableFromDate"]
+  },
+  "_changeDepositAddressWarningRangeDate_COMMENT": "Date format: YYYY-MM-DD/YYYY-MM-DD",
+  "changeDepositAddressWarningRangeDate": "2025-01-16/2025-01-16",
+  "isCaptchaOff": false,
+  "storeVersion": "4.4.3"
+}

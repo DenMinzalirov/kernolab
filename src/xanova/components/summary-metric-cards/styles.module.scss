@@ -1,0 +1,25 @@
+@import '/src/styles/index';
+
+.metricsContainer {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(mobile) {
+    display: flex;
+    gap: 8px;
+    padding: 0 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

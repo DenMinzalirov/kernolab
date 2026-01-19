@@ -1,0 +1,121 @@
+@import '/src/styles/index';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  width: 100%;
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+.paginationMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.paginationSummary {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.paginationButton {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid $xanova-black-10;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+
+  &:hover {
+    border-color: $xanova-black;
+  }
+}
+
+.paginationButtonNumber {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+  @include xanova-p14-regular;
+  color: $xanova-black-50;
+
+  &:hover {
+    color: $xanova-black;
+  }
+}
+
+.paginationButtonActive {
+  border-color: $xanova-black-10;
+}
+
+.paginationButtonNumber.paginationButtonActive {
+  color: $xanova-black;
+}
+
+.paginationButtonDisabled {
+  border-color: $xanova-black-10;
+  color: $xanova-black-20;
+  cursor: not-allowed;
+
+  &:hover {
+    border-color: $xanova-black-10;
+  }
+}
+
+.paginationIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.paginationEllipsis {
+  @include xanova-p14-regular;
+  color: $xanova-black-50;
+  padding: 0 4px;
+}
+
+.pageSizeControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageSizeLabel {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+}
+
+.pageSizeSelect {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid $xanova-black-20;
+  background: transparent;
+  color: inherit;
+  @include xanova-p12-regular;
+
+  &:focus {
+    outline: none;
+    border-color: $xanova-black;
+  }
+}

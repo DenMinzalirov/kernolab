@@ -1,0 +1,68 @@
+@import '/src/styles/index';
+
+.inputWrap {
+  display: flex;
+  gap: 5px;
+}
+
+.input {
+  height: 50px;
+  width: 69px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  @include xanova-p16-regular;
+
+  @include respond-to-xanova(tablet) {
+    min-width: 40px;
+    max-width: 69px;
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: $xanova-black-60;
+  }
+
+  &:not(:placeholder-shown):not(.error) {
+    border: 1px solid $xanova-gold;
+  }
+
+  &:focus-visible {
+    outline: transparent 1px solid;
+    border: 1px solid #eaeaea;
+  }
+
+  &:focus-visible:not(:placeholder-shown):not(.error) {
+    border: 1px solid $xanova-gold;
+  }
+
+  &:-moz-placeholder {
+    // Firefox 4–18
+    color: $xanova-black-60;
+  }
+
+  &::-moz-placeholder {
+    // Firefox
+    color: $xanova-black-60;
+  }
+
+  &:-ms-input-placeholder {
+    // Internet Explorer
+    color: $xanova-black-60;
+  }
+
+  &::-webkit-input-placeholder {
+    // Chrome, Safari
+    color: $xanova-black-60;
+  }
+}
+
+.error {
+  border: 1px solid $xanova-red;
+
+  &:focus-visible {
+    outline: transparent 1px solid;
+    border: 1px solid $xanova-red;
+  }
+}

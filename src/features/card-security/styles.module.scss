@@ -1,0 +1,53 @@
+@import '/src/styles';
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: $p-bg;
+  gap: 3px;
+  overflow: hidden;
+}
+
+.headerWrap {
+  margin: 20px 20px 10px 20px;
+
+  @include respond-to(p-tablet) {
+    margin: 30px 20px 0px 20px;
+  }
+
+  @include respond-to(p-mobile) {
+    margin: 12px 12px 8px;
+  }
+}
+
+.contentWrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  padding: 50px;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.loadingWrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  height: 340px;
+  width: 100%;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  margin-bottom: 16px;
+}

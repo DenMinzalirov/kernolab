@@ -1,0 +1,32 @@
+@import '/src/styles/index';
+
+.hintContainer {
+  position: absolute;
+  background-color: $p-deep-space;
+  bottom: 40px;
+  left: -31px;
+  width: 200px;
+  border-radius: 16px;
+}
+
+.hintText {
+  @include ag-P10;
+  //@include set-font($size: 0.75rem, $weight: 400, $family: 'Inter');
+  line-height: 16px;
+  color: $white;
+  padding: 12px;
+  text-align: left;
+}
+
+.hintContainer::before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  bottom: -8px;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #262832;
+}

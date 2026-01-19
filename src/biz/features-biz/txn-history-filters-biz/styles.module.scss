@@ -1,0 +1,109 @@
+@import '/src/styles';
+
+.container {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include respond-to-biz(lg) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.filterSelectWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filterSelectLabel {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.containerMd {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: flex;
+    gap: 8px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+
+.activeFilterRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.filterTypeText {
+  @include ag-s16-medium;
+  color: $navy;
+}
+
+.filterAssetRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filterAssetIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.filterAssetIdText {
+  @include ag-s16-medium;
+  color: $navy;
+}
+
+.filterAssetNameText {
+  @include ag-s14-0;
+  color: $grey;
+}
+
+.iconContainer {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: transparent;
+}
+
+.iconCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $blue;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    background-color: $light-grey;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modalFix {
+  margin-top: calc(100vh - 500px) !important;
+}

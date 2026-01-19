@@ -1,0 +1,76 @@
+@import '/src/styles/index';
+
+.containerAuth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.iconAuth {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 36px;
+}
+
+.titleAuth {
+  @include xanova-h20-semiBold;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.subTitleAuth {
+  @include xanova-p16-regular;
+  color: $xanova-black-50;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+//main
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 446px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.subTitle {
+  @include xanova-p14-regular;
+  color: $xanova-black-60;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.buttonLink {
+  @include xanova-h14-medium;
+  color: $xanova-black;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $xanova-black-60;
+  }
+}

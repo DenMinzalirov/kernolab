@@ -1,0 +1,85 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 33px;
+  padding: 16px 80px;
+
+  @include respond-to-biz(xl) {
+    flex-direction: column;
+    padding: 16px 50px;
+  }
+
+  @include respond-to-biz(lg) {
+    flex-direction: column;
+    padding: 24px 50px;
+    gap: 24px;
+  }
+
+  @include respond-to-biz(md) {
+    flex-direction: column;
+    padding: 26.5px 15px;
+  }
+}
+
+.filterWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include respond-to-biz(md) {
+    gap: 24px;
+  }
+}
+
+.txnHistoryLabelWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.txnHistoryLabel {
+  @include ag-s20-reg;
+
+  @include respond-to-biz(md) {
+    @include ag-s16-medium;
+  }
+}
+
+.reportBtnWrap {
+  display: flex;
+  gap: 12px;
+}
+
+.reportBtnMd {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 2px 1px; // fix for center icon
+    width: 30px;
+    height: 30px;
+    background-color: $blue;
+    border-radius: 100px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: $lg-blue-100-black20;
+    }
+  }
+}
+
+.txnHistoryWrap {
+  height: calc(100vh - 580px); // TODO !Обновить при добавлении компонентов или изменении стилей
+  overflow: auto;
+
+  @include respond-to-biz(md) {
+    height: 100%;
+  }
+}

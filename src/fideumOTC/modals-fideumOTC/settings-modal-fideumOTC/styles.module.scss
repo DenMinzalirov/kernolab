@@ -1,0 +1,128 @@
+@import '/src/styles/index';
+
+.containerModal {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: center;
+  align-items: center;
+  width: 473px;
+  gap: 48px;
+  background-color: $light-grey;
+  border-radius: 20px;
+
+  @include respond-to-biz(md) {
+    box-sizing: border-box;
+    max-width: 345px;
+    height: 597px;
+    padding: 30px 15px;
+    justify-content: start;
+    gap: 36px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+
+  @include respond-to-biz(md) {
+    gap: 4px;
+  }
+}
+
+.avatar {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  border: solid 3px $lg-white-100-dark-grey-20;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  background-color: $white;
+
+  @include ag-s30-medium;
+  font-weight: 400;
+  line-height: 44.26px;
+}
+
+.name {
+  @include ag-s20-med;
+  color: $navy;
+}
+
+.email {
+  @include ag-s14-0;
+  color: $navy;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+}
+
+.mainBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.currencyWrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 20px;
+  background-color: $white;
+  border-radius: 20px;
+  align-items: center;
+  box-sizing: border-box;
+  height: 58px;
+}
+
+.currencyWrapHover {
+  &:hover {
+    background-color: $lg-white-100-black20;
+  }
+}
+
+.btnText {
+  @include ag-s16-reg;
+  color: $dark-navy;
+
+  @include respond-to-biz(md) {
+    @include ag-s14-0;
+  }
+}
+
+.logoutbtnText {
+  @include ag-s16-reg;
+  color: $s-red;
+  text-align: center;
+  width: 100%;
+
+  @include respond-to-biz(md) {
+    @include ag-s14-0;
+  }
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.hideMd {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.showMd {
+  display: none;
+  @include respond-to-biz(md) {
+    display: flex;
+  }
+}

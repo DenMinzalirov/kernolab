@@ -1,0 +1,426 @@
+@import '/src/styles';
+
+.navContainer {
+  gap: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  padding: 24px 0;
+  align-items: center;
+  flex-direction: column;
+
+  @include respond-to-biz(md) {
+    padding: 24px 15px;
+    justify-content: flex-start;
+  }
+}
+
+.navContentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 840px;
+  gap: 36px;
+  @include respond-to-biz(lg) {
+    width: 570px;
+  }
+  @include respond-to-biz(md) {
+    width: 100%;
+    padding: 20px 15px;
+    gap: 24px;
+    min-height: 670px;
+    height: 100%;
+  }
+}
+
+.secondaryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  padding: 24px 0;
+
+  @include respond-to-biz(md) {
+    align-items: flex-start;
+    background-color: $light-grey;
+    padding: 24px 0;
+  }
+}
+
+.secondaryContentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  min-height: 840px;
+
+  @include respond-to-biz(lg) {
+    width: 570px;
+  }
+  @include respond-to-biz(md) {
+    width: 100%;
+    border-radius: 0;
+    padding: 0 15px;
+    min-height: 670px;
+    height: 100%;
+  }
+}
+
+.heading {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: flex;
+
+    width: 100%;
+  }
+}
+
+.headingText {
+  @include ag-s16-medium;
+  color: $navy;
+  padding: 0 15px;
+}
+
+.fixBgColor {
+  background-color: $white;
+}
+
+.headerWrap {
+  display: flex;
+  gap: 24px;
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.menuItem {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menuActive {
+  border-bottom: 1px solid $blue;
+  color: $blue;
+}
+
+.activeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardItemWrap {
+  background-color: $white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  gap: 10px;
+
+  @include respond-to-biz(md) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 338px;
+
+  @include respond-to-biz(md) {
+    gap: 8px;
+    width: 100%;
+  }
+}
+
+.cardTitle {
+  @include ag-s16-medium;
+  color: $navy;
+}
+
+.cardDescription {
+  @include ag-s14-0;
+  color: $dark-grey;
+}
+
+.colorNavy {
+  color: $navy;
+}
+
+.btnWrap {
+  display: flex;
+  align-self: center;
+  min-width: 125px;
+
+  @include respond-to-biz(md) {
+    width: 100%;
+  }
+}
+
+.switcherWrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: $lg-white-100-dark-grey-20;
+  border-radius: 20px;
+  padding: 2px;
+  cursor: pointer;
+  align-self: center;
+  box-sizing: border-box;
+
+  @include respond-to-biz(md) {
+    width: 100%;
+  }
+}
+
+.switcherItem {
+  border-radius: 20px;
+  padding: 8px 10px;
+  flex-grow: 1;
+  text-align: center;
+  @include ag-s12;
+  color: $dark-grey;
+  min-width: 96px;
+}
+
+.switcherItemActive {
+  background-color: $white;
+  color: $navy;
+}
+
+.changeFormWrap {
+  max-width: 440px;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  padding: 100px 0;
+
+  @include respond-to-biz(md) {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
+.deletAccountWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  height: 840px;
+
+  @include respond-to-biz(md) {
+    padding: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.changeFormWrapSuccessful {
+  max-width: 440px;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 100px 0;
+
+  @include respond-to-biz(md) {
+    padding: 0;
+  }
+}
+
+.changeTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  @include respond-to-biz(md) {
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+}
+
+.changeTitle {
+  @include ag-s30-medium;
+  color: $navy;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+  }
+}
+
+.changeDescription {
+  @include ag-s12-medium;
+  color: $dark-grey;
+
+  @include respond-to-biz(md) {
+    text-align: center;
+  }
+}
+
+.changeLabel {
+  @include ag-s12;
+  color: $dark-grey;
+  margin-bottom: 12px;
+}
+
+.changeErrorWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.changeErrorText {
+  @include ag-s12;
+  color: $s-red;
+}
+
+.changeIconBiz {
+  width: 15px;
+  height: 15px;
+}
+
+.hintText {
+  @include ag-s12-medium;
+  line-height: 24.72px;
+  color: $dark-grey;
+  text-wrap: nowrap;
+  position: relative;
+  padding-left: 12px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: $dark-grey;
+    border-radius: 50%;
+  }
+
+  &.colorGreen::before {
+    background-color: $s-green;
+  }
+
+  &.colorRed::before {
+    background-color: $s-red;
+  }
+
+  &.colorDarkGrey::before {
+    background-color: $dark-grey;
+  }
+}
+
+.changeBtnWrap {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  @include respond-to-biz(md) {
+    flex-grow: 1;
+    justify-content: end;
+  }
+}
+
+.stepControllerWrap {
+  max-width: 440px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  padding: 100px 0;
+
+  @include respond-to-biz(md) {
+    padding: 0;
+  }
+}
+
+.loading {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorGreen {
+  color: $s-green;
+}
+
+.colorRed {
+  color: $s-red;
+}
+
+.colorDarkGrey {
+  color: $dark-grey;
+}
+
+.dynamicHeight {
+  height: 12px;
+
+  @include respond-to-biz(md) {
+    height: 12px;
+  }
+}
+
+.height12 {
+  height: 12px;
+}
+
+.height24 {
+  height: 24px;
+}
+
+.minHeight12 {
+  min-height: 12px;
+
+  @include respond-to-biz(md) {
+    min-height: 0;
+  }
+}
+
+.hideMd {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.showMd {
+  display: none;
+  @include respond-to-biz(md) {
+    display: inline;
+  }
+}

@@ -1,0 +1,13 @@
+diff --git a/esm/toaster/render.js b/esm/toaster/render.js
+index f13b6e8..620059d 100644
+--- a/esm/toaster/render.js
++++ b/esm/toaster/render.js
+@@ -20,7 +20,7 @@ export function render(element, container) {
+      * ignore react 18 warnings
+      * Warning: You are importing createRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".
+      */
+-    ReactDOM['__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED'].usingClientEntryPoint = true;
++    // ReactDOM['__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED'].usingClientEntryPoint = true;
+     var createRoot = SuperposedReactDOM.createRoot;
+     var root = createRoot(mountElement, {
+       identifierPrefix: 'rs-root-'

@@ -1,0 +1,21 @@
+@import '/src/styles';
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: $p-ivory;
+  display: flex;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: $p-system-green;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.height8 {
+  height: 8px;
+}

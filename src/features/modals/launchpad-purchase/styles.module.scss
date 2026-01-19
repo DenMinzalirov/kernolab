@@ -1,0 +1,47 @@
+@import '/src/styles/index';
+//TODO old DELETE
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.equivalentText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  line-height: 147%;
+}
+
+.residual {
+  @include ag-P10;
+  color: $p-deep-space-80;
+  line-height: 147%;
+}
+
+.amount2 {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.backBtn {
+  @include ag-H14;
+  color: $p-deep-space;
+  position: absolute;
+  top: -62px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

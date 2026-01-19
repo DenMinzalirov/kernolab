@@ -1,0 +1,290 @@
+@import '/src/styles';
+
+.dashboardRoot {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 0;
+  width: 100%;
+  padding-bottom: 30px;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+}
+
+.pageHeading {
+  @include xanova-h30-semiBold;
+
+  margin-top: 23px;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+    margin-top: 30px;
+  }
+}
+
+.summarySection {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+
+  @include respond-to-xanova(desktop) {
+    padding: 0 30px;
+  }
+
+  @include respond-to-xanova(tablet) {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  @include respond-to-xanova(mobile) {
+    height: auto;
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+.progressOverviewBlock {
+  flex: 0 0 563px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include respond-to-xanova(tablet) {
+    flex: 1;
+    max-width: none;
+    padding: 0 30px;
+  }
+
+  @include respond-to-xanova(mobile) {
+    flex: 1;
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+.metricsCardsWrap {
+  @include respond-to-xanova(desktop) {
+    display: flex;
+    flex: 1;
+    gap: 50px;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    min-height: 0;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.metricCard {
+  @include respond-to-xanova(desktop) {
+    background-color: transparent;
+    padding: 0;
+    gap: 8px;
+    flex-direction: column-reverse;
+    width: auto;
+  }
+}
+
+.contentGrid {
+  display: grid;
+  gap: 5px;
+  min-height: 0;
+
+  grid-template-areas:
+    'a b b'
+    'c d e';
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include respond-to-xanova(tablet) {
+    grid-template-areas:
+      'b b'
+      'd a';
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to-xanova(mobile) {
+    grid-template-areas:
+      'b'
+      'a';
+    grid-template-columns: 1fr;
+  }
+}
+
+.gridBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: $xanova-bg;
+  min-width: 0;
+}
+
+.topLeftWidget {
+  grid-area: a;
+}
+.topRightWidget {
+  grid-area: b;
+}
+.bottomLeftWidget {
+  grid-area: c;
+
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+  @include respond-to-xanova(mobile) {
+    display: none;
+  }
+}
+.bottomCenterWidget {
+  grid-area: d;
+
+  max-height: 336px;
+
+  @include respond-to-xanova(mobile) {
+    display: none;
+  }
+}
+.bottomRightWidget {
+  grid-area: e;
+
+  color: $xanova-white;
+  background-color: $xanova-black;
+
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+  @include respond-to-xanova(mobile) {
+    display: none;
+  }
+}
+
+.contentGutter {
+  padding: 0 30px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 0 10px;
+  }
+}
+
+.inputLabel {
+  @include xanova-p14-regular;
+}
+.smallText {
+  @include xanova-p12-regular;
+}
+
+.mediumText {
+  @include xanova-p16-medium;
+}
+
+.title {
+  @include xanova-h20-semiBold;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h16-semiBold;
+  }
+}
+
+.ellipsis {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flexSpaceBetweenAlignEndGap10 {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+}
+
+.flexVerticalGap16 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flexVerticalGap8 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.flexHorizontalGap24 {
+  display: flex;
+  gap: 24px;
+}
+
+.flexVerticalGap20 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.myServicesBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: $xanova-bg;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $xanova-black-10;
+  }
+}
+
+.opacity07 {
+  opacity: 0.7;
+}
+
+.customCopy {
+  --copy-button-width: 20px;
+  --copy-button-height: 24px;
+}
+
+.buttonsWrap {
+  display: flex;
+  gap: 12px;
+}
+
+.colorWhite {
+  color: $xanova-white;
+}
+
+.timerXanovaWrap {
+  display: none;
+
+  @include respond-to-xanova(mobile) {
+    display: flex;
+    align-self: center;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+}
+
+.customDataTableWrap {
+  gap: 12px;
+
+  h3 {
+    padding-left: 10px;
+
+    @include respond-to-xanova(tablet) {
+      padding-left: 0;
+    }
+  }
+
+  border-radius: 0;
+  overflow: hidden;
+}

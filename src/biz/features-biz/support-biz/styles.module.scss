@@ -1,0 +1,50 @@
+@import '/src/styles';
+
+.container {
+  height: 100%;
+  background-color: $white;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include respond-to-biz(md) {
+    background-color: $light-grey;
+    padding: 24px 15px;
+  }
+}
+
+.contentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 40px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+  gap: 48px;
+
+  @include respond-to-biz(lg) {
+    width: 570px;
+    padding: 40px 50px;
+  }
+  @include respond-to-biz(md) {
+    width: 100%;
+    padding: 0;
+    gap: 24px;
+  }
+}
+
+.title {
+  @include ag-s30-medium;
+  color: $navy;
+  text-align: center;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+  }
+}

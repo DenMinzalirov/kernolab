@@ -1,0 +1,258 @@
+@import '/src/styles';
+
+.contentWrap {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  padding: 24px;
+  background-color: $white;
+  border-radius: 10px;
+  flex-grow: 1;
+  overflow: hidden;
+
+  @include respond-to(p-tablet) {
+    flex-direction: column;
+  }
+
+  @include respond-to(p-mobile) {
+    padding: 12px;
+  }
+}
+
+.contentHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardsWrap {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: auto;
+
+  @include respond-to(p-desktop-s) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(p-mobile) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.launchpadWrap {
+  margin: 0 24px;
+}
+
+.buttonGroupFilter {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 12px;
+}
+
+.titleText {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.descriptionText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  line-height: 147%;
+}
+
+.lableText {
+  @include ag-P10;
+  color: $p-deep-space-80;
+}
+
+.nothingLaunchpadTitle {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+.nothingLaunchpadSubTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  line-height: 147%;
+}
+
+.launchpadItemBtn {
+  @include ag-P10;
+  font-weight: 800;
+  line-height: 160%;
+  background-color: $p-ivory;
+  color: $p-deep-space;
+  padding: 6px 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+//.activeText {
+//  @include set-font($size: 12px, $weight: 700, $family: 'Inter');
+//  color: #34C759;
+//}
+
+.infoBlockWrap {
+  display: flex;
+  gap: 8px;
+}
+
+.infoBlock {
+  background-color: $p-ivory;
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.infoBlockTitle {
+  @include ag-P10;
+  color: $p-deep-space-80;
+}
+
+.infoBlockAmount {
+  @include ag-H16;
+  color: $p-deep-space;
+  display: flex;
+  align-items: center;
+
+  @include respond-to(p-tablet) {
+    @include ag-H12;
+  }
+}
+
+.shareText {
+  @include ag-H14;
+  color: $p-deep-space;
+  line-height: 24px;
+}
+
+.projectTitleFilter {
+  @include ag-H14;
+  color: $p-simple-soft-grey;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.projectTitleFilterActive {
+  color: $p-deep-space;
+  border-bottom: 1px solid $p-system-green;
+}
+
+.descriptionCurrency {
+  @include ag-p10;
+  color: #585562;
+  margin-left: 5px;
+}
+
+.btnShare {
+  display: flex;
+  gap: 12px;
+  border-radius: 10px;
+  border: 1px solid $white;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  align-self: end;
+  cursor: pointer;
+  background-color: $p-ivory;
+}
+
+.divider {
+  border-top: 1px solid $p-deep-space-10;
+}
+
+.launchpadItemCard {
+  display: flex;
+  gap: 24px;
+  background-color: $p-bg;
+  border-radius: 15px;
+  padding: 24px;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+}
+
+.cardHeaderIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  margin-right: 24px;
+
+  @include respond-to(p-tablet) {
+    width: 54px;
+    height: 54px;
+    margin-right: 12px;
+  }
+}
+
+.cardHeaderTitleWrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+}
+
+.cardHeaderTitle {
+  @include ag-H24;
+  color: $p-deep-space;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+
+  @include respond-to(p-tablet) {
+    @include ag-H14;
+  }
+}
+
+.cardHeaderActions {
+  height: 100%;
+}
+
+.linkIconWrap {
+  width: 20px;
+  height: 20px;
+}
+
+.cardDescription {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.nothingLaunchpadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  margin: 0 24px;
+  padding: 24px;
+  border-radius: 15px;
+  min-height: 60vh;
+}
+
+.totalRaisedWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flexGrow1 {
+  flex-grow: 1;
+}

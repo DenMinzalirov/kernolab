@@ -1,0 +1,294 @@
+@import '/src/styles';
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-grey;
+  border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
+
+  @include respond-to-biz(md) {
+    background-color: $light-grey;
+    border-radius: 20px;
+    padding: 10px 0;
+    max-height: calc(100vh - 64px - 62px - 10px - 10px - 26.5px - 26.5px - 24px - 60px - 20px - 5px);
+    overflow: auto;
+  }
+}
+
+.columnSettings {
+  padding: 20px;
+  border-bottom: 1px solid $dark-grey-20;
+  background-color: $white;
+  border-radius: 20px 20px 0 0;
+
+  @include respond-to-biz(md) {
+    padding: 16px;
+  }
+}
+
+.settingsTitle {
+  @include ag-s14-semiB;
+  color: $navy;
+  margin: 0 0 16px 0;
+
+  @include respond-to-biz(md) {
+    @include ag-s12-semiB;
+    margin: 0 0 12px 0;
+  }
+}
+
+.columnToggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include respond-to-biz(md) {
+    gap: 8px;
+  }
+}
+
+.columnToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: $light-grey;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $blue-10;
+  }
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  span {
+    @include ag-s12;
+    color: $navy;
+    white-space: nowrap;
+  }
+}
+
+.tableHeader {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid $dark-grey-20;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.tableRowsWrap {
+  overflow: auto;
+}
+
+.tableRow {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid $dark-grey-20;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-10;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @include respond-to-biz(md) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 0;
+    border-bottom: 0.5px solid $dark-grey-20;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.headerText {
+  @include ag-s12;
+  color: $dark-grey;
+  font-weight: 600;
+
+  //&:last-child {
+  //  text-align: end;
+  //}
+}
+
+.dateText {
+  @include ag-s12;
+  color: $dark-grey;
+
+  @include respond-to-biz(md) {
+    @include ag-s10;
+  }
+}
+
+.text {
+  @include ag-s12;
+  color: $navy;
+
+  @include respond-to-biz(md) {
+    @include ag-s12;
+  }
+}
+
+.statusBadgeWrap {
+  display: flex;
+  justify-content: start;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.statusBadge {
+  @include ag-s10;
+  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  font-weight: 500;
+
+  &.statusGreen {
+    background: $lg-green-20-white-100;
+    color: $s-green;
+  }
+
+  &.statusRed {
+    background: $lg-red-20-white-100;
+    color: $s-red;
+  }
+
+  &.statusYellow {
+    background: $lg-yellow-20-white-100;
+    color: $s-yellow;
+  }
+
+  &.statusGrey {
+    background: $dark-grey-20;
+    color: $dark-grey;
+  }
+
+  &.statusBlue {
+    background: $lg-blue-100-black20;
+    color: $blue;
+  }
+}
+
+.placeholder {
+  height: 219px;
+  display: flex;
+  flex-direction: column;
+  gap: 17.86px;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to-biz(md) {
+    height: 263px;
+  }
+}
+
+.placeholderText {
+  @include ag-s14-0;
+  color: $dark-grey;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid $dark-grey-20;
+  border-top: 2px solid $navy;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Configurable table columns for clients
+.cell1 {
+  flex: 1.2; // Registration Date
+
+  @include respond-to-biz(lg) {
+    flex: 1;
+  }
+}
+
+.cell2 {
+  flex: 1.5; // Full Name
+
+  @include respond-to-biz(lg) {
+    flex: 1.2;
+  }
+}
+
+.cell3 {
+  flex: 1.8; // Email
+
+  @include respond-to-biz(lg) {
+    flex: 1.5;
+  }
+}
+
+.cell4 {
+  flex: 1.2; // Applicant ID
+
+  @include respond-to-biz(lg) {
+    flex: 1;
+  }
+}
+
+.cell5 {
+  flex: 1; // Status
+
+  @include respond-to-biz(lg) {
+    flex: 0.8;
+  }
+}
+
+.cell6 {
+  flex: 1.2; // Client ID
+
+  @include respond-to-biz(lg) {
+    flex: 1;
+  }
+}
+
+.cell7 {
+  flex: 1.2; // Last Updated
+
+  @include respond-to-biz(lg) {
+    flex: 1;
+  }
+}
+
+.applicantButton {
+  width: 70px;
+}

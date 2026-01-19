@@ -1,0 +1,58 @@
+@import '/src/styles/index';
+
+.containerModal {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.contentWrapModal {
+  background-color: $p-bg;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100dvw;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 40px 15px;
+  gap: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title {
+  @include ag-H20;
+  color: $p-deep-space;
+  text-align: start;
+}
+
+.assetsContainer {
+  flex: 1;
+  padding: 10px;
+  background-color: $white;
+  border-radius: 10px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  min-height: 62px;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $p-bg;
+  }
+}

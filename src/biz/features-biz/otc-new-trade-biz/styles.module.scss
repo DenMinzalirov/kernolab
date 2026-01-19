@@ -1,0 +1,403 @@
+@import '/src/styles';
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  padding: 24px;
+
+  @include respond-to-biz(md) {
+    align-items: flex-start;
+    padding: 24px 0;
+    background-color: $light-grey;
+  }
+}
+
+.contentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 70px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 840px;
+
+  @include respond-to-biz(lg) {
+    padding: 40px 50px;
+  }
+  @include respond-to-biz(md) {
+    padding: 0px 15px;
+  }
+}
+.contentWrapFixForStep {
+  padding: 70px 100px;
+
+  @include respond-to-biz(md) {
+    padding: 0px 15px;
+
+    width: 100%;
+    border-radius: 0;
+    min-height: 670px;
+    height: 100%;
+  }
+}
+
+//Back btn wrap
+.backBtnWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+//stepProgress
+.stepProgressContainer {
+  width: 218px;
+  margin: 0 auto 25px;
+}
+.stepProgress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: $blue;
+    opacity: 0.2;
+    height: 4px;
+    width: 100%;
+    top: 7px;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.stepProgressStepWrapper {
+  position: relative;
+}
+.stepProgressStepStyle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $blue;
+
+  &.active {
+    background: $blue;
+  }
+
+  &.inactive {
+    background: $lg-white-100-blue50;
+  }
+}
+
+.stepProgressLabelContainer {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-wrap: nowrap;
+}
+.stepProgressLabel {
+  @include set-font($size: 12px, $weight: 700, $family: 'Inter');
+  color: $navy;
+  opacity: 0.4;
+}
+.stepProgressLabelActive {
+  opacity: 1;
+  color: $navy;
+  @include set-font($size: 12px, $weight: 700, $family: 'Inter');
+}
+.stepProgressActiveLine {
+  position: absolute;
+  background-color: $blue;
+  height: 4px;
+  top: 5px;
+  transition: 0.4s ease;
+}
+
+.tradeDetailsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.tradeDetailsHeaderTitle {
+  @include ag-s30-medium;
+  color: $navy;
+}
+.tradeDetailsHeaderSubTitle {
+  @include ag-s12-medium;
+  text-align: center;
+  color: $dark-grey;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.formFixForSuccess {
+  justify-content: center;
+}
+.stepProgressWrap {
+  margin-bottom: 80px;
+
+  @include respond-to-biz(md) {
+    margin-bottom: 67px;
+  }
+}
+.stepFormWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.buttonWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  max-height: 124px;
+  gap: 10px;
+  margin-top: 20px;
+}
+.buttonWrapFixForSuccess {
+  margin-top: 48px;
+  justify-content: normal;
+  gap: 0;
+}
+
+.minAmoutErrorText {
+  @include ag-s12;
+  color: $s-red;
+  text-align: center;
+}
+
+// step One Container
+.stepOneContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.assetSelection {
+  display: flex;
+  gap: 24px;
+
+  @include respond-to-biz(md) {
+    flex-direction: column;
+  }
+}
+.assetSelectionItem {
+  position: relative;
+  width: 50%;
+
+  @include respond-to-biz(md) {
+    width: 100%;
+  }
+}
+.inputLabel {
+  @include ag-s12;
+  color: $dark-grey;
+  margin-bottom: 12px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.itemComponent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+.itemComponentPlaceholder {
+  @include ag-s14-0;
+  color: $navy;
+  opacity: 0.3;
+  margin-left: 20px;
+}
+.amountContainer {
+  display: flex;
+  flex-direction: column;
+  // margin-top: 20px;
+  // position: relative;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.amountInput {
+  //TODO refactor
+  background-color: $white;
+  border: 1px solid $dark-grey-20;
+  border-radius: 0.625rem;
+  // box-shadow: 0 1px 2px -1px rgba(17, 12, 34, 0.078);
+  color: #445374;
+  flex-grow: 1;
+  @include ag-s14-0;
+  outline: none;
+  padding: 1rem;
+}
+.colorRed {
+  color: $s-red;
+}
+.inputError {
+  border: 1px solid $s-red;
+  color: $s-red;
+}
+.actionContainer {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  display: flex;
+  padding: 19px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 15px;
+}
+
+.addressBookIconWrap {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--amountInputBackgroundNew);
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 15px;
+  cursor: pointer;
+  height: 95%;
+  align-items: center;
+}
+
+.inputAsset {
+  @include ag-s14-semiB;
+  color: $navy;
+}
+
+.inputMax {
+  @include ag-s14-semiB;
+  color: $blue;
+}
+
+.availableBalanceWrap {
+  margin-top: 10px;
+}
+.availableBalance {
+  @include ag-s12;
+  color: $dark-grey;
+}
+.height10 {
+  height: 10px;
+}
+
+//STEP
+.stepDescription {
+  @include ag-s12-medium;
+  text-align: center;
+  color: $dark-grey;
+}
+
+//contact
+.stepContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include respond-to-biz(md) {
+    gap: 36px;
+  }
+}
+
+.contactsInputsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+//summary
+.summaryContainer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.summaryColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include respond-to-biz(md) {
+    padding: 0 10px;
+  }
+}
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+}
+.summaryTitle {
+  @include ag-s14-0;
+  color: $navy;
+}
+.summaryKeyText {
+  @include ag-s12;
+  color: $dark-grey;
+}
+.summaryValueText {
+  @include ag-s12-semiB;
+  color: $navy;
+}
+
+//stepSuccess
+.stepSuccess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.stepSuccessTitle {
+  @include ag-s30-medium;
+  color: $navy;
+}
+.stepSuccessSubTitle {
+  @include ag-s12-medium;
+  color: $dark-grey;
+}
+
+.hideMdAndDown {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.showMdAndDown {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: block;
+  }
+}

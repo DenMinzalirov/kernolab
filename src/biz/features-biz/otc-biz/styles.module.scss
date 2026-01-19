@@ -1,0 +1,152 @@
+@import '/src/styles';
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 33px;
+  padding: 16px 80px;
+
+  @include respond-to-biz(xl) {
+    flex-direction: column;
+    padding: 16px 50px;
+  }
+
+  @include respond-to-biz(md) {
+    flex-direction: column;
+    padding: 24px 15px;
+  }
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: $light-grey;
+  border-radius: 20px;
+  padding: 0 20px;
+  overflow: hidden;
+
+  @include respond-to-biz(md) {
+    padding: 10px;
+    background-color: $light-grey;
+  }
+}
+
+.tableHeader {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.headerText {
+  @include ag-s12;
+  color: $dark-grey;
+
+  &:last-child {
+    text-align: end;
+  }
+}
+
+.statusBadge {
+  @include ag-s10;
+  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+
+  &Green {
+    background: $lg-green-20-white-100;
+    color: $s-green;
+  }
+  &Red {
+    background: $lg-red-20-white-100;
+    color: $s-red;
+  }
+  &Yellow {
+    background: $lg-yellow-20-white-100;
+    color: $s-yellow;
+  }
+}
+
+.placeholder {
+  height: 219px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  @include respond-to-biz(md) {
+    height: 263px;
+  }
+}
+
+.placeholderText {
+  @include ag-s14-0;
+  color: $dark-grey;
+}
+
+.otcWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  height: calc(100vh - 415px); // TODO !Обновить при добавлении компонентов или изменении стилей
+  overflow: hidden;
+
+  @include respond-to-biz(md) {
+    height: calc(100vh - 190px); // TODO !Обновить при добавлении компонентов или изменении стилей
+  }
+}
+
+.otcHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.otcHeaderLabel {
+  @include ag-s20-reg;
+  color: $navy;
+
+  @include respond-to-biz(md) {
+    @include ag-s16-medium;
+  }
+}
+
+.otcTradeRowsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  overflow: auto;
+
+  @include respond-to-biz(md) {
+    scrollbar-width: none;
+  }
+}
+
+.showInlineMdAndDown {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: inline;
+  }
+}
+.hideMdAndDown {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.hideLgAndDown {
+  @include respond-to-biz(lg) {
+    display: none;
+  }
+}

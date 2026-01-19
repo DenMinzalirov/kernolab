@@ -1,0 +1,96 @@
+@import '/src/styles';
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  width: 535px;
+  height: 290px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 63px 60px;
+
+  border-radius: 20px;
+  background-color: $bg;
+
+  border: 1px solid $modal-stroke;
+
+  @include respond-to-biz(md) {
+    width: 345px;
+    height: 241px;
+    padding: 40px 20px 20px 20px;
+
+    border: none;
+    background-color: $white;
+  }
+}
+
+.containerFix {
+  padding: 60px 60px 30px 60px;
+
+  @include respond-to-biz(md) {
+    height: 280px;
+    padding: 40px 20px 20px 20px;
+  }
+}
+
+.title {
+  @include set-font($size: 24px, $weight: 600, $family: 'Inter');
+  line-height: 33.6px;
+  color: #1f1d3a;
+}
+
+.titleBiz {
+  @include ag-s24-reg;
+  color: $navy;
+  @include respond-to-biz(md) {
+    width: 290px;
+  }
+}
+
+.successTitlFix {
+  text-align: center;
+}
+
+.successSubTitlFix {
+  text-align: center;
+  @include respond-to-biz(md) {
+    margin: 0 auto;
+    width: 300px;
+  }
+}
+
+.subTitle {
+  @include ag-s12;
+  color: $grey;
+  opacity: 80%;
+}
+
+.subTitleBiz {
+  @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+  line-height: 17.7px;
+  color: #585562;
+  opacity: 80%;
+}
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.buttons .button {
+  min-width: 415px;
+  max-width: 415px;
+  max-height: 40px;
+  margin-top: 0px;
+  min-height: 40px;
+  @include set-font($size: 14px, $weight: 600, $family: 'Lexend');
+  line-height: 24px;
+  align-self: center;
+}

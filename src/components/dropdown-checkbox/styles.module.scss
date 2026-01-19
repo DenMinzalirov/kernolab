@@ -1,0 +1,16 @@
+@import '/src/styles/index';
+.checkboxButton {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 5.7px;
+  align-items: center;
+  justify-content: center;
+  background-color: $p-deep-space-20;
+}
+.checkboxButtonInner {
+  width: 11.4px;
+  height: 11.4px;
+  border-radius: 2.9px;
+  background-color: $p-deep-space;
+}

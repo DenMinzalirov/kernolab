@@ -1,0 +1,43 @@
+@import '/src/styles';
+
+.container {
+  height: 37px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+
+  &.warning {
+    background-color: $xanova-red-20;
+  }
+
+  &.primary {
+    background-color: $xanova-black; //TODO in the design there is no timer state in primary
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 6px;
+  padding: 0px 12px;
+}
+
+.text {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+  text-wrap: nowrap;
+}
+
+.timer {
+  @include xanova-h16-semiBold;
+  width: 71px;
+
+  &.warning {
+    color: $xanova-red;
+  }
+
+  &.primary {
+    color: $xanova-black; //TODO in the design there is no timer state in primary
+  }
+}

@@ -1,0 +1,342 @@
+@import '/src/styles/index';
+
+// .main {
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100dvw;
+//   min-height: 100dvh;
+//   background-size: cover;
+
+//   @include respond-to(p-mobile) {
+//     min-height: auto;
+//   }
+// }
+
+.rightModule {
+  @include flex(center, center, column);
+  position: relative;
+  width: 51%;
+  background-color: $white;
+
+  @include respond-to(p-tablet) {
+    width: 527px;
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 30px;
+
+    max-height: 699px;
+    justify-content: start;
+    overflow: auto;
+  }
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    min-height: 699px;
+    max-height: min-content;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 30px 20px;
+
+    margin-top: 145px;
+    justify-content: end;
+    overflow: visible;
+  }
+}
+
+.formWrap {
+  @include flex(stretch, center, column);
+  width: 400px;
+  flex-grow: 1;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+.stepControllerWrap {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleWrap {
+  margin-bottom: 50px;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  margin-top: 12px;
+}
+
+.checkBoxWrap {
+  margin-bottom: 4rem;
+}
+
+/* Customize Check Box + the label (the container) */
+.container {
+  @include flex(center, flex-start, row);
+  //@include set-font($mapKey: 0, $weight: 500, $family: 'Inter');
+  @include ag-P16;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 50px;
+  color: $p-deep-space-80;
+  //justify-content: center;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background-color: $p-deep-space-20; // rgba(154, 149, 206, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkmarkError {
+  background-color: $p-system-red-20;
+}
+
+///* On mouse-over, add a grey background color */
+//.container:hover input ~ .checkmark {
+//  background-color: #ccc;
+//}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  //background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  width: 11.5px;
+  height: 11.5px;
+  border-radius: 3px;
+  background-color: $p-deep-space;
+}
+
+.sumsub {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.iconMessageContainer {
+  display: flex;
+  justify-content: center;
+}
+.iconMessageWrap {
+  width: 221px;
+  height: 221px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconMessageCircle {
+  width: 129px;
+  height: 129px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: $white;
+  box-shadow: 0 0 100px 100px rgba(0, 168, 72, 0.13);
+}
+
+.hintPassword {
+  position: absolute;
+  min-width: 110px;
+  background-color: $p-deep-space;
+  top: 0;
+  right: -136px;
+  border-radius: 10px;
+  color: $white;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hintPassword::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -10px;
+  margin-top: -10px;
+  /* половина высоты треугольника */
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid $p-deep-space;
+  /* цвет треугольника */
+}
+
+.hidePasswordHint {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.fadeOut {
+  opacity: 1;
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.heightOut {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  animation: heightOut 1s ease-out forwards;
+}
+
+.errorResponse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  @include ag-P12;
+  color: $p-system-red;
+  text-align: center;
+}
+
+.link {
+  @include ag-P16;
+  cursor: pointer;
+  color: $p-system-green;
+  text-decoration: underline;
+
+  &:hover {
+    color: $p-system-green;
+    cursor: pointer;
+  }
+}
+.linkForgetPassword {
+  @include ag-P12;
+  cursor: pointer;
+  color: $p-system-green;
+  text-decoration: underline;
+
+  &:hover {
+    color: $p-system-green;
+    cursor: pointer;
+  }
+}
+
+.mobilePairsLogo {
+  display: none;
+
+  @include respond-to(p-mobile) {
+    display: block;
+    position: absolute;
+    top: -100px;
+  }
+}
+
+.textError {
+  display: flex;
+  gap: 8px;
+  @include ag-P12;
+  color: $p-system-red;
+  margin-top: 12px;
+}
+
+@keyframes heightOut {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+
+  to {
+    height: 0;
+    width: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+// password info
+.passwordInfoWrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.passwordInfoRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.passwordInfoDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: $p-deep-space-80;
+}
+.passwordInfoText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.colorRed {
+  color: $p-system-red;
+}

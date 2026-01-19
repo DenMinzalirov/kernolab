@@ -1,0 +1,28 @@
+@import '/src/styles/index';
+
+.resendCodeLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.link {
+  @include ag-P12;
+  cursor: pointer;
+  color: $p-system-green;
+  text-decoration: underline;
+
+  &:hover {
+    color: $p-system-green;
+    cursor: pointer;
+  }
+}
+
+.linkDisabled {
+  cursor: default;
+  color: $p-simple-soft-grey;
+
+  &:hover {
+    color: $p-simple-soft-grey;
+    cursor: default;
+  }
+}

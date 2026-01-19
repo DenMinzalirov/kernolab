@@ -1,0 +1,16 @@
+@import '/src/styles/index';
+.checkboxButton {
+  display: flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue-10;
+}
+.checkboxButtonInner {
+  width: 8.57px;
+  height: 8.57px;
+  border-radius: 2.86px;
+  background-color: $blue;
+}

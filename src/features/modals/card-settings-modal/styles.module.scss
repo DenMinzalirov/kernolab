@@ -1,0 +1,237 @@
+@import 'src/styles';
+//TODO DELETE
+.cardSettingsWrap {
+  background-color: $p-bg;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 27px;
+}
+
+.contentWrap {
+  //width: 513px;
+  //margin-left: 62px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  //background-color: red;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.titleCardFees {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  text-align: center;
+  line-height: 170%;
+  margin-top: 16px;
+}
+
+.closeWrap {
+  display: flex;
+  align-self: end;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cardSettingsItemWrap {
+  background-color: $white;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 11px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardSettingsItemTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+  line-height: 24px;
+}
+
+.cardSettingsItemDescription {
+  @include ag-P14;
+  color: $p-deep-space-80;
+  line-height: 145%;
+}
+//
+// .limitContainer {
+//   flex-grow: 1;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+//   width: 100%;
+//   max-width: 440px;
+//   overflow: auto;
+
+//   @include respond-to(p-tablet) {
+//     max-width: 100%;
+//   }
+// }
+// .limitCardWrap {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 12px;
+// }
+// .limitTitle {
+//   @include ag-P16;
+//   color: $p-deep-space-80;
+//   line-height: 19.36px;
+// }
+// .limitCard {
+//   padding: 10px 20px;
+//   border-radius: 10px;
+
+//   background-color: #ffffff;
+//   border: 1px solid var(--Modal-Stroke, #f3f3f4);
+//   box-shadow: 0px 1px 2px -1px #110c2214;
+// }
+// .limitCardOneField {
+//   padding: 19px 20px;
+//   border-radius: 10px;
+
+//   background-color: $white;
+//   border: 1px solid var(--Modal-Stroke, #f3f3f4);
+//   box-shadow: 0px 1px 2px -1px #110c2214;
+// }
+// .limitCardTitle {
+//   @include ag-H14;
+//   color: $p-deep-space;
+//   line-height: 19.36px;
+// }
+// .limitCardSubTitle {
+//   @include ag-P14;
+//   color: $p-deep-space-80;
+//   line-height: 17.7px;
+// }
+
+.containerOff2Fa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+// .feesContainer {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 48px;
+// }
+// .feesContent {
+//   width: 500px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+// }
+// .feesBanner {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: rgba(156, 136, 253, 0.2);
+//   border-radius: 15px;
+//   gap: 10px;
+//   padding: 12px 0;
+// }
+// .feesBannerText {
+//   @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+//   color: #445374;
+//   line-height: 17.7px;
+// }
+// .feesBannerPercentText {
+//   @include set-font($size: 32px, $weight: 700, $family: 'Lexend');
+//   color: #9c88fd;
+//   line-height: 42.5px;
+// }
+
+// .feesItemContainer {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   background-color: $white;
+//   padding: 8px 16px;
+//   border-radius: 10px;
+// }
+
+// .feesItemTitle {
+//   @include ag-H14;
+//   color: $navy;
+// }
+
+// .feesItemTitleWrap {
+//   max-width: 300px;
+// }
+
+// .feesItemDescription {
+//   @include ag-p12;
+//   color: $light-navy;
+// }
+
+// .feesItemValue {
+//   @include ag-p18-bold;
+//   color: $navy;
+// }
+
+// .cursorPointer {
+//   cursor: pointer;
+// }
+
+// new
+// .limitCardRow {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+// }
+// .limitCardTitle {
+//   @include ag-P12;
+//   color: $p-deep-space-80;
+// }
+// .limitCardAmountWrap {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 12px;
+// }
+// .limitCardAmountRow {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .limitCardAmount {
+//   @include ag-H14;
+//   color: $p-deep-space;
+// }
+// .limitCardRemaining {
+//   @include ag-P12;
+//   color: $p-deep-space-80;
+// }
+// .limitCardProgress {
+//   height: 4px;
+//   width: 100%;
+//   background-color: $p-bg;
+//   border-radius: 4px;
+// }
+// .limitCardProgressActive {
+//   background-color: $p-ivory;
+//   height: 100%;
+//   border-radius: 4px;
+//   transition: width 0.3s ease-in-out;
+// }
+// .colorRed {
+//   color: $p-system-red;
+// }

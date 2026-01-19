@@ -1,0 +1,127 @@
+@import '/src/styles';
+
+.container {
+  padding: 20px;
+  border-radius: 10px;
+}
+.containerBg {
+  background-color: rgba(61, 92, 245, 0.05);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoWrap {
+  width: 255px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titleWrap {
+  width: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.title {
+  @include set-font($size: 16px, $weight: 600, $family: 'Inter');
+  line-height: 19.36px;
+  color: #445374;
+}
+
+.clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subTitle {
+  @include set-font($size: 12px, $weight: 600, $family: 'Inter');
+  line-height: 17.7px;
+  color: #445374;
+}
+
+.textDate {
+  @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+  line-height: 14.52px;
+  color: #99a1b2;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.date {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.divider {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid rgba(61, 92, 245, 0.1);
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 66px;
+}
+.detailsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.details {
+  display: flex;
+  gap: 36px;
+}
+.btnAndTimer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.buttons .button {
+  min-width: 125px;
+  max-width: 125px;
+  max-height: 40px;
+  margin-top: 0px;
+  min-height: 40px;
+  @include set-font($size: 14px, $weight: 600, $family: 'Lexend');
+  line-height: 24px;
+}
+
+.buttons .btnBorder {
+  border: 1px solid var(--mainBlue);
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+.rotate0 {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.statusWrap {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}

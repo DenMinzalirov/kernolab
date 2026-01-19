@@ -1,0 +1,369 @@
+@import '/src/styles/index';
+
+.main {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  min-height: 100vh;
+  //background-image: url('assets/images/bg_kaizen.png');
+  background-size: cover;
+}
+
+.rightModule {
+  position: relative;
+  width: 100%;
+  max-width: 542px;
+  min-height: 544px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+
+  padding: 40px;
+  background-color: $light-grey;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  @include respond-to-biz(md) {
+    padding: 40px 20px;
+    gap: 36px;
+  }
+}
+
+.stepControllerWrap {
+  position: relative;
+  width: 100%;
+  max-width: 542px;
+  min-height: 544px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  padding: 80px 51px 60px 51px;
+  background-color: $light-grey;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  @include respond-to-biz(md) {
+    padding: 75px 20px;
+  }
+}
+
+.sumsub {
+  //width: 100%;
+  //margin-top: 100px;
+}
+
+.forgetPasswordModal {
+  position: relative;
+  width: 100%;
+  max-width: 542px;
+  min-height: 544px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 80px 40px 60px 40px;
+  background-color: $light-grey;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  @include respond-to-biz(md) {
+    justify-content: center;
+    gap: 36px;
+    padding: 75px 20px;
+  }
+}
+
+.backHideMd {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  @include ag-s30-medium;
+  color: $dark-navy;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+    text-align: center;
+  }
+}
+
+.description {
+  @include ag-s14-0;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.signUpDescription {
+  @include ag-s14-0;
+  color: $dark-grey;
+  text-align: center;
+  padding: 0 45px;
+}
+
+.inputBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+.inputPasswordWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.iconEye {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: calc(50% + 0.15rem);
+  right: 1.5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.inputItemLabel {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.inputItemForm {
+  @include set-font($mapKey: 0, $weight: 400, $family: 'Inter');
+  background-color: #ffffff; //var(--amountInputBackground);
+  padding: 20px;
+  border-radius: 0.625rem;
+  border: 0;
+  //margin-top: 0.3rem;
+  flex-grow: 1;
+  outline: none;
+  color: $text-color-2;
+
+  &:focus-visible {
+    border: 1px solid $link-color;
+  }
+
+  &:focus-within {
+    outline: 0;
+    border: 1px solid $link-color;
+  }
+
+  &::placeholder {
+    @include ag-s14-0;
+    color: $navy;
+    opacity: 0.3;
+  }
+}
+
+.forgotPassword {
+  @include ag-s12;
+  color: $navy;
+  transition: all 0.3s;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btnDisable {
+  opacity: 0.5;
+}
+
+.forgotBtnWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+
+  @include respond-to-biz(md) {
+    justify-content: end;
+    flex-grow: 1;
+  }
+}
+
+.seccses {
+  @include flex(center, center, column);
+  position: relative;
+  max-width: 542px;
+  width: 100%;
+  background-color: $light-grey;
+  gap: 36px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  min-height: 544px;
+  padding: 0 20px;
+}
+
+.seccsesContent {
+  @include flex(center, center, column);
+  gap: 48px;
+  margin-top: 20px;
+
+  @include respond-to-biz(md) {
+    margin-top: 0;
+  }
+}
+
+.seccsesTitleWrap {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.seccsesTitle {
+  @include ag-s30-medium;
+  color: $dark-navy;
+  text-align: center;
+}
+.seccsesDescription {
+  @include ag-s12-medium;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.gap12 {
+  gap: 12px;
+}
+
+/* Customize Check Box + the label (the container) */
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkBoxContainer input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  background-color: rgba(154, 149, 206, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 11px;
+}
+
+.checkmark:after {
+  content: '';
+  display: none;
+}
+
+.checkBoxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkBoxContainer .checkmark:after {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background-color: $link-color;
+}
+
+.checkBoxText {
+  @include ag-s14-0;
+  color: $dark-grey;
+}
+
+.checkBoxLink {
+  @include ag-s14-0;
+  color: $navy;
+}
+
+.text {
+  @include ag-s14-0;
+  color: $dark-grey;
+}
+
+.linkText {
+  @include ag-s14-0;
+  color: $navy;
+  cursor: pointer;
+}
+
+.checkBoxError {
+  outline: 1px solid $s-red;
+}
+
+.textError {
+  color: $s-red;
+}
+
+.hintText {
+  @include ag-s12-medium;
+  line-height: 24.72px;
+  color: $dark-grey;
+  text-wrap: nowrap;
+  position: relative;
+  padding-left: 12px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: $dark-grey;
+    border-radius: 50%;
+  }
+
+  &.colorGreen::before {
+    background-color: $s-green;
+  }
+
+  &.colorRed::before {
+    background-color: $s-red;
+  }
+
+  &.colorDarkGrey::before {
+    background-color: $dark-grey;
+  }
+}
+
+.colorGreen {
+  color: $s-green;
+}
+
+.colorRed {
+  color: $s-red;
+}
+
+.colorDarkGrey {
+  color: $dark-grey;
+}

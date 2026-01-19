@@ -1,0 +1,22 @@
+@import '/src/styles';
+
+.copiedWrap {
+  //@include set-font($size: 2.125rem, $weight: 700, $family: 'Lexend');
+  background-color: #262832;
+  color: #ffffff;
+  height: 24px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: 3px 11px;
+  justify-content: center;
+  width: 136px;
+  margin: 36px auto;
+}
+
+@media (max-width: 767px) {
+  .copiedWrap {
+    padding: 0;
+    margin: 0 auto;
+  }
+}

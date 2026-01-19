@@ -1,0 +1,98 @@
+@import '/src/styles/index';
+
+.dropDownSelectedTextWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 16px;
+
+  @include ag-H14;
+  color: $p-deep-space;
+
+  @include respond-to(p-mobile) {
+    margin-left: 6px;
+  }
+}
+
+.networksDropdownMain {
+  position: relative;
+  height: 62px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid $p-ivory;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: $white;
+  box-shadow: 0px 1px 2px -1px #110c2214;
+
+  &.networksDropdownMainActive {
+    border: 1px solid $p-simple-soft-grey;
+  }
+}
+
+.networksDropdownTriangle {
+  transform: rotate(-90deg);
+  width: 17px;
+  margin-right: 12px;
+}
+
+.networksDropdownContainer {
+  position: absolute;
+  background-color: $white;
+  width: 434px;
+  border-radius: 10px;
+  border: 1px solid $p-simple-soft-grey;
+  margin-top: 8px;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 369px;
+  overflow-y: auto;
+  box-shadow: 0px 20px 30px 0px #a3a3a333;
+}
+
+.networksDropdownContainerTrade {
+  width: calc(100% - 16px);
+  max-height: 306px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.networksDropdownItem {
+  height: 62px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding: 10px 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: $white;
+  @include ag-H16;
+  color: $p-deep-space;
+
+  &:hover {
+    background-color: $p-bg;
+  }
+}
+
+.assetIcon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+
+  @include respond-to(p-mobile) {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}
+
+.dropdownItemAssetIcon {
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}

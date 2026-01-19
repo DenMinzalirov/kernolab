@@ -1,0 +1,75 @@
+@import '/src/styles';
+
+.selectContainer {
+  position: relative;
+  width: 100%;
+}
+
+.selectDisplay {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 20px;
+  border: 1px solid $lg-white-100-dark-grey-20;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: $white;
+
+  @include ag-s14-0;
+  color: $navy;
+
+  &.open {
+    border-color: $blue;
+  }
+}
+
+.assetInputIcon {
+  width: 14px;
+  height: 14px;
+  transform: rotate(-90deg);
+}
+.iconTransform {
+  transform: rotate(90deg);
+}
+
+.placeholderText {
+  @include ag-s14-0;
+  opacity: 30%;
+}
+
+//list row
+.listWrap {
+  position: absolute;
+  width: 100%;
+  max-height: 180px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid $lg-white-100-dark-grey-20;
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 0px 16px 13.9px 0px #6d6d6d0d;
+  box-shadow: 0px 4px 11.9px 0px #6d6d6d1f;
+  z-index: 1;
+}
+.listRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-grey;
+    border-radius: 10px;
+  }
+}
+.listRowTitleWrap {
+  display: flex;
+  gap: 12px;
+}
+
+.listRowSelectIcon {
+  width: 20px;
+  height: 20px;
+}

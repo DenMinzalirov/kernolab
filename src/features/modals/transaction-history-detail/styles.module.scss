@@ -1,0 +1,143 @@
+@import '/src/styles/index';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 70px 60px;
+  height: 80vh;
+  max-height: 515px;
+  width: 80vw;
+  max-width: 535px;
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: 15px;
+
+  @include respond-to(p-mobile) {
+    max-width: 100%;
+    min-height: 470px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 38px 20px 60px;
+    gap: 24px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 70px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.headerTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.headerTitle {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+.headerSubTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.flexGrow1 {
+  flex-grow: 1;
+}
+.icon {
+  height: 53px;
+  width: 53px;
+}
+.amountText {
+  @include ag-H18;
+  color: $p-deep-space;
+  margin: 24px 0;
+}
+.greenColor {
+  color: $p-system-green;
+}
+
+.pendingStyle {
+  opacity: 0.5;
+}
+.rowWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rowLoading {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rowText {
+  @include ag-H12;
+  color: $p-deep-space;
+}
+.rowSubText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  text-align: right;
+}
+.listGreenColor {
+  color: $p-system-green;
+}
+.iconWrap {
+  display: flex;
+  align-items: center;
+  width: 15px;
+  cursor: pointer;
+}
+//status
+.statusBlockWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 39px;
+}
+.statusBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.statusIndicatorWrap {
+  display: flex;
+  gap: 8px;
+  width: 170px;
+}
+.statusIndicator {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: $p-system-green;
+}
+.statusBlockText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  text-align: end;
+}
+.green10 {
+  background-color: $p-system-green-10;
+}
+.green {
+  background-color: $p-system-green;
+}
+.red {
+  background-color: $p-system-red;
+}

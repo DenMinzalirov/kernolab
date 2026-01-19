@@ -1,0 +1,43 @@
+@import '/src/styles';
+
+.modalMobileContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f6f6;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+}
+
+.headerTitle {
+  display: flex;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #f5f6f6;
+  min-height: 32px;
+  padding: 64px 16px 10px;
+  justify-content: space-between;
+  align-items: center;
+  @include set-font($size: 24px, $weight: 700, $family: 'Lexend');
+  color: #262832;
+  z-index: 1;
+}
+
+.contentContainerWrap {
+  width: 100dvw;
+  flex-grow: 1;
+  display: flex;
+}
+
+.contentContainer {
+  background-color: #ffffff;
+  flex-grow: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin: auto 15px;
+  height: 75.65vh;
+  max-height: 845px;
+  overflow-y: auto;
+}

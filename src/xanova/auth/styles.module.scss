@@ -1,0 +1,170 @@
+@import '/src/styles/index';
+
+.rightModule {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 544px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.kycContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.kycContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 50px;
+}
+
+.sumsub {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.stepControllerWrap {
+  position: relative;
+  width: 100%;
+  max-width: 542px;
+  min-height: 544px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  box-sizing: border-box;
+}
+
+.forgetPasswordModal {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 544px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  box-sizing: border-box;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(tablet) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.description {
+  @include xanova-p18-regular;
+  color: $xanova-black-60;
+  text-align: center;
+
+  @include respond-to-xanova(tablet) {
+    @include xanova-p16-regular;
+  }
+}
+
+.description2 {
+  max-width: 409px;
+
+  @include respond-to-xanova(mobile) {
+    max-width: 309px;
+  }
+}
+
+.inputBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.inputItemLabel {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+}
+
+.forgotPassword {
+  @include xanova-h14-medium;
+  color: $xanova-black;
+  transition: all 0.2s;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: $xanova-black-60;
+  }
+}
+
+.forgotBtnWrap {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.text {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+}
+
+.linkText {
+  @include xanova-p14-regular;
+  font-weight: 500;
+  color: $xanova-black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.textError {
+  color: $xanova-red;
+}
+
+.hintsWrap {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.hintsIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.hintText {
+  @include xanova-p12-regular;
+  color: $xanova-black-50;
+}
+
+.spinnerIcon {
+  margin-bottom: 50px;
+}

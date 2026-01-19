@@ -1,0 +1,26 @@
+@import '/src/styles';
+
+.bgGradient {
+  min-height: 100vh;
+  background: $xanova-bg-dash-gradient;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @include respond-to-xanova(mobile) {
+    background: $xanova-mobile-dash-bg-gradient;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+
+  @include respond-to-xanova(tablet) {
+  }
+}

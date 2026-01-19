@@ -1,0 +1,26 @@
+@import '/src/styles/index';
+
+.countryCode {
+  @include xanova-p16-regular;
+  color: $xanova-black-50;
+}
+
+.countryCodeActive {
+  @include xanova-p16-regular;
+  color: $xanova-black;
+}
+
+.fileHint {
+  @include xanova-p16-regular;
+  color: $xanova-black-50;
+}
+
+.fileTextMain {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+}
+
+.fileTextDesc {
+  @include xanova-p14-regular;
+  color: $xanova-black-50;
+}

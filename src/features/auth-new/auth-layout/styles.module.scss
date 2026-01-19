@@ -1,0 +1,31 @@
+@import '/src/styles/index';
+
+.main {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 100dvw;
+  min-height: 100dvh;
+  background-size: cover;
+
+  @include respond-to(p-tablet) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include respond-to(p-mobile) {
+    align-items: flex-end;
+    // min-height: auto;
+  }
+}
+
+.logoWrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
+
+  @include respond-to(p-tablet) {
+    display: none;
+  }
+}

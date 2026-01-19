@@ -1,0 +1,162 @@
+@import '/src/styles';
+
+.mainNavPanel {
+  min-width: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $p-bg;
+  padding: 54px 40px 30px 40px;
+  box-sizing: border-box;
+
+  @include respond-to(p-desktop-s) {
+    padding: 30px 20px;
+    min-width: 240px;
+  }
+}
+
+.navLinksContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.bbLogo {
+  max-width: 156px;
+  margin-bottom: 46px;
+  object-fit: cover;
+
+  @include respond-to(p-desktop-s) {
+    max-width: 118px;
+  }
+}
+
+.mainNavPanelMobile {
+  background-color: $p-bg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 71px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.navBurgerBtn {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.64px;
+}
+
+.navBurgerLine {
+  width: 20px;
+  height: 2.5px;
+  border-radius: 23px;
+  background-color: $p-deep-space;
+}
+
+.bbLogoMobile {
+  object-fit: cover;
+  width: 118px;
+  height: 31px;
+}
+
+.mobileNavPanelContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.mobileNavPanel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 100%;
+  background-color: $p-bg;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  .open & {
+    transform: translateX(0);
+  }
+}
+
+.mobileNavPanelHader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.mobileNavPanelContent {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+}
+
+.mobileNavPanelLinks {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+// closeButton
+.closeButton {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+}
+
+.closeButton::before,
+.closeButton::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2.2px;
+  background-color: $navy;
+  transform-origin: center;
+  border-radius: 10px;
+}
+
+.closeButton::before {
+  transform: rotate(45deg);
+}
+
+.closeButton::after {
+  transform: rotate(-45deg);
+}
+
+.closeButton:hover::before,
+.closeButton:hover::after {
+  opacity: 0.8;
+}

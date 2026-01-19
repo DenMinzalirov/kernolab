@@ -1,0 +1,245 @@
+@import '/src/styles/index';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  gap: 48px;
+  max-width: 440px;
+
+  @include respond-to(p-mobile) {
+    padding: 0 20px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 16px;
+  max-width: 510px;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+  white-space: nowrap;
+
+  @include respond-to(p-mobile) {
+    white-space: normal;
+  }
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  text-align: center;
+
+  max-width: 400px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  flex-grow: 1;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 15px;
+  background-color: $p-bg;
+  padding: 11.5px 20px;
+  box-sizing: border-box;
+  height: 97px;
+}
+
+.infoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.infoText {
+  @include ag-P12;
+  color: $p-deep-space;
+}
+
+.infoSubText {
+  @include ag-P12;
+  color: $p-deep-space;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+//-----
+.checkBoxWrap {
+  height: 62px;
+  box-sizing: border-box;
+  background-color: $white;
+  border: 1px solid $p-deep-space-10;
+  border-radius: 10px;
+  padding: 19px 20px;
+  box-shadow: 0px 1px 2px -1px rgba(17, 12, 34, 0.08);
+}
+/* Customize Check Box + the label (the container) */
+.containerCheckBox {
+  @include flex(center, flex-start, row);
+  @include ag-H14;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: $p-deep-space;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5.71px;
+  background-color: $p-deep-space-20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckBox .checkmark:after {
+  width: 11px;
+  height: 11px;
+  border-radius: 2.86px;
+  background-color: $p-deep-space;
+}
+
+.boxShadow {
+  box-shadow: 0px 1px 2px -1px rgba(17, 12, 34, 0.08);
+}
+
+.inputLabel {
+  @include ag-P12;
+  color: $p-deep-space;
+
+  margin-bottom: 8px;
+}
+
+.dropDownWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.countryItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  padding-left: 20px;
+}
+
+.countryItemFlag {
+  font-size: 24px;
+}
+
+.countryItemName {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.walletItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.walletItemIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.walletItemName {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.itemPlaceholder {
+  @include ag-P14;
+  color: $p-deep-space;
+  opacity: 0.3;
+}
+
+.link {
+  cursor: pointer;
+  color: $p-system-green;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.spacer {
+  flex-grow: 1;
+  min-height: 62px;
+}
+
+.mainFix {
+  margin-bottom: 90px;
+}
+
+.truncatedAddress {
+  display: flex;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @media screen and (max-width: 500px) {
+    max-width: 200px;
+  }
+}
+.truncatedAddressStart {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}

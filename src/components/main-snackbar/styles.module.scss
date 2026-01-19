@@ -1,0 +1,46 @@
+@import '/src/styles/index';
+
+.mainSnackBarWrap {
+  position: absolute;
+  width: 100%;
+  z-index: 500;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.fadeIn {
+  top: -200px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  top: 0;
+  opacity: 1;
+  animation: fadeOut 1s ease-in forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+
+  to {
+    top: -200px;
+    opacity: 0;
+  }
+}

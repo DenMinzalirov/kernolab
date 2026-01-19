@@ -1,0 +1,290 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  padding: 24px 0;
+
+  @include respond-to-biz(md) {
+    align-items: flex-start;
+    background-color: $light-grey;
+    padding: 17.5px 15px;
+  }
+}
+
+.contentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 70px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 840px;
+
+  @include respond-to-biz(lg) {
+    width: 570px;
+    padding: 70px 50px;
+  }
+  @include respond-to-biz(md) {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    min-height: 670px;
+    height: 100%;
+  }
+}
+
+.containerWrapFixForInput {
+  padding: 100px;
+
+  @include respond-to-biz(lg) {
+    padding: 70px 50px;
+  }
+
+  @include respond-to-biz(md) {
+    padding: 0;
+  }
+}
+
+.containerWrapFixForSummary {
+  padding: 103px 152px;
+
+  @include respond-to-biz(lg) {
+    padding: 70px 50px;
+  }
+
+  @include respond-to-biz(md) {
+    padding: 0;
+  }
+}
+
+.title {
+  margin-bottom: 12px;
+  @include ag-s30-medium;
+  color: $navy;
+  text-align: center;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+  }
+}
+
+.description {
+  @include ag-s12-medium;
+  color: $dark-grey;
+  text-align: start;
+}
+
+.label {
+  @include ag-s12;
+  color: $dark-grey;
+
+  margin-bottom: 12px;
+}
+
+.dropDownPlaceholderText {
+  padding-left: 20px;
+  opacity: 0.3;
+  color: $navy;
+  @include ag-s14-0;
+}
+
+.dropDownCleareWrap {
+  height: 290px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $dark-grey;
+  @include ag-s14-0;
+}
+
+.itemWrap {
+  width: 100%;
+  padding: 10px;
+  @include ag-s14-medium;
+  color: $navy;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.emptyWhiteListWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.emptyWhiteListTitle {
+  @include ag-p14-regular;
+  color: $dark-grey;
+}
+
+.whiteListItem {
+  display: flex;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-grey;
+  }
+}
+
+.titleWhiteListItem {
+  @include ag-s16-reg;
+  color: $navy;
+}
+
+.descriptionWhiteListItem {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.addWhitelist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 10;
+  margin-top: 66px;
+  @include ag-s14-0;
+  color: $dark-grey;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.addressBookIconWrap {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--amountInputBackgroundNew);
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 15px;
+  cursor: pointer;
+  height: 95%;
+  align-items: center;
+}
+
+.whiteListWrap {
+  position: absolute;
+  background-color: var(--amountInputBackgroundNew);
+  border-radius: 20px;
+  top: 100%;
+  z-index: 1;
+  overflow: auto;
+  width: 100%;
+  margin-top: 9px;
+  padding: 10px;
+  height: 307px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputAsset {
+  @include ag-s14-semiB;
+  color: $navy;
+}
+
+.inputMax {
+  @include ag-s14-semiB;
+  color: $blue;
+}
+
+.confirmDataWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.confirmData {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.confirmTitle {
+  @include ag-s14-0;
+  color: $navy;
+}
+
+.confirmDescriptionWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmDescription {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.confirmValue {
+  @include ag-s12-semiB;
+  color: $navy;
+}
+
+.confirmAsset {
+  @include ag-s16-semiB;
+  color: $navy;
+}
+
+.adaptiveHeight {
+  min-height: 48px;
+
+  @include respond-to-biz(md) {
+    min-height: 24px;
+  }
+}
+
+.colorRed {
+  color: $s-red;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stepInputLabel {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.transactionFeesWrap {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paddingRight50 {
+  padding-right: 50px;
+}
+
+.buttonsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 66px;
+}
+
+.hideMd {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,171 @@
+@import '/src/styles';
+
+.launchpadInfoWrap {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+
+  @include respond-to(p-mobile) {
+    flex-direction: column-reverse;
+  }
+}
+
+.launchpadInfo {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 90px 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+
+  @include respond-to(p-desktop-s) {
+    padding: 24px;
+    gap: 36px;
+  }
+
+  @include respond-to(p-tablet) {
+    gap: 24px;
+  }
+}
+
+.launchpadInfoHeaderWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.launchpadInfoHeader {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+
+  @include respond-to(p-tablet) {
+    gap: 24px;
+  }
+}
+
+.launchpadInfoIcon {
+  width: 124px;
+  height: 124px;
+  border-radius: 5px;
+
+  @include respond-to(p-desktop-s) {
+    width: 90px;
+    height: 90px;
+  }
+  @include respond-to(p-tablet) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @include respond-to(p-mobile) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.titleText {
+  @include ag-H34;
+  color: $p-deep-space;
+
+  @include respond-to(p-desktop-s) {
+    @include ag-H24;
+  }
+}
+
+.launchpadItemBtn {
+  @include ag-H12;
+  background-color: $p-ivory;
+  color: $p-deep-space;
+  padding: 3px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 23px;
+  box-sizing: border-box;
+}
+
+.activeText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.infoBlock {
+  background-color: $p-bg;
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.infoBlockTitle {
+  @include ag-P10;
+  color: $p-deep-space-80;
+}
+
+.infoBlockAmount {
+  @include ag-H16;
+  color: $p-deep-space;
+  display: flex;
+  align-items: center;
+}
+
+.descriptionCurrency {
+  @include ag-P10;
+  color: $p-deep-space-80;
+  margin-left: 5px;
+}
+
+.actionsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  padding: 24px;
+  background-color: $white;
+  border-radius: 10px;
+  min-width: 370px;
+  box-sizing: border-box;
+  height: max-content;
+
+  @include respond-to(p-mobile) {
+    min-width: auto;
+  }
+}
+
+.btnTitle {
+  @include ag-H14;
+  color: $white;
+}
+
+.divider {
+  border-bottom: 1px solid $p-deep-space-10;
+}
+
+.headerTitle {
+  height: 110px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.headerLine {
+  min-height: 28px;
+}
+
+.finalCall {
+  @include ag-H12;
+  color: $p-system-red;
+  background-color: $p-system-red-10;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+.hideMobile {
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}

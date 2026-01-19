@@ -1,0 +1,53 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px 20px;
+  gap: 65px;
+  min-width: 540px;
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: 15px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    min-width: auto;
+    padding: 70px 20px 60px 20px;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  max-width: 421px;
+}
+
+.isSuccessIconWrap {
+  height: 159px;
+  margin-bottom: 79px;
+  margin-top: 160px;
+}
+
+.isLoadingWrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnWrap {
+  width: 100%;
+}

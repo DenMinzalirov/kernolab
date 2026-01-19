@@ -1,0 +1,56 @@
+@import '/src/styles';
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: $white;
+  height: 100%;
+  will-change: transform;
+
+  &:hover {
+    background-color: $p-bg;
+  }
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 84px;
+  background-color: $p-system-red;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+
+  @include ag-H14;
+  color: $white;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

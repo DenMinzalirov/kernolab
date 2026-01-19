@@ -1,0 +1,261 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 2700px;
+  background-color: $p-bg;
+}
+
+.headerWrap {
+  margin: 20px 20px 10px 20px;
+
+  @include respond-to(p-mobile) {
+    margin: 12px 12px 8px;
+  }
+}
+
+// .header {
+//   margin: 43px 25px 10px 25px;
+// }
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 10px;
+  //margin: 20px;
+  padding: 100px 20px 20px;
+  background-color: $white;
+}
+.content {
+  width: 100%;
+  max-width: 440px;
+}
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+
+  margin-bottom: 36px;
+}
+
+.dropdownWrap {
+  position: relative;
+}
+.dropdownLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-bottom: 8px;
+}
+.dropdownPlaceholder {
+  @include ag-P14;
+  color: $p-deep-space;
+  opacity: 0.3;
+  padding-left: 20px;
+}
+.dropdownItemRow {
+  display: flex;
+  align-items: center;
+  padding: 12.5px 13px;
+  gap: 10px;
+}
+.dropdownItemRowIcon {
+  width: 40px;
+  height: 40px;
+}
+.dropdownItemRowTitle {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.spinnerWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+// .contentWrap {
+//   display: flex;
+//   gap: 20px;
+//   padding: 20px;
+// }
+
+// .contentLeft {
+//   flex-grow: 1;
+//   background-color: $white;
+//   border-radius: 10px;
+//   overflow-y: auto;
+// }
+// .contentRight {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 24px;
+//   // max-height: heightControl || '100%';
+// }
+
+// .txnHistorySection {
+//   display: flex;
+//   flex-grow: 1;
+//   background-color: $white;
+//   border-radius: 10px;
+//   overflow-y: auto;
+// }
+
+// .balanceInfoBlockWrap {
+//   flex-shrink: 0;
+// }
+
+// .balanceInfoBlock {
+//   background-color: $white;
+//   padding: 40px;
+//   border-radius: 10px;
+// }
+
+// .totalBalanceTitle {
+//   @include ag-H14;
+//   color: $p-deep-space;
+//   margin-bottom: 20px;
+// }
+
+// .totalBalanceAmount {
+//   @include ag-H34;
+//   margin-bottom: 8px;
+// }
+
+// .totalBalanceSubTitle {
+//   @include ag-H16;
+//   color: $p-deep-space;
+// }
+
+// .divider {
+//   border-bottom: 1px solid $p-simple-soft-grey-20;
+//   margin: 36px 0;
+// }
+
+// .buttonGroup {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 12px;
+// }
+
+// .primaryActionsGroup {
+//   display: flex;
+//   gap: 12px;
+// }
+
+// // PriceChartComponent
+// .chartBlockWrap {
+//   padding: 40px;
+//   background-color: $white;
+//   border-radius: 10px;
+// }
+
+// .assetInfoWrap {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .graphIcon {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .assetImg {
+//   width: 64px;
+//   height: 64px;
+//   border-radius: 5px;
+//   margin-right: 22px;
+// }
+
+// .assetNameWrap {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+// }
+
+// .assetName {
+//   @include ag-H24;
+//   color: $p-deep-space;
+//   line-height: 33.6px;
+// }
+
+// .assetId {
+//   @include ag-H20;
+//   color: $p-deep-space;
+//   line-height: 28px;
+// }
+
+// .assetChangeWrap {
+//   align-items: flex-end;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: 1px;
+// }
+
+// .assetChange {
+//   @include ag-H20;
+// }
+
+// .priceChartWrap {
+//   height: 515px;
+//   margin-top: 110px;
+//   margin-bottom: 57px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .timeLine {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 37px;
+//   background-color: $p-ivory;
+//   color: $p-deep-space;
+//   @include ag-H12;
+//   border-radius: 5px;
+// }
+
+// .timeLineItem {
+//   height: 33px;
+//   width: 100%;
+//   border-radius: 6px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: $p-deep-space-10;
+//   }
+// }
+
+// .timeLineItemActive {
+//   background-color: $p-deep-space;
+//   color: $white;
+
+//   &:hover {
+//     background-color: $p-deep-space;
+//     color: $white;
+//   }
+// }
+
+// .graphText {
+//   display: flex;
+//   justify-content: center;
+//   margin: 55px 85px 0px 85px;
+//   @include ag-P14;
+//   text-align: center;
+//   color: $p-deep-space-80;
+// }
+
+// .redColor {
+//   color: $p-system-red;
+// }
+
+// .greenColor {
+//   color: $p-system-green;
+// }

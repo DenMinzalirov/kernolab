@@ -1,0 +1,48 @@
+@import '/src/styles/index';
+
+.title {
+  @include ag-s24-reg;
+  color: $navy;
+  margin-bottom: 12px;
+}
+
+.containerModal {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 60px 30px 60px;
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: 20px;
+  overflow: auto;
+  position: relative;
+
+  border-radius: 20px;
+  background-color: $bg;
+  border: 1px solid $modal-stroke;
+
+  @include respond-to-biz(md) {
+    width: 345px;
+    padding: 30px 20px 20px 20px;
+
+    border: none;
+    background-color: $white;
+  }
+}
+
+.description {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.spacerLarge {
+  height: 50px;
+
+  @include respond-to-biz(md) {
+    height: 36px;
+  }
+}
+
+.buttonSpacer {
+  height: 8px;
+}

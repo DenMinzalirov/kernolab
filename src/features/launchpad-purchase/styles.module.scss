@@ -1,0 +1,209 @@
+@import '/src/styles';
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 24px;
+  border-radius: 10px;
+  padding: 32px 24px;
+  background-color: $white;
+
+  @include respond-to(p-mobile) {
+    padding: 50px 20px;
+  }
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+}
+
+.inputLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-bottom: 8px;
+}
+
+.equivalentText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  line-height: 147%;
+}
+
+.residual {
+  @include ag-P10;
+  color: $p-deep-space-80;
+  line-height: 147%;
+}
+
+.amount2 {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.backBtn {
+  @include ag-H14;
+  color: $p-deep-space;
+  position: absolute;
+  top: -62px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+//
+.contentForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  width: 100%;
+  gap: 36px;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.infoBlockWrap {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.infoBlockHintWrap {
+  position: relative;
+  cursor: pointer;
+  min-height: 22px;
+}
+
+.infoBlockRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+//summary
+.contentSummary {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  width: 100%;
+  gap: 36px;
+}
+
+.summaryHeaderWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.summaryText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.summarySubText {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.summaryBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.summaryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.summaryBlockRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.summaryBtnsWrap {
+  display: flex;
+  gap: 16px;
+}
+
+.btnBack {
+  width: 100%;
+  max-width: 136px;
+}
+
+.btnBackIcon {
+  height: 16px;
+  width: 16px;
+  margin-right: 6px;
+}
+
+//error
+.errorBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include ag-P12;
+  color: $p-system-red;
+  margin-top: 12px;
+}
+
+.errorIcon {
+  width: 14px;
+  height: 14px;
+}
+
+//other
+.tierText {
+  color: $p-system-green;
+}
+
+.divider {
+  border-bottom: 1px solid $p-ivory;
+}
+
+.colorRed {
+  color: $p-system-red;
+}
+
+.autoHeight100 {
+  max-height: 100px;
+  min-height: 50px;
+  height: 100%;
+}
+
+.height10 {
+  height: 10px;
+}
+
+.height20 {
+  height: 20px;
+}
+
+.maxWidth402 {
+  max-width: 402px;
+}

@@ -1,0 +1,11 @@
+@import 'src/styles';
+
+.btnWrap {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+
+  @include respond-to(p-mobile) {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,219 @@
+@import '/src/styles';
+
+.container {
+  box-sizing: border-box;
+  width: 440px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sectionAmount {
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border-radius: 10px;
+  background-color: rgba(61, 92, 245, 0.1);
+}
+
+.amountText {
+  @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+  line-height: 24px;
+  color: #1f1d3a;
+  opacity: 50%;
+  line-height: 17.7px;
+}
+
+.amountSubText {
+  @include set-font($size: 24px, $weight: 600, $family: 'Lexend');
+  line-height: 33.6px;
+  color: #1f1d3a;
+}
+.sectionBtnSwitch {
+  display: flex;
+  gap: 8px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: rgba(61, 92, 245, 0.1);
+}
+
+.btnSwitch {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 8px;
+  @include set-font($size: 12px, $weight: 600, $family: 'Inter');
+  line-height: 16px;
+  text-align: center;
+  color: #858eaa;
+}
+
+.btnSwitchColorActive {
+  background-color: #ffffff;
+  color: #445374;
+}
+.sectionBalance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(61, 92, 245, 0.1);
+  border-radius: 10px;
+}
+.balanceWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.balanceText {
+  @include set-font($size: 14px, $weight: 600, $family: 'Inter');
+  line-height: 16.94px;
+  color: #1f1d3a;
+}
+.redColor {
+  color: #ff3b30;
+}
+
+.sectionQrCode {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 10px;
+  align-items: center;
+  background-color: rgba(61, 92, 245, 0.1);
+}
+.qrCode {
+  display: flex;
+  width: 156px;
+  height: 166px;
+  // background-color: rgba(61, 92, 245, 0.1);
+}
+.qrCodeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.network {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.qrCodeContentLabel {
+  @include set-font($size: 12px, $weight: 600, $family: 'Inter');
+  line-height: 16px;
+  color: #445374;
+}
+.networkBtnGrup {
+  display: flex;
+  gap: 12px;
+}
+.copyString {
+  display: flex;
+}
+
+.attention {
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+  border-radius: 10px;
+  background-color: rgba(255, 149, 0, 0.1);
+}
+
+.attentionText {
+  @include set-font($size: 12px, $weight: 400, $family: 'Inter');
+  line-height: 19.2px;
+  color: #ff9500;
+}
+
+.title {
+  @include set-font($size: 30px, $weight: 700, $family: 'Lexend');
+  line-height: 37.5px;
+  color: #1f1d3a;
+  text-align: center;
+}
+
+.subTitle {
+  @include set-font($size: 14px, $weight: 400, $family: 'Inter');
+  line-height: 24px;
+  color: #585562;
+  opacity: 80%;
+  text-align: center;
+  padding: 0 22px;
+}
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons .button {
+  min-width: 440px;
+  max-width: 440px;
+  max-height: 50px;
+  margin-top: 0px;
+  min-height: 50px;
+  @include set-font($size: 16px, $weight: 500, $family: 'Lexend');
+  line-height: 24px;
+  align-self: center;
+}
+
+.containerFix {
+  padding: 60px 60px 30px 60px;
+}
+
+.stepSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.stepSuccessTitleWrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.stepSuccessTitle {
+  @include set-font($size: 24px, $weight: 600, $family: 'Lexend');
+  color: #1f1d3a;
+  line-height: 33.6px;
+  text-align: center;
+}
+.stepSuccessSubTitle {
+  @include set-font($size: 14px, $weight: 400, $family: 'Inter');
+  color: #585562;
+  opacity: 0.8;
+  line-height: 24px;
+  text-align: center;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}

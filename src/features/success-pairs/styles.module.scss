@@ -1,0 +1,16 @@
+@import '/src/styles';
+
+.contentWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border-radius: 10px;
+  padding: 100px 40px;
+  background-color: $white;
+
+  @include respond-to(p-mobile) {
+    margin: 0;
+    padding: 50px 20px;
+  }
+}

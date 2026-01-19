@@ -1,0 +1,45 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 61px;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50px;
+}
+.text {
+  @include set-font($size: 12px, $weight: 700, $family: 'Inter');
+  line-height: 14.52px;
+}
+.success {
+  color: #34c759;
+}
+.error {
+  color: #ff3b30;
+}
+.warning {
+  color: #ff9500;
+}
+.dotSuccessBg {
+  background-color: #34c759;
+}
+.dotErrorBg {
+  background-color: #ff3b30;
+}
+.dotWarningBg {
+  background-color: #ff9500;
+}
+.successBg10 {
+  background-color: rgba(52, 199, 89, 0.1);
+}
+.errorBg10 {
+  background-color: rgba(255, 59, 48, 0.1);
+}
+.warningBg10 {
+  background-color: rgba(255, 149, 0, 0.1);
+}

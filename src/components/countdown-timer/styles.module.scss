@@ -1,0 +1,43 @@
+@import '/src/styles';
+
+.container {
+  width: 189px;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+
+  &.warning {
+    background-color: $p-system-red-10;
+  }
+
+  &.primary {
+    background-color: $p-deep-space-10;
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 12px;
+}
+
+.text {
+  @include ag-P14;
+  color: $p-deep-space;
+}
+
+.timer {
+  @include set-font($size: 0.875rem, $weight: 600, $family: 'Inter');
+  @include ag-H14;
+  width: 60px;
+  &.warning {
+    color: $p-system-red;
+  }
+
+  &.primary {
+    color: $p-deep-space;
+  }
+}

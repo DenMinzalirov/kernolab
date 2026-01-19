@@ -1,0 +1,630 @@
+.btn-xanova {
+  @include xanova-p16-medium;
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  transition: all 0.2s;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: $xanova-white;
+  border: none;
+
+  &.black {
+    background: $xanova-black;
+    &:hover {
+      background: $xanova-black;
+    }
+  }
+
+  &.gold {
+    background: $xanova-gold;
+    color: $xanova-black;
+    &:hover {
+      background: #f3c738;
+    }
+  }
+
+  &.grey {
+    background: #f9f9f6cc;
+    color: $xanova-black;
+    border: 1px solid $xanova-black-10;
+    &:hover {
+      background: $xanova-black-10;
+    }
+  }
+
+  &.red {
+    background: $xanova-red;
+    &:hover {
+      background: #e5524f;
+    }
+
+    &.text-only {
+      background: transparent;
+      color: $xanova-red;
+      color: var(--Xanova-Red);
+      padding: 0;
+      height: auto;
+      min-height: auto;
+      width: fit-content;
+      align-self: center;
+
+      &:hover {
+        color: #e5524f;
+      }
+    }
+  }
+
+  &.big {
+    height: 50px;
+    min-height: 50px;
+  }
+
+  &.small {
+    height: 30px;
+    min-height: 30px;
+    @include xanova-h14-medium;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.btn-with-icon-xanova {
+  @include xanova-p16-medium;
+  height: 40px;
+  min-height: 40px;
+  transition: all 0.3s;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: $xanova-black;
+  text-wrap: nowrap;
+  box-sizing: border-box;
+  border: none;
+
+  &.grey {
+    background: $xanova-black-10;
+    color: $xanova-black;
+    &:hover {
+      background: $xanova-black-20;
+    }
+  }
+
+  &.grey-small {
+    background: #f9f9f6cc;
+    color: $xanova-black;
+    border: 1px solid $xanova-black-10;
+    padding: 0 20px;
+    gap: 4px;
+    &:hover {
+      background: $xanova-black-10;
+    }
+  }
+
+  &.transparent-with-border {
+    color: $xanova-black;
+    border: 1px solid $xanova-black-10;
+  }
+
+  &.circle40 {
+    color: $xanova-black;
+    border: 1px solid $xanova-black-10;
+    min-width: 40px;
+    width: 40px;
+    min-height: 40px;
+    height: 40px;
+  }
+  &.circle50 {
+    color: $xanova-black;
+    border: 1px solid $xanova-black-10;
+    min-width: 50px;
+    width: 50px;
+    min-height: 50px;
+    height: 50px;
+  }
+
+  &.spanArrowBackIcon {
+    span {
+      width: 20px;
+      height: 20px;
+      background-color: $xanova-black;
+      mask: url('../xanova/icon-xanova/arrow-icon.svg') center/contain no-repeat;
+      -webkit-mask: url('../xanova/icon-xanova/arrow-icon.svg') center/contain no-repeat;
+
+      rotate: 180deg;
+    }
+  }
+
+  &.back {
+    border-radius: 10px;
+    color: $xanova-black;
+    padding: 10px;
+
+    &:hover {
+      background: $xanova-black-10;
+    }
+
+    &.absolute {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+  }
+
+  &.gap-4 {
+    gap: 4px;
+  }
+
+  &.big {
+    height: 50px;
+    min-height: 50px;
+  }
+
+  &.gap-6 {
+    gap: 6px;
+  }
+
+  &.width100 {
+    width: 100%;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.input-wrap-xanova {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    @include xanova-p14-regular;
+    color: $xanova-black;
+    margin-bottom: 12px;
+    display: inline-block;
+
+    &.text-error {
+      color: $xanova-red;
+    }
+  }
+
+  input {
+    @include xanova-p16-regular;
+    background-color: transparent;
+    padding: 0 20px;
+    border-radius: 50px;
+    outline: none;
+    color: $xanova-black;
+    border: 1px solid $xanova-black-10;
+
+    height: 50px;
+    min-height: 50px;
+    box-sizing: border-box;
+
+    &:focus-visible {
+      border: 1px solid $xanova-gold;
+    }
+
+    &:focus-within {
+      outline: 0;
+      border: 1px solid $xanova-gold;
+    }
+
+    &.error {
+      border: 1px solid $xanova-red;
+    }
+
+    ::placeholder {
+      color: $xanova-black-50;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      color: $xanova-black-60;
+      background-color: $xanova-light-grey;
+    }
+  }
+
+  &.white {
+    label {
+      color: $xanova-white;
+
+      &.text-error {
+        color: $xanova-red;
+      }
+    }
+
+    input {
+      background-color: $xanova-light-black;
+      color: $xanova-white;
+      border: 1px solid transparent;
+
+      &::placeholder {
+        color: $xanova-white-50;
+      }
+
+      &:focus-visible {
+        border: 1px solid $xanova-gold;
+      }
+
+      &:focus-within {
+        outline: 0;
+        border: 1px solid $xanova-gold;
+      }
+
+      &.error {
+        border: 1px solid $xanova-red;
+      }
+
+      &:disabled {
+        color: $xanova-white-50;
+        background-color: $xanova-white-10;
+      }
+    }
+  }
+
+  .currency {
+    @include xanova-p16-regular;
+    position: absolute;
+    top: 43px;
+    right: 20px;
+  }
+}
+
+// class for label tag, not use for div
+.checkbox-wrap-xanova {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  input[type='checkbox'] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: inherit;
+    margin: 0;
+  }
+
+  .checkbox-xanova-box {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    background: $xanova-black-10;
+    transition: all 0.2s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      width: 8px;
+      height: 4px;
+      border-left: 2px solid $xanova-black;
+      border-bottom: 2px solid $xanova-black;
+      transform: translate(-50%, -55%) rotate(-45deg);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+  .checkbox-xanova-text {
+    @include xanova-p14-regular;
+    color: $xanova-black;
+
+    &.text-12 {
+      @include xanova-p12-regular;
+    }
+    &.text-16 {
+      @include xanova-p16-regular;
+    }
+  }
+
+  &:hover .checkbox-xanova-box {
+    background: $xanova-black-50;
+  }
+
+  input[type='checkbox']:focus-visible + .checkbox-xanova-box {
+    outline: 2px solid $xanova-gold;
+    outline-offset: 2px;
+  }
+
+  input[type='checkbox']:checked + .checkbox-xanova-box {
+    background: $xanova-black-20;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.error .checkbox-xanova-box {
+    outline: 1px solid $xanova-red;
+  }
+
+  &.error .checkbox-xanova-text {
+    color: $xanova-red;
+  }
+}
+
+.select-wrap-xanova {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    @include xanova-p14-regular;
+    color: $xanova-black;
+    margin-bottom: 12px;
+    display: inline-block;
+
+    &.text-error {
+      color: $xanova-red;
+    }
+  }
+
+  select {
+    @include xanova-p16-regular;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    padding: 0 20px;
+    border-radius: 50px;
+    outline: none;
+    color: $xanova-black;
+    border: 1px solid $xanova-black-10;
+    height: 50px;
+    min-height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+
+    &:focus-visible,
+    &:focus {
+      border: 1px solid $xanova-gold;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: $xanova-black-50;
+      background-color: $xanova-black-10;
+    }
+
+    &.error {
+      border: 1px solid $xanova-red;
+    }
+
+    &:required:invalid {
+      color: $xanova-black-50;
+    }
+
+    &:required:invalid {
+      color: $xanova-black-50;
+    }
+  }
+
+  select.placeholder {
+    color: $xanova-black-50;
+  }
+
+  option {
+    color: $xanova-black;
+  }
+
+  &.error {
+    select {
+      border: 1px solid $xanova-red;
+    }
+  }
+
+  &.white {
+    label {
+      color: $xanova-white;
+
+      &.text-error {
+        color: $xanova-red;
+      }
+    }
+
+    select {
+      background-color: $xanova-light-black;
+      color: $xanova-white;
+
+      &:focus-visible,
+      &:focus {
+        border: 1px solid $xanova-gold;
+      }
+
+      &:required:invalid {
+        color: $xanova-white;
+      }
+
+      &:disabled {
+        color: $xanova-white;
+        background-color: $xanova-white-10;
+      }
+
+      &.error {
+        border: 1px solid $xanova-red;
+      }
+
+      &:required:invalid {
+        color: $xanova-white-50;
+      }
+    }
+
+    select.placeholder {
+      color: $xanova-white-50;
+    }
+
+    option {
+      color: $xanova-black;
+    }
+  }
+}
+
+// class for label tag, not use for div
+.radio-wrap-xanova {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  input[type='radio'] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: inherit;
+    margin: 0;
+  }
+
+  .radio-xanova-box {
+    position: relative;
+    width: 17.5px;
+    height: 17.5px;
+    border-radius: 50%;
+    border: 1.25px solid $xanova-black-50;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+
+    &::after {
+      content: '';
+      width: 7.5px;
+      height: 7.5px;
+      border-radius: 50%;
+      background: $xanova-black;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+  .radio-xanova-text {
+    @include xanova-p14-regular;
+    color: $xanova-black-50;
+    transition: color 0.2s ease;
+  }
+
+  &:hover .radio-xanova-box {
+    border-color: $xanova-black;
+  }
+
+  &:hover .radio-xanova-text {
+    color: $xanova-black;
+  }
+
+  input[type='radio']:focus-visible + .radio-xanova-box {
+    outline: 2px solid $xanova-gold;
+    outline-offset: 2px;
+  }
+
+  input[type='radio']:checked + .radio-xanova-box {
+    border-color: $xanova-black;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  input[type='radio']:checked ~ .radio-xanova-text {
+    color: $xanova-black;
+  }
+
+  &.error .radio-xanova-box {
+    outline: 1px solid $xanova-red;
+  }
+
+  &.error .radio-xanova-text {
+    color: $xanova-red;
+  }
+
+  &.white {
+    .radio-xanova-box {
+      border-color: $xanova-white-50;
+    }
+
+    .radio-xanova-text {
+      color: $xanova-white-50;
+    }
+
+    &:hover .radio-xanova-box,
+    input[type='radio']:checked + .radio-xanova-box {
+      border-color: $xanova-white;
+    }
+
+    &:hover .radio-xanova-text,
+    input[type='radio']:checked ~ .radio-xanova-text {
+      color: $xanova-white;
+    }
+
+    input[type='radio']:checked + .radio-xanova-box::after {
+      background: $xanova-white;
+    }
+  }
+}
+
+.icon-eye-xanova {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 51px;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.height-50 {
+  height: 50px;
+}
+
+.height-40 {
+  height: 40px;
+}
+
+.display-none {
+  display: none;
+}
+
+.text-error {
+  color: $xanova-red;
+}

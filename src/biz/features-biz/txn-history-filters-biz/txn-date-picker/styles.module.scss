@@ -1,0 +1,20 @@
+@import '/src/styles';
+
+.selectContainer {
+  position: relative;
+  width: 100%;
+}
+
+.selectDisplay {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px 10px;
+  border: 1px solid $lg-white-100-dark-grey-20;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include ag-s14-0;
+  color: $navy;
+}

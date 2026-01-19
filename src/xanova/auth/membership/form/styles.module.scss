@@ -1,0 +1,161 @@
+@import '/src/styles/index';
+
+.containerModal {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 30px 30px;
+  box-sizing: border-box;
+  width: 600px;
+
+  @include respond-to-xanova(mobile) {
+    width: 100%;
+  }
+}
+
+.title {
+  @include xanova-h20-semiBold;
+  color: $xanova-black;
+}
+
+.line {
+  height: 1px;
+  background-color: $xanova-black-20;
+  margin: 24px 0px;
+}
+
+.tabsButtons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.flexHorizontalGap12 {
+  display: flex;
+  gap: 12px;
+
+  @include respond-to-xanova(mobile) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.flexVerticalGap24 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flexHorizontalCenterSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexVerticalGap8 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text {
+  @include xanova-p16-regular;
+  color: $xanova-black;
+}
+
+.subText {
+  @include xanova-p12-regular;
+  color: $xanova-black-60;
+  white-space: pre-line;
+}
+
+.totalInfo {
+  display: flex;
+  justify-content: space-between;
+  color: $xanova-black;
+
+  p {
+    margin-top: 0;
+  }
+
+  .text {
+    @include xanova-p16-regular;
+  }
+
+  .value {
+    @include xanova-p16-medium;
+  }
+}
+
+.paddingText {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+  white-space: pre-line;
+  text-align: center;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-p12-regular;
+    white-space: normal;
+  }
+}
+
+.copyAddressButton {
+  position: absolute;
+  top: 68%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.loadingPlaceholder {
+  display: inline-block;
+  min-width: 80px;
+  color: $xanova-black-50;
+  @include xanova-p14-regular;
+}
+
+.contentSuccess {
+  background-color: $xanova-white;
+  width: 600px;
+  border-radius: 30px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to-xanova(mobile) {
+    padding: 20px;
+  }
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+
+.titleAuth {
+  @include xanova-h20-semiBold;
+  text-align: center;
+  margin-bottom: 12px;
+  white-space: pre-line;
+}
+
+.subTitleAuth {
+  @include xanova-p16-regular;
+  color: $xanova-black-50;
+  text-align: center;
+  margin-bottom: 36px;
+}

@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TH28HQA4T5.ai.blockbank.blockbankv2",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

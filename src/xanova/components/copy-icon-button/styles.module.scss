@@ -1,0 +1,30 @@
+@import '/src/styles';
+
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--copy-button-width, 36px);
+  height: var(--copy-button-height, 36px);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $xanova-black-10;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $xanova-gold;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}

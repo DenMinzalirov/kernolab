@@ -1,0 +1,52 @@
+@import '/src/styles/index';
+
+.containerModal {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  box-sizing: border-box;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: auto;
+  text-align: center;
+  align-items: center;
+  height: 777px;
+}
+
+.textTitle {
+  @include ag-s24-reg;
+  color: $navy;
+  margin-bottom: 12px;
+}
+
+.label {
+  @include ag-s12;
+  color: $dark-grey;
+
+  margin: 24px 0 12px 0;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+}
+
+.dropdownWrap {
+  position: relative;
+  width: 100%;
+}
+
+.itemWrap {
+  padding: 10px;
+  @include ag-s14-medium;
+  color: $navy;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.colorRed {
+  color: $s-red;
+}

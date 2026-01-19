@@ -1,0 +1,282 @@
+@import '/src/styles/index';
+.title {
+  text-align: center;
+  @include ag-H30;
+  color: $p-deep-space;
+  margin-bottom: 12px;
+
+  @include respond-to(p-mobile) {
+    @include ag-H24;
+    text-align: left;
+  }
+}
+
+.containerModal {
+  //width: 775px;
+  //height: 845px;
+  display: flex;
+  flex-direction: column;
+  //padding: 94px;
+  box-sizing: border-box;
+  //max-width: 80vw;
+  //max-height: 80vh;
+  //overflow: auto;
+  position: relative;
+  min-width: 440px;
+
+  @include respond-to(p-mobile) {
+    min-width: auto;
+  }
+}
+
+.contentWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 100px 40px;
+  background-color: $white;
+
+  @include respond-to(p-mobile) {
+    margin: 0;
+    padding: 50px 20px;
+  }
+}
+
+.isSuccessIconWrap {
+  height: 159px;
+  margin-bottom: 79px;
+  //margin-top: 160px;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space;
+  text-align: center;
+  //line-height: 27px;
+  margin-bottom: 48px;
+
+  @include respond-to(p-mobile) {
+    @include ag-P14;
+    text-align: left;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.enterAmount {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-bottom: 10px;
+}
+
+.note {
+  @include ag-P10;
+  color: $p-deep-space-80;
+  margin-top: 21px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.bankName {
+  margin-left: 20px;
+}
+
+.backBtn {
+  background-color: $p-deep-space-10;
+  margin-top: 12px;
+  @include ag-P16;
+  color: $p-deep-space;
+
+  &:hover {
+    background-color: $p-deep-space-20;
+  }
+}
+
+.titleWhiteListItem {
+  @include ag-P16;
+  color: $p-deep-space;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.descriptionWhiteListItem {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.listSummaryWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.descriptionWhiteListSummary {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.descriptionWhiteListSummarySemiBold {
+  @include ag-H12;
+  color: $p-deep-space;
+
+  @include respond-to(p-mobile) {
+    word-break: break-all;
+    text-align: right;
+    margin-left: 10px;
+    min-width: 50px;
+  }
+}
+
+.whiteListItem {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 5px;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  &:hover {
+    background-color: $p-bg;
+    cursor: pointer;
+  }
+}
+
+.button {
+  display: flex;
+  gap: 16px;
+}
+
+/* Customize Check Box + the label (the container) */
+.containerCheckBox {
+  @include flex(center, flex-start, row);
+  @include ag-P12;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  //margin-bottom: 3rem;
+  color: $p-deep-space-80;
+  //line-height: 26px;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 6px;
+  background-color: $p-deep-space-20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+///* On mouse-over, add a grey background color */
+//.container:hover input ~ .checkmark {
+//  background-color: #ccc;
+//}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckBox input:checked ~ .checkmark {
+  //background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckBox .checkmark:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 2.86px;
+  background-color: $p-deep-space;
+}
+
+.backBtn {
+  background-color: $p-ivory;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  cursor: pointer;
+}
+
+.btnIcon {
+  margin-right: 0.625rem;
+  display: flex;
+  align-self: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emptyWhiteListWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.emptyWhiteListTitle {
+  @include ag-P14;
+  color: $p-deep-space-80;
+}
+
+.addWhiteListContainer {
+  //background-color: $white;
+  //border: 1px solid $p-deep-space-10;
+  //border-radius: 10px;
+  //padding: 20px;
+  margin-top: 8px;
+}
+
+.height24 {
+  height: 24px;
+}
+
+.stepBackBtn {
+  width: 47%;
+
+  @include respond-to(p-mobile) {
+    width: 20%;
+  }
+}
+
+.errorText {
+  @include ag-P12;
+  color: $p-system-red;
+  margin-top: 12px;
+}

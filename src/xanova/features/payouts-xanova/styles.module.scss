@@ -1,0 +1,118 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 23px;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+
+  @include respond-to-xanova(mobile) {
+    margin-bottom: 20px;
+  }
+}
+
+.contentWrap {
+  display: flex;
+  flex: 1;
+  margin-top: 5px;
+  gap: 5px;
+
+  @include respond-to-xanova(tablet) {
+    margin-top: 30px;
+  }
+  @include respond-to-xanova(mobile) {
+    margin-top: 50px;
+  }
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.contentGutter {
+  padding: 0 30px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 0 10px;
+  }
+}
+
+// Metrics
+.metricsCardsWrap {
+  @include respond-to-xanova(desktop) {
+    height: 130px;
+    gap: 5px;
+  }
+}
+
+//form
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 30px;
+  background-color: $xanova-bg;
+  width: calc(34% - 73px);
+
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+}
+
+//table
+.tableWrap {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: $xanova-bg;
+  flex: 1;
+}
+
+.onlyTablet {
+  display: none;
+  @include respond-to-xanova(tablet) {
+    display: flex;
+  }
+
+  @include respond-to-xanova(mobile) {
+    display: none;
+  }
+}
+
+.onlyMobile {
+  display: none;
+
+  @include respond-to-xanova(mobile) {
+    display: flex;
+  }
+}
+
+.buttonWrap {
+  width: 150px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}

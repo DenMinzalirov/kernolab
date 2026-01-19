@@ -1,0 +1,90 @@
+@import '/src/styles';
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  width: 535px;
+  gap: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+
+  border-radius: 20px;
+  background-color: $bg;
+
+  border: 1px solid $modal-stroke;
+
+  @include respond-to-biz(md) {
+    width: 345px;
+    padding: 40px 20px 20px 20px;
+
+    border: none;
+    background-color: $white;
+  }
+}
+
+.containerFixIsCloseBtn {
+  padding: 60px 60px 30px 60px;
+
+  @include respond-to-biz(md) {
+    padding: 40px 20px 20px 20px;
+  }
+}
+
+.containerMdFix {
+  gap: 50px;
+
+  @include respond-to-biz(md) {
+    gap: 36px;
+  }
+}
+
+.containerSuccessFix {
+  justify-content: center;
+  height: 300px;
+  gap: 30px;
+
+  @include respond-to-biz(md) {
+    align-items: center;
+    padding: 0;
+    height: 250px;
+  }
+}
+
+.successTitlFix {
+  text-align: center;
+}
+
+.successSubTitlFix {
+  text-align: center;
+  @include respond-to-biz(md) {
+    margin: 0 auto;
+    width: 300px;
+  }
+}
+
+.title {
+  @include ag-s24-reg;
+  color: $navy;
+  @include respond-to-biz(md) {
+    width: 290px;
+  }
+}
+
+.subTitle {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}

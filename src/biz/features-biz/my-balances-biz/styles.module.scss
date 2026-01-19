@@ -1,0 +1,89 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  @include ag-s20-reg;
+  color: $navy;
+}
+
+.viewAllButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  @include ag-s12;
+  color: $dark-grey;
+  letter-spacing: -0.5px;
+  text-decoration: underline;
+}
+
+.itemsWrap {
+  height: 172px;
+  overflow: hidden;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include respond-to-biz(xxl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond-to-biz(xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond-to-biz(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $light-grey;
+}
+
+.itemIcon {
+  width: 35px;
+  height: 35px;
+}
+
+.itemTextWrap {
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemText {
+  @include ag-s14-0;
+  color: $navy;
+}
+
+.itemSubText {
+  @include ag-s12;
+  color: $dark-grey;
+}

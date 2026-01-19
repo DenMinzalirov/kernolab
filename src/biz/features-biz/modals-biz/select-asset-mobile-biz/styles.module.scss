@@ -1,0 +1,62 @@
+@import '/src/styles/index';
+
+.containerModal {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.contentWrapModal {
+  background-color: $white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 40px 15px;
+  gap: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title {
+  @include ag-s20-reg;
+  color: $navy;
+  text-align: start;
+}
+
+.assetsContainer {
+  flex: 1;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+  &:hover {
+    background-color: $dark-grey-20;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+
+.assetId {
+  @include ag-s16-medium;
+  color: $navy;
+}
+
+.assetName {
+  @include ag-s14-0;
+  color: $grey;
+}

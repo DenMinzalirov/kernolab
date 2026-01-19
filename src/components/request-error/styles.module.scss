@@ -1,0 +1,23 @@
+@import '/src/styles/index';
+
+.requestErrorWrap {
+  background-color: $p-system-red-10;
+  margin-top: 24px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.requestErrorIcon {
+  height: 24px;
+  margin: 0 24px;
+}
+
+.requestErrorInfo {
+  margin-right: 24px;
+  @include ag-H16;
+  color: $p-deep-space;
+  word-break: break-word;
+}

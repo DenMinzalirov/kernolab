@@ -1,0 +1,56 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: $p-deep-space url('./pairs-redirect-bg.svg') no-repeat center center;
+  background-size: cover;
+  padding: 0 8%;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  @include ag-H36;
+  margin-top: 8%;
+  color: $white;
+}
+.subTitle {
+  @include ag-P14;
+  color: $white;
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 15px;
+  padding: 0 2%;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-top: 42%;
+  padding: 13px 20px;
+  background-color: $white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.link {
+  @include ag-H16;
+  color: $p-deep-space-80;
+  text-decoration: none;
+}

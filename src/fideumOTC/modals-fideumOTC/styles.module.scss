@@ -1,0 +1,980 @@
+@import '/src/styles/index';
+
+.containerModal {
+  min-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-sizing: border-box;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+
+  background-color: $bg;
+  border-radius: 20px;
+  border: 1px solid $modal-stroke;
+
+  //@include respond-to-biz(md) {
+  //  border: none;
+  //  background-color: $white;
+  //  padding: 20px;
+  //  max-width: 100%;
+  //  width: 100%;
+  //}
+}
+
+.textTitle {
+  @include ag-s24-reg;
+  color: $navy;
+  //margin-bottom: 8px;
+  text-align: center;
+}
+
+.textDescription {
+  @include ag-s14-0;
+  color: $dark-grey;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formRow {
+  display: flex;
+  //gap: 10px;
+  margin-top: 10px;
+  //border-bottom: solid 1px white;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  //align-items: center;
+
+  //@include respond-to-biz(md) {
+  //  flex-direction: column;
+  //  gap: 16px;
+  //}
+
+  // Обводка зеленым бордером для первых трех элементов одним общим бордером
+  //&.highlightedFirstThree {
+  //  display: flex;
+  //  gap: 10px;
+  //}
+}
+
+.gap10 {
+  gap: 10px
+}
+
+// Базовый контейнер для блоков
+.blockContainer {
+  flex: 1;
+  display: flex;
+  //flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  //transition: all 0.3s ease;
+}
+
+// Обводка для левого блока (захватывает левый + центральный)
+.highlightLeft {
+  border: 2px solid $white;
+  border-right: none !important;// Убираем правый бордер
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  //background-color: rgba($s-green, 0.1);
+}
+
+// Центральный блок при выделении левой стороны
+//.highlightedFirstThree.highlightLeft .centerBlock {
+.centerBlockLeft {
+  border: 2px solid $white;
+  border-left: none !important; // Убираем левый бордер
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  //background-color: rgba($s-green, 0.1);
+}
+
+// Обводка для правого блока (захватывает центральный + правый)
+.highlightRight {
+  border: 2px solid $white;
+  border-left: none !important; // Убираем левый бордер
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  //background-color: rgba($s-green, 0.1);
+}
+
+// Центральный блок при выделении правой стороны
+.centerBlockRight {
+  border: 2px solid $white;
+  border-right: none !important; // Убираем правый бордер
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  //background-color: rgba($s-green, 0.1);
+}
+
+.formField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.label {
+  @include ag-s12-semiB;
+  color: $navy;
+  margin-bottom: 4px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  background-color: $white;
+  @include ag-s14-0;
+  color: $navy;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+
+  &.error {
+    border-color: $s-red;
+  }
+
+  &.calculated {
+    background-color: $light-grey;
+    color: $dark-grey;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $dark-grey;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  padding-right: 40px;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  background-color: $white;
+  @include ag-s14-0;
+  color: $navy;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+
+  &.error {
+    border-color: $s-red;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $dark-grey;
+    cursor: not-allowed;
+  }
+}
+
+.dropdownArrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $dark-grey;
+  pointer-events: none;
+  font-size: 12px;
+}
+
+.addButton {
+  padding: 8px 16px;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  background-color: transparent;
+  color: $blue;
+  @include ag-s12;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.buttonRow {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 32px;
+
+  //@include respond-to-biz(md) {
+  //  flex-direction: column;
+  //}
+}
+
+.cancelButton {
+  padding: 12px 24px;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  background-color: $s-red;
+  color: $white;
+  @include ag-s14-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.submitButton {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: green;
+  color: $white;
+  @include ag-s14-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $dark-blue;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 20px;
+  }
+}
+
+.previewButton {
+  padding: 12px 24px;
+  border: 1px solid $s-green;
+  border-radius: 8px;
+  background-color: transparent;
+  color: $s-green;
+  @include ag-s14-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $s-green;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.clearButton {
+  padding: 12px 24px;
+  border: 1px solid $s-red;
+  border-radius: 8px;
+  background-color: transparent;
+  color: $s-red;
+  @include ag-s14-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $s-red;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Error messages
+.errorMessage {
+  @include ag-s10;
+  color: $s-red;
+  margin-top: 4px;
+}
+
+.helpText {
+  @include ag-s10;
+  color: $dark-grey;
+  margin-top: 4px;
+}
+
+// Client Search Component
+.clientSearchContainer {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.clientList {
+  padding: 8px 0;
+}
+
+.clientItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &.selected {
+    background-color: $blue-10;
+  }
+}
+
+.clientInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clientEmail {
+  @include ag-s14-semiB;
+  color: $navy;
+}
+
+.clientDetails {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.clientName {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.clientId {
+  @include ag-s10;
+  color: $dark-grey;
+  background-color: $light-grey;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.clientStatus {
+  display: flex;
+  align-items: center;
+}
+
+.statusBadge {
+  @include ag-s10;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+
+  &.statusPENDING {
+    background-color: $lg-yellow-20-white-100;
+    color: $s-yellow;
+  }
+
+  &.statusCONFIRMED {
+    background-color: $lg-green-20-white-100;
+    color: $s-green;
+  }
+
+  &.statusREJECTED {
+    background-color: $lg-red-20-white-100;
+    color: $s-red;
+  }
+}
+
+.noResults {
+  padding: 24px 16px;
+  text-align: center;
+  color: $dark-grey;
+}
+
+.noResultsIcon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.noResultsText {
+  @include ag-s14-semiB;
+  margin-bottom: 4px;
+}
+
+.noResultsSubtext {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+// Trade Preview Component
+.previewContainer {
+  background-color: $light-grey;
+  border: 1px solid $dark-grey-20;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $dark-grey-20;
+}
+
+.previewTitle {
+  @include ag-s16-semiB;
+  color: $navy;
+  margin: 0;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.previewActions {
+  display: flex;
+  gap: 8px;
+}
+
+.copyButton,
+.copyToFormButton {
+  width: 32px;
+  height: 32px;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  background-color: $white;
+  color: $blue;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &.copied {
+    background-color: $s-green;
+    border-color: $s-green;
+    color: $white;
+  }
+}
+
+.previewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.previewRow {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.previewField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 150px;
+}
+
+.previewLabel {
+  @include ag-s12-semiB;
+  color: $dark-grey;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.previewValue {
+  @include ag-s14-semiB;
+  color: $navy;
+  padding: 8px 12px;
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid $dark-grey-20;
+}
+
+.priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copyPriceButton {
+  width: 28px;
+  height: 28px;
+  border: 1px solid $blue;
+  border-radius: 4px;
+  background-color: $white;
+  color: $blue;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &.copied {
+    background-color: $s-green;
+    border-color: $s-green;
+    color: $white;
+  }
+}
+
+.sideValue {
+  &.sideBuy {
+    background-color: $lg-green-20-white-100;
+    color: $s-green;
+    border-color: $s-green-20;
+  }
+
+  &.sideSell {
+    background-color: $lg-red-20-white-100;
+    color: $s-red;
+    border-color: $s-red-20;
+  }
+}
+
+.previewJson {
+  background-color: $white;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.jsonCode {
+  @include ag-s12;
+  color: $navy;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.statusBadgeWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.statusBadge {
+  @include ag-s10;
+  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  font-weight: 500;
+
+  &.statusGreen {
+    background: $lg-green-20-white-100;
+    color: $s-green;
+  }
+
+  &.statusRed {
+    background: $lg-red-20-white-100;
+    color: $s-red;
+  }
+
+  &.statusYellow {
+    background: $lg-yellow-20-white-100;
+    color: $s-yellow;
+  }
+
+  &.statusGrey {
+    background: $dark-grey-20;
+    color: $dark-grey;
+  }
+
+  &.statusBlue {
+    background: $lg-blue-100-black20;
+    color: $blue;
+  }
+
+  &.statusPurple {
+    background: $lavender-20;
+    color: $blue;
+  }
+}
+
+.serverError {
+  @include ag-s14-semiB;
+  color: $s-red;
+  background-color: $lg-red-20-white-100;
+  border: 1px solid $s-red-20;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+// Trade Comment Component
+.commentContainer {
+  background-color: $light-grey;
+  border: 1px solid $dark-grey-20;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  //margin-bottom: 16px;
+  //padding-bottom: 12px;
+  //border-bottom: 1px solid $dark-grey-20;
+}
+
+.commentTitle {
+  @include ag-s16-semiB;
+  color: $navy;
+  margin: 0;
+}
+
+.editButton {
+  padding: 8px 16px;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  background-color: transparent;
+  color: $blue;
+  @include ag-s12-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.commentContent {
+  min-height: 60px;
+}
+
+.commentEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.commentTextarea {
+  //width: 100%;
+  min-height: 60px;
+  max-height: 120px;
+  padding: 12px 16px;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  background-color: $white;
+  @include ag-s14-0;
+  color: $navy;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $dark-grey;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $dark-grey;
+  }
+}
+
+.commentActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: 8px 16px;
+  border: 1px solid $dark-grey-20;
+  border-radius: 6px;
+  background-color: transparent;
+  color: $dark-grey;
+  @include ag-s12-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $dark-grey-20;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.saveButton {
+  padding: 8px 16px;
+  border: 1px solid $s-green;
+  border-radius: 6px;
+  background-color: transparent;
+  color: $s-green;
+  @include ag-s12-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $s-green;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.commentDisplay {
+  min-height: 60px;
+}
+
+.emptyComment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  gap: 12px;
+  color: $dark-grey;
+}
+
+.emptyText {
+  @include ag-s14-0;
+  color: $dark-grey;
+}
+
+.addButton {
+  padding: 8px 16px;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  background-color: transparent;
+  color: $blue;
+  @include ag-s12-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.commentText {
+  @include ag-s14-0;
+  color: $navy;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  cursor: pointer;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $white;
+    border-color: $dark-grey-20;
+  }
+}
+
+// Client Details Modal
+.clientDetailsModal {
+  .rs-modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.modalTitle {
+  @include ag-s18-med;
+  color: $navy;
+  margin: 0;
+}
+
+.modalBody {
+  padding: 24px;
+}
+
+.clientDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  background-color: $light-grey;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.sectionTitle {
+  @include ag-s16-semiB;
+  color: $navy;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $dark-grey-20;
+}
+
+.detailsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 32px;
+}
+
+.detailLabel {
+  @include ag-s14-semiB;
+  color: $dark-grey;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.detailValue {
+  @include ag-s14-0;
+  color: $navy;
+  flex: 1;
+  word-break: break-word;
+}
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+}
+
+.statusBadge {
+  padding: 4px 12px;
+  border-radius: 6px;
+  @include ag-s12-semiB;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statusGreen {
+  background-color: $lg-green-20-white-100;
+  color: $s-green;
+}
+
+.statusYellow {
+  background-color: $lg-yellow-20-white-100;
+  color: $s-yellow;
+}
+
+.statusRed {
+  background-color: $lg-red-20-white-100;
+  color: $s-red;
+}
+
+.statusGrey {
+  background-color: $dark-grey-20;
+  color: $dark-grey;
+}
+
+.closeButton {
+  padding: 10px 20px;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  background-color: $blue;
+  color: $white;
+  @include ag-s14-semiB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $blue;
+    border-color: $blue;
+  }
+}

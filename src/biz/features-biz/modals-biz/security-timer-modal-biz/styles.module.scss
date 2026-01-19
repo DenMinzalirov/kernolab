@@ -1,0 +1,60 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 535px;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  box-sizing: border-box;
+
+  border-radius: 20px;
+  background-color: $bg;
+  border: 1px solid $modal-stroke;
+
+  @include respond-to-biz(md) {
+    width: 345px;
+    padding: 30px 20px 20px 20px;
+    gap: 36px;
+
+    border: none;
+    background-color: $white;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 415px;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+
+  @include respond-to-biz(md) {
+    gap: 24px;
+  }
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  @include ag-s24-reg;
+  text-align: center;
+  color: $navy;
+}
+
+.description {
+  @include ag-s12;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.height30 {
+  height: 30px;
+}

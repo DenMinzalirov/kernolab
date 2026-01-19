@@ -1,0 +1,228 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  padding: 24px 0;
+
+  @include respond-to-biz(md) {
+    align-items: flex-start;
+    background-color: $light-grey;
+    padding: 24px 15px;
+  }
+}
+
+.contentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 70px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 840px;
+
+  @include respond-to-biz(lg) {
+    width: 570px;
+    padding: 70px 50px;
+  }
+  @include respond-to-biz(md) {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    min-height: 670px;
+  }
+}
+
+.title {
+  margin-bottom: 12px;
+  @include ag-s30-medium;
+  color: $navy;
+  text-align: center;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+  }
+}
+
+.description {
+  @include ag-s12-medium;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.label {
+  @include ag-s12;
+  color: $dark-grey;
+  margin-bottom: 12px;
+}
+
+.dropDownWrap {
+  width: 100%;
+  position: relative;
+}
+
+.dropDownPlaceholderText {
+  padding-left: 20px;
+  opacity: 0.3;
+  color: $navy;
+  @include ag-s14-0;
+}
+
+.dropDownCleareWrap {
+  height: 290px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $dark-grey;
+  @include ag-s14-0;
+}
+
+.itemWrap {
+  padding: 10px;
+  @include ag-s14-medium;
+  color: $navy;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.addressWrap {
+  padding: 20px;
+  border: 1px solid $lg-white-100-dark-grey-20;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+
+  @include ag-s14-0;
+  color: $navy;
+}
+
+.addressText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.networkContainer {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.networkWrap {
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+  width: 32%;
+  border-radius: 40px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  @include ag-s14-0;
+  color: $dark-grey;
+
+  &:hover {
+    background-color: $lg-white-100-blue20;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.networkActive {
+  background-color: $blue;
+  color: $white;
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+.depositInfoContainer {
+  position: relative;
+  background-color: $white;
+  margin-top: 24px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.qrCodeWrap {
+  background-color: $light-grey;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 160px;
+  border-radius: 5px;
+}
+
+.note {
+  text-align: center;
+  @include ag-s14-0;
+  color: $dark-grey;
+  margin-top: 24px;
+}
+
+.note span {
+  color: $blue;
+}
+
+.copiedWrap {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.copyBtn {
+  width: 16px;
+  height: 16px;
+}
+
+.assetIcon {
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+}
+
+.adaptiveHeight {
+  min-height: 48px;
+
+  @include respond-to-biz(md) {
+    min-height: 24px;
+  }
+}
+
+.marginTop {
+  margin-top: 24px;
+}
+
+.height10 {
+  height: 10px;
+}
+
+.showMd {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: flex;
+  }
+}
+
+.hideMd {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}

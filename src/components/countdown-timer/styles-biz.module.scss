@@ -1,0 +1,43 @@
+@import '/src/styles';
+
+.container {
+  height: 30px;
+  border-radius: 31px;
+  display: inline-flex;
+  align-items: center;
+
+  &.warning {
+    background-color: $s-red-20;
+  }
+
+  &.primary {
+    background-color: $blue-50; //TODO in the design there is no timer state in primary
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 16px;
+}
+
+.text {
+  @include ag-s12-semiB;
+  color: $navy;
+  text-wrap: nowrap;
+}
+
+.timer {
+  @include ag-s12;
+  width: 50px;
+
+  &.warning {
+    color: $s-red;
+  }
+
+  &.primary {
+    color: $blue; //TODO in the design there is no timer state in primary
+  }
+}

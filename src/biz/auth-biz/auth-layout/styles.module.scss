@@ -1,0 +1,54 @@
+@import '/src/styles/index';
+
+.main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  //background-image: url('assets/images/bg_kaizen.png');
+  background-size: cover;
+  padding: 0 15px;
+  box-sizing: border-box;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 158px;
+
+  @include respond-to-biz(md) {
+    padding-bottom: 15px;
+    align-items: end;
+    height: 78px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px;
+}
+
+.footerText {
+  @include ag-s12;
+  color: $white;
+}
+
+.dynamicHeight {
+  height: 24px;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}

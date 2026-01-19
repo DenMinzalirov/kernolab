@@ -1,0 +1,18 @@
+@import '/src/styles';
+
+.truncatedAddress {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  align-items: flex-start;
+
+  @media screen and (max-width: 500px) {
+    max-width: 200px;
+  }
+}
+.truncatedAddressStart {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

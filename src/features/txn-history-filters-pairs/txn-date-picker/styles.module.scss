@@ -1,0 +1,26 @@
+@import '/src/styles';
+
+.selectContainer {
+  position: relative;
+  width: 100%;
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.selectDisplay {
+  display: flex;
+  justify-content: space-between;
+  height: 62px;
+  align-items: center;
+  border: 1px solid $p-ivory;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 2px -1px $p-deep-space-10;
+  -moz-box-shadow: 0px 1px 2px -1px $p-deep-space-10;
+  box-shadow: 0px 1px 2px -1px $p-deep-space-10;
+
+  @include ag-P14;
+  color: $p-deep-space;
+}

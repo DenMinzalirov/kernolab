@@ -1,0 +1,109 @@
+@import '/src/styles';
+
+.container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.filterSelectWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filterSelectLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.containerMd {
+  display: none;
+
+  @include respond-to(p-mobile) {
+    width: calc(100% - 76px);
+    display: flex;
+    gap: 8px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+
+.activeFilterRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.filterTypeText {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.filterAssetRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filterAssetIcon {
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+  border-radius: 100%;
+}
+
+.filterAssetIdText {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.filterAssetNameText {
+  @include ag-P14;
+  color: $p-deep-space-80;
+}
+
+.iconContainer {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: transparent;
+}
+
+.iconCircle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 1.43px;
+    background-color: $p-deep-space;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modalFix {
+  margin-top: calc(100dvh - 500px) !important;
+}

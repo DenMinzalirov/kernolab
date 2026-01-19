@@ -1,0 +1,170 @@
+@import '/src/styles/index';
+
+.statusFilterContainer {
+  position: relative;
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  background-color: $white;
+  @include ag-s14-0;
+  color: $navy;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+
+  &.error {
+    border-color: $s-red;
+  }
+
+  &.calculated {
+    background-color: $light-grey;
+    color: $dark-grey;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $dark-grey-50;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $dark-grey;
+    cursor: not-allowed;
+  }
+}
+
+.inputActions {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  color: $dark-grey-50;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $navy;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.dropdownArrow {
+  color: $dark-grey-50;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.errorMessage {
+  @include ag-s12;
+  color: $s-red;
+  margin-top: 4px;
+  display: block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  border: 1px solid $dark-grey-20;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.statusList {
+  padding: 8px 0;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &.selected {
+    background-color: $blue-10;
+  }
+}
+
+.statusBadgeWrap {
+  display: flex;
+  justify-content: start;
+}
+
+.statusBadge {
+  @include ag-s10;
+  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  font-weight: 500;
+
+  // Стили для разных статусов (точно как в таблице)
+  &.statusGreen {
+    background: $lg-green-20-white-100;
+    color: $s-green;
+  }
+
+  &.statusRed {
+    background: $lg-red-20-white-100;
+    color: $s-red;
+  }
+
+  &.statusYellow {
+    background: $lg-yellow-20-white-100;
+    color: $s-yellow;
+  }
+
+  &.statusGrey {
+    background: $dark-grey-20;
+    color: $dark-grey;
+  }
+
+  &.statusBlue {
+    background: $lg-blue-100-black20;
+    color: $blue;
+  }
+
+  &.statusPurple {
+    background: $lavender-20;
+    color: $blue;
+  }
+}

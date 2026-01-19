@@ -1,0 +1,61 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  gap: 103px;
+  min-width: 540px;
+
+  box-sizing: border-box;
+  background-color: $white;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    gap: 24px;
+    min-width: auto;
+    padding: 38px 20px 60px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  text-align: center;
+}
+
+.valueWrap {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 15px 20px;
+  background-color: $p-bg;
+  height: 114px;
+  box-sizing: border-box;
+  gap: 17px;
+
+  @include respond-to(p-mobile) {
+    height: 242px;
+    gap: 8px;
+  }
+}
+
+.value {
+  @include ag-H60;
+  color: $p-deep-space;
+  text-align: center;
+
+  @include respond-to(p-mobile) {
+    @include ag-H34;
+  }
+}

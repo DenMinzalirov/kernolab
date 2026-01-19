@@ -1,0 +1,213 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 23px 30px 30px 30px;
+  flex: 1;
+
+  @include respond-to-xanova(tablet) {
+    padding: 23px 10px 30px 10px;
+  }
+  @include respond-to-xanova(mobile) {
+    padding: 20px 10px 10px 10px;
+  }
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.title2 {
+  @include xanova-h20-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checkboxLabelWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.checkboxWrap {
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid $xanova-black-10;
+}
+
+.checkboxLabel {
+  @include xanova-h16-semiBold;
+}
+
+.checkboxDescription {
+  @include xanova-p14-regular;
+  color: $xanova-black-60;
+}
+
+.subTitle {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+}
+
+.descriptionText {
+  @include xanova-p16-regular;
+  color: $xanova-black-80;
+}
+
+.flexVerticalCenterGap12 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+//form
+.width100 {
+  width: 100%;
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //width: 100%;
+  flex: 1;
+}
+
+.formWrap {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  //gap: 36px;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btnWrap {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.removeString {
+  @include xanova-p14-regular;
+  color: $xanova-red;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.signatureWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.signatureBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.signatureTitle {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+}
+
+.signatureDescription {
+  @include xanova-p12-regular;
+  color: $xanova-black-80;
+  margin-bottom: 8px;
+}
+
+.signatureCanvasWrap {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 200px;
+  background-color: white;
+  cursor: crosshair;
+}
+
+.signatureCanvas {
+  width: 100% !important;
+  height: 200px !important;
+}
+
+.signatureClearBtn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(255, 77, 79, 0.1);
+  border: 1px solid #000;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 8px;
+  z-index: 10;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $xanova-black-10;
+    color: $xanova-black-80;
+  }
+}
+
+.signatureError {
+  @include xanova-p12-regular;
+  color: #ff4d4f;
+  margin-top: 4px;
+}
+
+.contentSuccess {
+  background-color: $xanova-white;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 30px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 20px;
+  }
+}

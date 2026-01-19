@@ -1,0 +1,466 @@
+@import '/src/styles';
+
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background-color: $p-bg;
+  gap: 24px;
+  padding: 50px 20px 20px;
+  overflow: auto;
+
+  @include respond-to(p-desktop-s) {
+    padding: 30px 20px 20px;
+    gap: 20px;
+  }
+  @include respond-to(p-mobile) {
+    padding: 12px;
+    overflow: visible;
+  }
+}
+
+.assetChangeRateWrap {
+  @include ag-P11;
+  padding: 2px 10px;
+  border-radius: 20px;
+
+  @include respond-to(p-mobile) {
+    padding: 0;
+  }
+}
+
+.positiveStyle {
+  color: $p-system-green;
+  background-color: $p-system-green-10;
+
+  @include respond-to(p-mobile) {
+    background-color: transparent;
+  }
+}
+
+.negativeStyle {
+  color: $p-system-red;
+  background-color: $p-system-red-10;
+
+  @include respond-to(p-mobile) {
+    background-color: transparent;
+  }
+}
+
+.tableSection {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
+  height: 100%;
+  overflow: hidden;
+
+  @include respond-to(p-mobile) {
+    min-height: 500px;
+  }
+}
+
+.tableTitleRow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom-width: 1px;
+  border-color: $p-bg;
+  border-bottom-style: solid;
+  background-color: $white;
+  padding: 24px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  @include respond-to(p-desktop-s) {
+    padding: 12px 24px;
+  }
+}
+
+.tableTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+
+  @include respond-to(p-desktop-s) {
+    @include ag-H14;
+  }
+}
+
+.tableHideZeroWrap {
+  display: flex;
+  align-items: center;
+}
+
+.tableHideZero {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-right: 10px;
+}
+
+.priceChangeBoxIcon {
+  width: 10px;
+  height: 10px;
+}
+
+.priceIsPosIcon {
+  transform: rotate(90deg);
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.priceIsNegIcon {
+  transform: rotate(-90deg);
+  margin-left: -6px;
+  margin-right: 6px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: flex;
+  padding: 24px;
+  padding-bottom: 16px;
+  gap: 10px;
+}
+
+.tableHeaderText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.tableRowsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: auto;
+  padding: 0 24px;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  min-height: 46px;
+
+  &:hover {
+    background-color: $p-bg;
+  }
+
+  @include respond-to(p-mobile) {
+    min-height: 56px;
+    padding: 0 8px;
+  }
+}
+
+.tableRowText {
+  @include ag-H14;
+  color: $p-deep-space;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-mobile) {
+    @include ag-H16;
+    width: 100%;
+  }
+}
+
+.priceMobile {
+  @include respond-to(p-mobile) {
+    width: 100%;
+    text-align: end;
+  }
+}
+
+.tableRowSubText {
+  @include ag-P12;
+  color: $p-simple-grey;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-mobile) {
+    @include ag-P11;
+  }
+}
+
+.tableRowSubTextMobileWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  @include ag-P12;
+  color: $p-simple-grey;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.assetItem {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    flex-direction: column;
+    gap: 1px;
+    align-items: start;
+  }
+
+  @include respond-to(p-mobile) {
+    gap: 3px;
+  }
+}
+
+.assetIcon {
+  width: 46px;
+  height: 46px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.priceChangeItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 18px;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cell1 {
+  flex: 0.85;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    gap: 12px;
+  }
+  @include respond-to(p-tablet) {
+    flex: 0.92;
+  }
+  @include respond-to(p-mobile) {
+    flex: 2;
+  }
+}
+
+.cell2 {
+  flex: 0.85;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-tablet) {
+    flex: 1.15;
+  }
+  @include respond-to(p-mobile) {
+    flex: 1;
+    flex-direction: column-reverse;
+    align-items: end;
+    gap: 3px;
+  }
+}
+
+.cell3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-tablet) {
+    flex: 0.85;
+  }
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.cell4 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-tablet) {
+    flex: 0.85;
+  }
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.cell5 {
+  flex: 1.55;
+
+  @include respond-to(p-desktop-s) {
+    flex: 0.3;
+    text-align: end;
+  }
+  @include respond-to(p-tablet) {
+    flex: 0.4;
+  }
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.colorRed {
+  color: $s-red;
+}
+
+.colorGreen {
+  color: $s-green;
+}
+
+.menuDotsWrap {
+  display: none;
+
+  @include respond-to(p-desktop-s) {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    justify-content: center;
+    justify-content: end;
+  }
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.dot {
+  min-width: 3px;
+  min-height: 3px;
+  border-radius: 100%;
+  background-color: $p-simple-grey;
+  display: inline-block;
+}
+
+.hideDesktopSAndDown {
+  @include respond-to(p-desktop-s) {
+    display: none;
+  }
+}
+
+.hideMobile {
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+//infoCards
+.infoCards {
+  display: flex;
+  gap: 24px;
+
+  @include respond-to(p-mobile) {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+.infoCardsItemWrap {
+  flex-grow: 1;
+
+  @include respond-to(p-mobile) {
+    flex-grow: 0;
+    width: calc(50% - 6px);
+  }
+}
+
+//card item
+.cardWrap {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 120px;
+
+  @include respond-to(p-mobile) {
+    height: 98px;
+    padding: 12px;
+  }
+}
+
+.cardTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.cardAmount {
+  @include ag-H20;
+  color: $p-deep-space;
+
+  @include respond-to(p-mobile) {
+    @include ag-H16;
+  }
+}
+
+.cardChangeRateWrap {
+  display: flex;
+  @include ag-H12;
+  color: $p-system-green;
+}
+
+.emptyCardChangeRateWrap {
+  height: 16.8px;
+}
+
+.cardIcon {
+  width: 80px;
+  height: 80px;
+  margin-right: 17px;
+
+  @include respond-to(p-desktop) {
+    display: none;
+  }
+}
+
+.cardAmountWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 134px;
+}
+
+.cardChangeRateMinus {
+  color: $p-system-red;
+}

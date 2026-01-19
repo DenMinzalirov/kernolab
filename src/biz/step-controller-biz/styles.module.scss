@@ -1,0 +1,109 @@
+@import '/src/styles/index';
+
+.containerWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.header {
+  @include ag-s12-medium;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  @include ag-s12;
+  color: $dark-grey;
+
+  margin-bottom: 12px;
+}
+
+.qrCodeContainer {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.errorLabel {
+  color: $s-red;
+}
+
+.resendWrap {
+  width: 100%;
+  margin-top: 9px;
+}
+
+.resendText {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.resendLink {
+  color: $navy;
+  @include ag-s12;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.qrBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 250px;
+  align-items: center;
+  align-self: center;
+}
+
+.secretText {
+  @include ag-s16-reg;
+  color: $navy;
+
+  @include respond-to-biz(md) {
+    @include ag-s14-0;
+  }
+}
+
+.secretWrap {
+  display: flex;
+  gap: 12px;
+  padding: 11px 30px;
+  background-color: $white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.accentText {
+  color: $navy;
+}
+
+.errorWrapBiz {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.errorIconBiz {
+  width: 15px;
+  height: 15px;
+}
+
+.errorTextBiz {
+  @include ag-s12;
+  color: $s-red;
+}

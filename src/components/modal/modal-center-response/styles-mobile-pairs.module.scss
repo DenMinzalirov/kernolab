@@ -1,0 +1,100 @@
+@import '/src/styles/index';
+
+.backdrop {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: end;
+  backdrop-filter: blur(1.5px);
+}
+.iconWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 5rem 0 2.5rem;
+}
+.contentWrap {
+  position: relative;
+  cursor: default;
+  overflow-y: auto;
+  display: flex;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  margin: 0 0 0 auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.noPaddingClose {
+  top: 1rem;
+  right: 1rem;
+}
+
+//new close button
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin: 0 0 0 auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  width: 25px;
+  height: 25px;
+
+  @include respond-to-biz(md) {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.closeButton::before,
+.closeButton::after {
+  content: '';
+  position: absolute;
+  width: 17.68px;
+  height: 0.7px;
+  background-color: $navy;
+  transform-origin: center;
+}
+
+.closeButton::before {
+  transform: rotate(45deg);
+}
+
+.closeButton::after {
+  transform: rotate(-45deg);
+}
+
+.closeButton:hover::before,
+.closeButton:hover::after {
+  opacity: 0.5;
+}

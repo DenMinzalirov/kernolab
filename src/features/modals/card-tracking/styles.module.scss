@@ -1,0 +1,87 @@
+@import 'src/styles';
+
+.cardViewWrap {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  width: 540px;
+  height: 515px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    min-width: auto;
+    padding: 70px 20px 60px 20px;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.viewDetailsItemWrap {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  margin-bottom: 24px;
+}
+
+.closeWrap {
+  display: flex;
+  align-self: end;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.viewDetailsTitle {
+  @include ag-H12;
+  color: $p-deep-space;
+}
+
+.viewDetailsDescription {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.copiedWrap {
+  position: absolute;
+  top: 0;
+  left: 200%;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iconWrap {
+  height: 53px;
+  width: 53px;
+  border-radius: 100%;
+  background-color: $p-ivory;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
+}

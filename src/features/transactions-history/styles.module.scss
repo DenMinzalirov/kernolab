@@ -1,0 +1,531 @@
+@import '/src/styles/index';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background-color: $p-bg;
+  gap: 30px;
+  padding: 43px 20px 20px;
+  overflow: hidden;
+
+  @include respond-to(p-desktop-s) {
+    padding: 30px 20px 20px;
+    gap: 20px;
+  }
+  @include respond-to(p-tablet) {
+    padding: 30px 20px 20px;
+    gap: 24px;
+  }
+
+  @include respond-to(p-mobile) {
+    padding: 12px;
+    gap: 20px;
+  }
+}
+
+.tableWrap {
+  display: flex;
+  flex-grow: 1; //
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tnxTopBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid $p-bg;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    padding: 21px;
+  }
+}
+
+.tableTitle {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.containerPageRequest {
+  margin-top: 85px;
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+}
+.containerWrap {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.title {
+  @include ag-H34;
+  color: $p-deep-space;
+  margin-bottom: 36px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.headerTitleWrap {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.navMenuItem {
+  @include ag-H14;
+  color: $p-simple-soft-grey;
+  display: inline-block;
+  cursor: pointer;
+}
+.navMenuItemActive {
+  color: $p-deep-space;
+  border-bottom: 1px solid $p-system-green;
+  padding-bottom: 2px;
+}
+.headerBackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: $p-ivory;
+}
+.headerBackBtnIcon {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
+.headerTitle {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.horizontalLine {
+  border: none;
+  border-top: 1px solid $p-bg;
+}
+
+.btnGroupWrap {
+  display: flex;
+  gap: 9px;
+}
+.btnGroupButton {
+  display: flex;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background-color: $p-ivory;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.btnGroupButtonText {
+  @include ag-P14;
+  color: $p-deep-space;
+}
+.btnGroupIcon {
+  width: 14px;
+}
+
+/* styles.css  list for mobile*/
+.listContainer {
+  background-color: $white;
+  border-radius: 15px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 14px;
+  overflow: auto;
+  margin-top: 24px;
+}
+
+.listSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.listSectionTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+  padding: 0 10px;
+}
+
+.listRow {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  height: 58px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $p-bg;
+    border-radius: 10px;
+  }
+}
+
+.listIcon {
+  width: 42px;
+  height: 42px;
+  margin-right: 12px;
+}
+
+.listRowTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.listRowTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.listTextDate {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.listTextAmountWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.listTextAmount {
+  @include ag-H16;
+  color: $p-deep-space;
+  text-align: end;
+}
+
+.textAlignEnd {
+  text-align: end;
+}
+
+.listTextStatus {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  text-align: end;
+}
+
+.listGreenColor {
+  color: $p-system-green;
+}
+
+.listPendingStyle {
+  opacity: 0.5;
+}
+
+.listStrikethrough {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: $p-black;
+}
+
+.flexGrow1 {
+  flex-grow: 1;
+}
+
+.loadingWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.searchBarWrap {
+  //margin-bottom: 22px;
+  //margin: 0 14px;
+  margin: 0 14px 22px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.loaderTrigger {
+  width: 100%;
+  font-size: 1px;
+  visibility: hidden;
+}
+
+// new
+
+.tnxTopBarButtonsWrap {
+  display: flex;
+  gap: 9px;
+}
+.tnxTopBarButton {
+  display: flex;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background-color: $p-ivory;
+  cursor: pointer;
+  height: 27px;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @include respond-to(p-mobile) {
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+.tnxTopBarButtonText {
+  @include ag-P12;
+  color: $p-deep-space;
+}
+.tnxTopBarButtonIcon {
+  width: 14px;
+}
+
+.tnxBtnViewAll {
+  @include ag-P14;
+  color: $p-system-green;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 20px;
+  overflow: auto;
+
+  @include respond-to(p-mobile) {
+    padding: 24px 14px;
+  }
+}
+
+.tableRowsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: auto;
+  scrollbar-width: none;
+  flex-grow: 1;
+
+  @include respond-to(p-mobile) {
+    gap: 14px;
+  }
+}
+.tableRowsWrap::-webkit-scrollbar {
+  display: none;
+}
+
+//--
+
+.tableHeader {
+  display: flex;
+  padding: 0 10px;
+  padding-bottom: 16px;
+  gap: 10px;
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.tableRow {
+  display: flex;
+  min-height: 31px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  gap: 10px;
+
+  &:hover {
+    background-color: $p-bg;
+  }
+
+  // @include respond-to-biz(md) {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   border-radius: 0;
+  //   border-bottom: 0.5px solid $dark-grey-20;
+
+  //   &:last-child {
+  //     text-align: end;
+  //     border: none;
+  //   }
+  // }
+}
+
+.headerText {
+  @include ag-P12;
+  color: $p-simple-grey;
+
+  // &:last-child {
+  //   text-align: end;
+  // }
+}
+
+.dateText {
+  @include ag-P12;
+  color: $p-simple-grey;
+
+  // @include respond-to-biz(md) {
+  //   @include ag-s10;
+  // }
+}
+
+.text {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+//Txn history Table cell
+.cell1 {
+  flex: 1;
+
+  @include respond-to(p-desktop-s) {
+    max-width: 120px;
+  }
+  @include respond-to(p-tablet) {
+    max-width: 100px;
+  }
+}
+.cell2 {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cell3 {
+  flex: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cell4 {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cell5 {
+  flex: 1;
+  max-width: 200px;
+  min-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include respond-to(p-desktop-s) {
+    max-width: 150px;
+  }
+}
+
+.hideMobile {
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.showMobile {
+  display: none;
+
+  @include respond-to(p-mobile) {
+    display: flex;
+  }
+}
+
+//new
+.statusBlockWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+.statusIndicatorWrap {
+  display: flex;
+  gap: 8px;
+}
+.statusIndicator {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: $p-system-green;
+}
+.statusBlockText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  text-align: end;
+}
+.green10 {
+  background-color: $p-system-green-10;
+}
+.green {
+  background-color: $p-system-green;
+}
+.red {
+  background-color: $p-system-red;
+}
+
+.filterWrap {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.filterWrapMobile {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.cashbackAmountEur {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.width100px {
+  min-width: 100px;
+  width: 100px;
+  max-width: 100px;
+}

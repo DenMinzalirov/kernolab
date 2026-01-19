@@ -1,0 +1,48 @@
+@import '/src/styles/index';
+
+.filterButton {
+  background-color: $p-ivory;
+  padding: 4px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $p-deep-space;
+
+    .filterButtonTitle {
+      color: $white;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.filterButtonDisabled {
+  background-color: $p-deep-space-10;
+  padding: 4px 12px;
+  border-radius: 100px;
+  opacity: 50%;
+}
+.filterButtonTitleLarge {
+  @include ag-P14;
+  color: $p-deep-space;
+
+  @include respond-to(p-mobile) {
+    @include ag-P12;
+  }
+}
+.filterButtonTitleMedium {
+  @include ag-P12;
+  color: $p-deep-space;
+}
+.filterButtonTitleSmall {
+  @include ag-P10;
+  line-height: 16px;
+}
+.filterButtonActive {
+  background-color: $p-deep-space;
+}
+.filterButtonTitleActive {
+  color: $white;
+}

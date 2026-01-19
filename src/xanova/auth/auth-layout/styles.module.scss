@@ -1,0 +1,118 @@
+@import '/src/styles/index';
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  background-color: inherit;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(tablet) {
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $xanova-gold;
+    gap: 0;
+    position: relative;
+  }
+}
+
+.imageSection {
+  position: relative;
+  flex: 0 0 487px;
+  max-width: 487px;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageContent {
+  //only desktop
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 32px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.imageTextTitle {
+  @include xanova-h30-semiBold;
+  color: $xanova-white;
+
+  @include respond-to-xanova(tablet) {
+    @include xanova-h40-medium;
+    color: $xanova-black;
+  }
+}
+
+.imageTextSubTitle {
+  @include xanova-p16-regular;
+  color: $xanova-white;
+}
+
+.contentSection {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(tablet) {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.contentInner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 30px 20px;
+  background-color: $xanova-white;
+
+  @include respond-to-xanova(tablet) {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    background: $xanova-white;
+    border-radius: 20px;
+    padding: 20px 20px;
+    box-shadow: $xanova-modal-shadow;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.tabletAndDown {
+  display: none;
+
+  @include respond-to-xanova(tablet) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 26px 0;
+    position: relative;
+    z-index: 1;
+  }
+}

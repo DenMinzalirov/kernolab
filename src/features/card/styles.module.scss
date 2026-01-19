@@ -1,0 +1,549 @@
+@import 'src/styles';
+
+.cardWrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: $p-bg;
+  padding: 30px 20px 20px;
+  overflow: hidden;
+
+  @include respond-to(p-mobile) {
+    overflow: auto;
+    padding: 20px;
+  }
+}
+
+.contentCardWrap {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  flex-grow: 1;
+
+  @include respond-to(p-tablet) {
+    flex-direction: column;
+  }
+
+  @include respond-to(p-mobile) {
+    overflow: visible;
+  }
+}
+
+.manageCardWrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+
+  @include respond-to(p-tablet) {
+    flex-direction: row;
+  }
+  @include respond-to(p-mobile) {
+    flex-direction: column;
+  }
+}
+
+.manageCardHeader {
+  display: flex;
+  justify-content: space-between;
+  color: $p-deep-space;
+}
+
+.manageCardTitle {
+  @include ag-H14;
+  padding: 24px;
+}
+
+.manageCardSwitchBlock {
+  background-color: $p-ivory;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  // width: 448px;
+  margin: 16px 24px;
+}
+
+.manageCardBtn {
+  @include ag-H14;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: $p-deep-space-20;
+  height: 80%;
+}
+
+.manageCardBtnActive {
+  background-color: $white;
+  color: $p-deep-space;
+}
+
+.divider {
+  border-bottom: 1px solid $p-bg;
+  width: 100%;
+}
+//-------------------------------
+.cardContent {
+  flex: 2;
+  background: $white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(p-tablet) {
+    flex: 1;
+  }
+}
+.cardHeader {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid $p-bg;
+}
+.cardSwitch {
+  display: flex;
+  gap: 24px;
+}
+.balanceCardWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cardNumber {
+  position: absolute;
+  bottom: 24.5px;
+  left: 24px;
+  color: $white;
+  @include ag-P16;
+
+  @include respond-to(p-desktop-s) {
+    @include ag-P12;
+    bottom: 17px;
+    left: 16px;
+  }
+
+  @include respond-to(p-tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    @include ag-P14;
+    color: $p-deep-space;
+  }
+
+  @include respond-to(p-mobile) {
+    display: block;
+    position: absolute;
+    bottom: 11px;
+    left: 14px;
+    color: $white;
+    @include ag-P12;
+  }
+}
+
+.cardName {
+  color: $white;
+  @include ag-H16;
+  margin-bottom: 6px;
+
+  @include respond-to(p-desktop-s) {
+    @include ag-H12;
+  }
+
+  @include respond-to(p-tablet) {
+    @include ag-H14;
+    color: $p-deep-space;
+  }
+
+  @include respond-to(p-mobile) {
+    @include ag-H12;
+    color: $white;
+  }
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.btnTitle {
+  @include ag-H14;
+}
+
+.topUpBtn {
+  max-width: 270px;
+}
+
+.balanceCardTitle {
+  @include ag-P14;
+  color: $p-deep-space-80;
+  margin-bottom: 13px;
+}
+
+.balanceCardAmount {
+  @include ag-H24;
+  color: $p-deep-space;
+  margin-bottom: 16px;
+}
+
+.cardBtnsWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 365px;
+
+  @include respond-to(p-desktop-s) {
+    max-width: 296px;
+  }
+
+  @include respond-to(p-tablet) {
+    max-width: 270px;
+  }
+  @include respond-to(p-mobile) {
+    max-width: 235px;
+  }
+}
+
+.btnIconRight {
+  width: 10px;
+  height: 10px;
+  margin-left: 12px;
+  transform: rotate(180deg);
+}
+
+.titleOrderCard {
+  @include ag-H24;
+  color: $p-deep-space;
+  text-align: center;
+}
+
+.descriptionOrderCard {
+  @include ag-P14;
+  color: $p-deep-space-80;
+  text-align: center;
+  max-width: 367px;
+}
+
+.iconWrap {
+  margin: 0 auto;
+  height: 64px;
+  width: 64px;
+  border-radius: 100%;
+  background-color: $p-ivory;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @include respond-to(p-desktop-s) {
+    height: 55px;
+    width: 55px;
+  }
+  @include respond-to(p-tablet) {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.btnIconFreeze {
+  max-width: 22px;
+
+  @include respond-to(p-desktop-s) {
+    max-width: 19px;
+  }
+  @include respond-to(p-tablet) {
+    max-width: 14px;
+  }
+}
+.btnIconDetails {
+  max-width: 32.5px;
+
+  @include respond-to(p-desktop-s) {
+    max-width: 28px;
+  }
+  @include respond-to(p-tablet) {
+    max-width: 20px;
+  }
+}
+.btnIconSettings {
+  max-width: 28px;
+
+  @include respond-to(p-desktop-s) {
+    max-width: 24px;
+  }
+  @include respond-to(p-tablet) {
+    max-width: 17.5px;
+  }
+}
+
+.iconTitle {
+  text-align: center;
+  @include ag-P16;
+  color: $p-deep-space-80;
+  margin-top: 15px;
+
+  @include respond-to(p-desktop-s) {
+    @include ag-P12;
+  }
+
+  @include respond-to(p-tablet) {
+    margin-top: 10px;
+  }
+}
+
+.trackingLinkText {
+  @include ag-H16;
+  color: $p-deep-space;
+  line-height: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  gap: 20px;
+  min-height: 775px;
+
+  @include respond-to(p-desktop-s) {
+    min-height: 700px;
+  }
+
+  @include respond-to(p-tablet) {
+    flex: 3;
+    min-height: auto;
+  }
+
+  @include respond-to(p-mobile) {
+    overflow: visible;
+  }
+}
+
+.getCardTitle {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.getCardDescription {
+  @include ag-P14;
+  color: $p-deep-space-80;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.availableTier {
+  @include ag-P12;
+  background-color: var(--Deep-Space);
+  padding: 6px 12px;
+  border-radius: 32px;
+  color: $white;
+}
+
+.goUpgradeText {
+  @include ag-H14;
+  color: var(--Deep-Space);
+  cursor: pointer;
+}
+
+.cardBalanceWrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
+  min-height: 263px;
+  overflow: hidden;
+
+  @include respond-to(p-tablet) {
+    flex: 1;
+  }
+
+  @include respond-to(p-mobile) {
+    min-height: auto;
+    background-color: transparent;
+  }
+}
+.cardBalanceHeader {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid $p-bg;
+}
+.cardBalanceTitle {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+.cardBalance {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 36px;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  @include respond-to(p-mobile) {
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+    flex-grow: 0;
+  }
+}
+.cardBalanceAmountWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include respond-to(p-mobile) {
+    align-items: center;
+  }
+}
+.cardBalanceLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.cardBalanceAmount {
+  @include ag-H34;
+  color: $p-deep-space;
+
+  @include respond-to(p-mobile) {
+    @include ag-H24;
+  }
+}
+.navMenuItem {
+  @include ag-H14;
+  color: $p-simple-soft-grey;
+  display: inline-block;
+  cursor: pointer;
+}
+.navMenuItemActive {
+  color: $p-deep-space;
+  border-bottom: 1px solid $p-system-green;
+  padding-bottom: 2px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 40px;
+  gap: 40px;
+  flex-grow: 1;
+
+  @include respond-to(p-tablet) {
+    padding: 20px;
+    gap: 30px;
+  }
+
+  @include respond-to(p-mobile) {
+    gap: 40px;
+  }
+}
+
+.cardBodyImageWrap {
+  position: relative;
+  transition: 0.6s;
+  border-radius: 12px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 116, 183, 0.7);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &.blurred {
+    filter: blur(2px);
+
+    &::after {
+      opacity: 1; // Показываем синий слой
+    }
+  }
+
+  @include respond-to(p-tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.cardBodyImage {
+  width: 377px;
+  height: 235px;
+
+  @include respond-to(p-desktop-s) {
+    width: 262px;
+    height: 163px;
+  }
+
+  @include respond-to(p-tablet) {
+    width: 70px;
+    height: 44px;
+  }
+  @include respond-to(p-mobile) {
+    width: 229px;
+    height: 143px;
+  }
+}
+
+.cashbackWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.limitsContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  border-radius: 10px;
+  max-height: 325px;
+
+  @include respond-to(p-tablet) {
+    display: none;
+  }
+}
+.limitCardHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid $p-bg;
+}
+.limitCardHeaderTitle {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+.limitCardHeaderButton {
+  @include ag-P12;
+  color: $p-simple-grey;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.limitsCardWrap {
+  padding: 20px;
+}

@@ -1,0 +1,28 @@
+@import '/src/styles/index';
+
+//NavButton
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--Blue-20);
+  padding: 4px 12px;
+  border-radius: 100px;
+  height: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.navButtonTitle {
+  @include ag-s12;
+  color: var(--Blue);
+}
+.navButtonActive {
+  background-color: var(--Blue);
+}
+.navButtonTitleActive {
+  color: #fff;
+}

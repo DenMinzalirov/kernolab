@@ -1,0 +1,83 @@
+@import '/src/styles/index';
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  border-radius: 100px;
+  padding: 0 12px;
+  height: 27px;
+  border: 1px solid $p-deep-space-10;
+}
+
+.searchBarBiz {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  background-color: $white;
+  border-radius: 100px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  min-height: 24px;
+  height: 100%;
+  border: 1px solid $dark-grey-20;
+}
+
+.searchBarIcon {
+  margin-right: 5px;
+}
+
+.searchBarIconBiz {
+  display: flex;
+  align-items: center;
+  width: 15px;
+  height: 16px;
+}
+
+.searchBarInput {
+  flex-grow: 1;
+  @include ag-P14;
+  line-height: 24px;
+  color: $p-deep-space;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.searchBarBizInput {
+  width: 100%;
+  @include ag-s10;
+  color: $navy;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  @include respond-to-biz(md) {
+    @include ag-s12;
+  }
+
+  &::placeholder {
+    color: $dark-grey; // Цвет плейсхолдера
+  }
+
+  &:-ms-input-placeholder {
+    color: $dark-grey; // Internet Explorer
+  }
+
+  &::-ms-input-placeholder {
+    color: $dark-grey; // Microsoft Edge
+  }
+
+  &::-webkit-input-placeholder {
+    color: $dark-grey; // Chrome, Safari
+  }
+
+  &:-moz-placeholder {
+    color: $dark-grey; // Firefox (старые версии)
+  }
+
+  &::-moz-placeholder {
+    color: $dark-grey; // Firefox (современные версии)
+  }
+}

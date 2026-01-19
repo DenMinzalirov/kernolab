@@ -1,0 +1,77 @@
+@import '/src/styles';
+
+.individualTokenWrap {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.mobBackTitle {
+  padding-top: 36px;
+  margin: 0 16px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.mobTitle {
+  display: flex;
+  align-items: center;
+  @include set-font($size: 24px, $weight: 600, $family: 'Lexend');
+  color: #262832;
+}
+
+.actionBtn {
+  position: relative;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #aa9de4;
+  color: white;
+  margin-top: 18px;
+}
+
+@media (max-width: 767px) {
+  .individualTokenWrap {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .mobTitle {
+    flex-direction: column;
+  }
+
+  .symbolAsset {
+    @include set-font($size: 12px, $weight: 500, $family: 'Lexend');
+    color: #445374;
+    margin-top: 8px;
+  }
+
+  .blockWrap {
+    border-radius: 10px;
+    background-color: #262832;
+    padding: 12px 16px;
+    min-height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .blockTitle {
+    @include set-font($size: 12px, $weight: 500, $family: 'Inter');
+    color: #858eaa;
+  }
+
+  .blockAmount {
+    color: #ffffff;
+    @include set-font($size: 20px, $weight: 600, $family: 'Lexend');
+    display: flex;
+    align-items: center;
+  }
+}

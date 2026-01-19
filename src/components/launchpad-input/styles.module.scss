@@ -1,0 +1,59 @@
+@import '/src/styles';
+
+.input {
+  @include ag-H18;
+  color: $p-deep-space;
+  background-color: $white;
+  padding: 18.5px 20px;
+  border: 1px solid $p-ivory;
+  flex-grow: 1;
+  outline: none;
+  box-sizing: border-box;
+  height: 62px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px -1px rgba(17, 12, 34, 0.08);
+
+  &::placeholder {
+    @include ag-P18;
+    color: $p-deep-space;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    border: 1px solid $p-simple-soft-grey;
+  }
+
+  &:focus-within {
+    outline: 0;
+    border: 1px solid $p-simple-soft-grey;
+  }
+
+  &.inputError {
+    border: 1px solid $p-system-red;
+    color: $p-system-red;
+  }
+}
+
+.btnTitle {
+  @include ag-H18;
+  color: $p-deep-space;
+}
+
+.btnTextMax {
+  @include ag-H18;
+  color: $p-system-green;
+  cursor: pointer;
+}
+
+.absoluteContent {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  background-color: $white;
+  display: flex;
+  padding: 17px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 10px;
+  gap: 16px;
+}

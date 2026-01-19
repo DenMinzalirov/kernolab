@@ -1,0 +1,147 @@
+@import '/src/styles';
+
+.containerWrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: $white;
+  padding: 20px;
+
+  @include respond-to(p-mobile) {
+    min-height: 650px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  flex-grow: 1;
+  gap: 100px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.title {
+  @include ag-H30;
+  text-align: center;
+  color: $p-deep-space;
+  margin-bottom: 48px;
+}
+.modalBtnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.labelDropdown {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.networkAndMemoWrap {
+  display: flex;
+  gap: 20px;
+}
+.networkWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.summaryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.summaryText {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.summarySubText {
+  @include ag-H12;
+  color: $p-deep-space;
+  word-break: break-all;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 16px;
+}
+.btnBackWrap {
+  flex: 1;
+  min-width: 120px;
+}
+.btnNextWrap {
+  flex: 2;
+}
+
+//warning modal
+.modalContent {
+  padding: 42px 60px 11px;
+  box-sizing: border-box;
+  width: 540px;
+  background-color: $white;
+  border-radius: 15px;
+
+  @include respond-to(p-mobile) {
+    padding: 42px 20px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+}
+.modalTextWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 65px;
+}
+.modalTitle {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+.modalSubTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.modalBtnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+// dropdown component
+.dropdownItemRow {
+  display: flex;
+  align-items: center;
+  padding: 12.5px 13px;
+  gap: 10px;
+}
+.dropdownItemRowIcon {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.dropdownItemRowTitle {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.flexGrow1 {
+  flex-grow: 1;
+}
+.height20 {
+  height: 20px;
+}
+.mb16 {
+  margin-bottom: 16px;
+}

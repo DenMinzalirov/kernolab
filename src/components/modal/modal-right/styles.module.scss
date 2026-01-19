@@ -1,0 +1,48 @@
+@import '/src/styles/index';
+
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  left: 0;
+  //left: 100%;
+  //width: 100%;
+  //transition: .5s;
+  display: flex;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.contentWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 655px;
+  min-width: 655px;
+  padding: 60px;
+  min-height: calc(100% - 120px);
+  background: $p-bg;
+}
+
+@media (max-width: 767px) {
+  .backdrop {
+    width: 100%;
+    transition: 0.5s;
+    height: calc(100% - 182px);
+    padding-top: 122px;
+    padding-bottom: 60px;
+    left: 0;
+  }
+
+  .contentWrap {
+    width: calc(100% - 30px);
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

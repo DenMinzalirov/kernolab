@@ -1,0 +1,31 @@
+@import '/src/styles';
+
+.copyContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.iconСopiedWrap {
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.iconСopyWrap {
+  top: 0;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}

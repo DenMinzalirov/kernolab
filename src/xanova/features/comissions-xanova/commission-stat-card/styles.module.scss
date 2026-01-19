@@ -1,0 +1,76 @@
+@import '/src/styles/index';
+
+.commissionStatCard {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: $xanova-bg;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(tablet) {
+    height: 82px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 32%;
+    min-width: 150px;
+    flex-direction: column-reverse;
+  }
+}
+
+// Skeleton
+.commissionStatCardSkeleton {
+  gap: 12px;
+}
+
+.commissionStatCardSkeletonBar {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 200px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.08);
+  animation: commissionStatSkeletonPulse 1.4s ease-in-out infinite;
+}
+
+.commissionStatCardSkeletonBarLarge {
+  block-size: 32px;
+}
+
+.commissionStatCardSkeletonBarSmall {
+  block-size: 16px;
+  inline-size: 60%;
+  max-inline-size: 120px;
+}
+
+.commissionStatCardTitle {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+}
+
+.commissionStatCardValue {
+  @include xanova-h40-medium;
+  color: $xanova-black;
+
+  @include respond-to-xanova(tablet) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.commissionStatCardSubText {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+}
+
+@keyframes commissionStatSkeletonPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

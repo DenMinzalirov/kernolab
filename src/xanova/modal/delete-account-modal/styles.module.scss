@@ -1,0 +1,56 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 30px 30px;
+  gap: 36px;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: 30px;
+  box-shadow: $xanova-modal-shadow;
+
+  @include respond-to-xanova(mobile) {
+    width: 100%;
+    min-width: auto;
+    padding: 70px 20px 60px 20px;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.title {
+  @include xanova-h20-semiBold;
+  color: $xanova-black;
+}
+
+.description {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.inputWrap {
+  width: 100%;
+}
+
+.error {
+  @include xanova-p14-regular;
+  color: $xanova-red;
+  text-align: center;
+  margin-bottom: 24px;
+}

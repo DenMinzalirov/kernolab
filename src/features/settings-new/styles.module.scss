@@ -1,0 +1,323 @@
+@import '/src/styles';
+//+
+.settingsWrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: $p-bg;
+  gap: 3px;
+}
+//+
+.settingsItemsWrap {
+  display: flex;
+  flex: 1;
+  //margin: 20px;
+  background-color: $white;
+  padding: 50px;
+  gap: 150px;
+  border-radius: 10px;
+
+  @include respond-to(p-tablet) {
+    flex-direction: column;
+    gap: 60px;
+    //margin-top: 30px;
+  }
+
+  @include respond-to(p-mobile) {
+    margin: 10px;
+    padding: 50px 20px;
+    gap: 50px;
+  }
+}
+//+
+.settingsNavMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include respond-to(p-tablet) {
+    flex-direction: row;
+  }
+
+  @include respond-to(p-mobile) {
+    gap: 12px;
+  }
+}
+//+
+.settingsMenuItem {
+  @include ag-H14;
+  color: $p-simple-soft-grey;
+  display: inline-block;
+  cursor: pointer;
+}
+//+
+.settingsMenuItemActive {
+  color: $p-deep-space;
+  border-bottom: 1px solid $p-system-green;
+  padding-bottom: 2px;
+}
+//+
+.tabSettingsWrap {
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+}
+//+
+.tabSettingsTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+//+
+.tabSettingsTitle {
+  @include ag-H30;
+  color: $p-deep-space;
+}
+//+
+.tabSettingsDescription {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  max-width: 744px;
+}
+//+
+.settingsTabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+//+
+.settingItemCardWrap {
+  border-radius: 10px;
+  border: 1px solid $p-ivory;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond-to(p-mobile) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+//+
+.settingItemCardWrapChild {
+  display: flex;
+  align-items: center;
+}
+//+
+.settingItemCardTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+//+
+.settingItemCardTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+//+
+.settingItemCardDescription {
+  @include ag-P14;
+  color: $p-deep-space-80;
+  //width: 277px;
+
+  @include respond-to(p-mobile) {
+    margin-bottom: 10px;
+    //width: 100%;
+  }
+}
+//+
+.settingVersionAppText {
+  @include ag-H20;
+  color: $p-deep-space;
+  margin-right: 30px;
+  display: flex;
+
+  @include respond-to(p-mobile) {
+    background-color: $p-ivory;
+    width: 100%;
+    margin-right: 0px;
+    padding: 13px 16px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+}
+//+
+.settingEditAppText {
+  @include ag-H20;
+  color: $p-deep-space;
+  margin-right: 30px;
+  cursor: pointer;
+  display: flex;
+
+  @include respond-to(p-mobile) {
+    @include ag-H16;
+    background-color: $p-deep-space;
+    width: 100%;
+    margin-right: 0px;
+    padding: 13px 16px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: $white;
+  }
+}
+//+
+.userDataDescription {
+  @include ag-H14;
+  color: $p-deep-space;
+}
+
+.settingsItem {
+  height: 196px;
+  width: 504px;
+  background-color: $white;
+  border-radius: 10px;
+  margin-right: 16px;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.settingsItemContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.settingsItemTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.settingsItemDescription {
+  @include ag-P14;
+  line-height: 24px;
+  color: $p-deep-space-80;
+}
+
+.fixOneRowText {
+  @include ag-P14;
+  line-height: 24px;
+  color: $p-deep-space-80;
+  height: 48px;
+}
+//+
+.currencySwitchBlock {
+  height: 52px;
+  width: 400px;
+  background-color: $p-ivory;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to(p-desktop-s) {
+    width: 300px;
+  }
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+  }
+}
+//+
+.currencyBtn {
+  @include ag-H14;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: $p-deep-space;
+}
+//+
+.currencyBtnActive {
+  background-color: $p-deep-space;
+  color: $white;
+}
+
+.twoFaBtn {
+  @include ag-H14;
+  position: relative;
+  background-color: $p-ivory;
+  color: $p-deep-space;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btnIcon {
+  position: absolute;
+  right: 20px;
+}
+//+
+.recommended {
+  @include ag-P11;
+  color: $p-system-green;
+  background-color: $p-system-green-10;
+  height: 22px;
+  border-radius: 20px;
+  padding: 3px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.twoFaTitleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activeBlock {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.activeBtn {
+  @include ag-H14;
+  color: $p-system-green;
+  background-color: $p-system-green-10;
+  padding: 14px 50px;
+  border-radius: 100px;
+}
+
+.deactivateBtn {
+  @include ag-H14;
+  margin-left: 24px;
+  cursor: pointer;
+  color: $p-deep-space;
+}
+
+.disableBtn {
+  @include ag-H14;
+  background-color: $p-ivory;
+  color: $p-deep-space;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

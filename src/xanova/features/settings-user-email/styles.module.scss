@@ -1,0 +1,45 @@
+@import '/src/styles';
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  margin-bottom: 8px;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.description {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+  text-align: center;
+}
+
+.formWrap {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.errorText {
+  @include xanova-p12-regular;
+  color: $xanova-red;
+}
+
+.btnWrap {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}

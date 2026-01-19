@@ -1,0 +1,291 @@
+@import '/src/styles';
+.tierProgressTracker {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header {
+  margin-bottom: 24px;
+  @include respond-to-xanova(mobile) {
+    margin-bottom: 12px;
+  }
+}
+.title {
+  margin: 0;
+  @include xanova-h20-semiBold;
+  color: $xanova-black;
+  @include respond-to-xanova(mobile) {
+    @include xanova-h16-semiBold;
+  }
+}
+.track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.circleWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 35px;
+  block-size: 35px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: $xanova-white;
+  border: 1px solid transparent;
+  flex-shrink: 0;
+  @include respond-to-xanova(tablet) {
+    inline-size: 25px;
+    block-size: 25px;
+  }
+  &.hideOnCompact {
+    @include respond-to-xanova(tablet) {
+      display: none;
+    }
+  }
+}
+.circleCompleted {
+  background-color: $xanova-black;
+  border-color: $xanova-black;
+  position: relative;
+}
+.circleCheckmark {
+  display: block;
+  inline-size: 23px;
+  block-size: 23px;
+  background-color: $xanova-white;
+  mask: url('../../icon-xanova/checkmark-icon.svg') center/contain no-repeat;
+  -webkit-mask: url('../../icon-xanova/checkmark-icon.svg') center/contain no-repeat;
+}
+.circleCurrent {
+  border: 11px solid $xanova-black;
+  background-color: $xanova-white;
+  color: $xanova-black;
+  @include respond-to-xanova(tablet) {
+    border-width: 7.5px;
+  }
+}
+.circleUpcoming {
+  border: 1.17px solid $xanova-white;
+  background-color: transparent;
+  color: $xanova-white;
+  .circleNumber {
+    color: $xanova-white;
+  }
+}
+.hideOnCompact {
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+}
+.hideOnCompact + .connector {
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+}
+.connector {
+  flex: 1 1 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 48px;
+  inline-size: 100%;
+  block-size: 25px;
+  border-radius: 50px;
+  margin: 0 5px;
+  box-sizing: border-box;
+  &.hideOnCompact {
+    @include respond-to-xanova(tablet) {
+      display: none;
+    }
+  }
+}
+.connectorCompleted {
+  background-color: $xanova-black;
+}
+.connectorUpcoming {
+  border: 1px solid $xanova-white;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(-45deg, var(--Xanova-White) 0 1.7px, transparent 1.7px 5px);
+  min-inline-size: 97px;
+}
+.connectorActive {
+  border: none;
+  background-color: transparent;
+  border-radius: 50px;
+  overflow: visible;
+  padding: 0;
+  gap: 5px;
+}
+.connectorAchieved {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $xanova-black;
+  inline-size: 100%;
+  block-size: 25px;
+  border-radius: 50px;
+  min-inline-size: 0;
+  padding: 0 10px;
+  color: $xanova-white;
+  white-space: nowrap;
+  @include xanova-p16-regular;
+  @include respond-to-xanova(tablet) {
+    padding: 0 20px;
+  }
+}
+.connectorAchievedLabel {
+  @include respond-to-xanova(desktop) {
+    display: none;
+  }
+}
+.connectorRemaining {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(-45deg, var(--Xanova-White) 0 1.7px, transparent 1.7px 5px);
+  inline-size: 100%;
+  block-size: 25px;
+  min-inline-size: 97px;
+  border-radius: 50px;
+  border: 1px solid $xanova-white;
+  padding: 0 20px;
+  color: $xanova-black;
+  white-space: nowrap;
+  @include xanova-p16-regular;
+}
+.descriptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  margin-top: 24px;
+  @include respond-to-xanova(mobile) {
+    gap: 16px;
+  }
+}
+.descriptionItem {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  &:first-child {
+    align-items: flex-start;
+  }
+  &:last-child {
+    align-items: flex-end;
+  }
+  &.hideOnCompact {
+    @include respond-to-xanova(tablet) {
+      display: none;
+    }
+  }
+  &.descriptionItemCompactStart {
+    @include respond-to-xanova(tablet) {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  &.descriptionItemCompactEnd {
+    @include respond-to-xanova(tablet) {
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+}
+.descriptionTitle {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.descriptionTitleText {
+  @include xanova-h16-semiBold;
+  color: $xanova-black;
+}
+.descriptionCurrentLabel {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+}
+.descriptionRange {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+}
+.descriptionTitleMuted {
+  .descriptionTitleText {
+    color: $xanova-black-60;
+  }
+  .descriptionCurrentLabel {
+    color: $xanova-black-60;
+  }
+}
+.descriptionTitleCurrent {
+  .descriptionTitleText {
+    color: $xanova-black;
+  }
+}
+.descriptionRangeMuted {
+  color: $xanova-black-60;
+}
+.descriptionRangeCurrent {
+  color: $xanova-black;
+}
+
+// Skeleton
+.skeletonTrack {
+  gap: 12px;
+}
+
+.skeletonCircle {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+  animation: skeletonPulse 1.4s ease-in-out infinite;
+}
+
+.skeletonConnector {
+  background-color: rgba(0, 0, 0, 0.08);
+  border: none;
+  animation: skeletonPulse 1.4s ease-in-out infinite;
+}
+
+.skeletonDescriptions {
+  align-items: stretch;
+}
+
+.skeletonDescriptionItem {
+  align-items: center;
+  gap: 8px;
+}
+
+.skeletonBar {
+  display: block;
+  inline-size: 100%;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.08);
+  animation: skeletonPulse 1.4s ease-in-out infinite;
+}
+
+.skeletonBarLarge {
+  block-size: 18px;
+  max-inline-size: 120px;
+}
+
+.skeletonBarSmall {
+  block-size: 12px;
+  max-inline-size: 86px;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

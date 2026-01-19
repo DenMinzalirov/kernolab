@@ -1,0 +1,39 @@
+@import '/src/styles/index';
+
+.passwordHintBlock {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.passwordHintContainer {
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  margin-right: 5px;
+  background-color: $white;
+}
+
+.text {
+  color: $white;
+  font-size: 10px;
+}
+
+.textSuccess {
+  color: $p-system-green;
+}
+
+@media (max-width: 767px) {
+  .text {
+    font-size: 8px;
+    color: #445374;
+  }
+
+  .textSuccess {
+    color: #2b9a18;
+  }
+
+  .passwordHintContainer {
+    background-color: #445374;
+  }
+}

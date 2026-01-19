@@ -1,0 +1,335 @@
+.btn-biz {
+  @include ag-s14-0;
+  width: 100%;
+  height: 35px;
+  transition: all 0.3s;
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: $white;
+  border: none;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &.blue {
+    background: $blue;
+    &:hover {
+      background: $lg-blue-100-black20;
+    }
+  }
+  &.grey {
+    background: $dark-grey;
+    &:hover {
+      background: $lg-dark-grey-100-black20;
+    }
+  }
+  &.white {
+    background: $white;
+    color: $dark-grey;
+    &:hover {
+      background: $lg-white-100-black20;
+    }
+  }
+  &.red {
+    background: $s-red;
+    &:hover {
+      background: $s-red;
+    }
+  }
+  &.transparent {
+    background: transparent;
+    color: $dark-grey;
+    &:hover {
+      background: $lg-white-100-black20;
+    }
+  }
+
+  &.md {
+    @include respond-to-biz(md) {
+      width: 100%;
+      height: 23px;
+      @include ag-s10;
+    }
+  }
+
+  &.big {
+    @include ag-s16-medium;
+    height: 50px;
+  }
+
+  &.showMd {
+    display: none;
+
+    @include respond-to-biz(md) {
+      display: flex;
+    }
+  }
+}
+
+.btn-with-icon-biz {
+  @include ag-s12;
+  height: 30px;
+  transition: all 0.3s;
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  color: $white;
+  border: none;
+  padding: 4px 12px;
+  text-wrap: nowrap;
+  box-sizing: border-box;
+
+  &.blue {
+    background: $blue;
+    color: $white;
+    &:hover {
+      background: $lg-blue-100-black20;
+    }
+  }
+  &.light-blue {
+    background: $blue-20;
+    color: $blue;
+    &:hover {
+      background: $blue-50;
+    }
+  }
+  &.white {
+    background: $white;
+    color: $blue;
+    border: 1px solid $blue;
+    &:hover {
+      background: $lg-white-100-black20;
+    }
+  }
+  &.transparent-with-border-blue {
+    color: $blue;
+    border: 1px solid $blue;
+    &:hover {
+      background: $lg-white-100-black20;
+    }
+  }
+  &.disabled {
+    opacity: 0.3;
+  }
+}
+
+.input-item-wrap-biz {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  //margin-bottom: 1.5rem;
+  width: 100%;
+
+  //.input-label {
+  //  @include set-font($mapKey: 0, $weight: 500, $family: 'Inter');
+  //  margin-left: 0.5rem;
+  //  color: $text-color-2;
+  //}
+
+  .text-error {
+    color: red;
+  }
+
+  ::placeholder {
+    color: $text-color-2;
+    opacity: 0.5;
+  }
+
+  .input-form {
+    @include ag-s14-medium;
+    background-color: var(--amountInputBackgroundNew);
+    padding: 20px;
+    border-radius: 15px;
+    //margin-top: 0.3rem;
+    flex-grow: 1;
+    outline: none;
+    color: $navy;
+    border: 1px solid $dark-grey-20;
+
+    height: 62px;
+    box-sizing: border-box;
+
+    &:focus-visible {
+      border: 1px solid $blue;
+    }
+
+    &:focus-within {
+      outline: 0;
+      border: 1px solid $blue;
+      //border-radius: .625rem;
+    }
+
+    &.error {
+      border: 1px solid $s-red;
+    }
+  }
+
+  //
+  //.input-password-wrap {
+  //  position: relative;
+  //  width: 100%;
+  //  display: flex;
+  //}
+
+  //.form-link {
+  //  //@include set-font($mapKey: 0, $weight: 500, $family: 'Inter');
+  //  color: $link-color;
+  //  margin-top: 0.3rem;
+  //  text-decoration: none;
+  //  transition: all 0.3s;
+  //
+  //  &_inline {
+  //    margin-left: 0.8rem;
+  //  }
+  //
+  //  &:hover {
+  //    text-decoration: underline;
+  //    cursor: pointer;
+  //  }
+  //}
+}
+
+.icon-eye-biz {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: calc(50% + 0.15rem);
+  right: 1.5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.height-50 {
+  height: 50px;
+}
+
+.height-40 {
+  height: 40px;
+}
+
+//OTC Table cell
+.otcCell1 {
+  flex: 1.5;
+
+  @include respond-to-biz(lg) {
+    flex: 3;
+  }
+}
+.otcCell2 {
+  flex: 1.5;
+}
+.otcCell3 {
+  flex: 3;
+  @include respond-to-biz(lg) {
+    flex: 1;
+  }
+}
+.otcCell4 {
+  flex: 1;
+}
+.otcCell5 {
+  flex: 1.5;
+
+  @include respond-to-biz(xl) {
+    flex: 1.8;
+  }
+
+  @include respond-to-biz(lg) {
+    flex: 2;
+  }
+}
+
+.hide-md-and-down {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.asset-icon {
+  border: 1px solid $dark-grey-20;
+  border-radius: 100%;
+  background-color: $white;
+  box-sizing: border-box;
+}
+
+.asset-icon[src='https://coin-images.coingecko.com/coins/images/1094/large/tron-logo.png?1696502193'],
+.asset-icon[src='/static/media/trx.webp'] {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+// calendar date picker mobile
+.rs-picker-popup {
+  // rs-picker-popup container
+  z-index: 501;
+  box-shadow: 0px 4px 11.9px 0px #6d6d6d1f;
+}
+
+.placement-top-start {
+  // box-shadow off for mobile
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.rs-btn-primary {
+  // button OK
+  width: 100%;
+}
+
+.rs-btn-primary:hover {
+  // button hover 'OK'
+  background-color: $lg-blue-100-black20;
+}
+
+.rs-stack .rs-stack-item:nth-of-type(1) {
+  // link button container
+  width: 100px;
+}
+
+.rs-picker-daterange-predefined {
+  // link button container padding
+  padding-left: 5px;
+  justify-content: space-between;
+  height: 314px;
+}
+
+.rs-btn-link {
+  // link button color
+  color: $blue;
+}
+
+.rs-stack .rs-stack-item:nth-of-type(2) {
+  // rs-stack .rs-stack-item:nth-of-type(1) = 100px; contentWrapModal (padding-left) = 5px
+  width: calc(100vw - 100px - 5px);
+}
+
+.rs-picker-daterange-header.rs-picker-tab-active-end:after,
+.rs-picker-daterange-header.rs-picker-tab-active-start:after {
+  // underline date color
+  border-bottom: 2px solid $blue;
+}
+
+// calendar date picker
+.rs-input {
+  &::placeholder {
+    text-transform: lowercase;
+  }
+}
+
+.rs-picker-daterange .rs-input-group-addon {
+  color: $blue;
+}

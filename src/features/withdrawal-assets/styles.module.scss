@@ -1,0 +1,40 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $p-bg;
+  height: 100%;
+
+  @include respond-to(p-mobile) {
+    max-height: 702px;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+}
+
+.headerWrap {
+  margin: 40px 25px 10px 25px;
+
+  @include respond-to(p-mobile) {
+    margin: 0 0 20px;
+  }
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border-radius: 10px;
+  //margin: 20px;
+  padding: 100px 40px;
+  background-color: $white;
+
+  @include respond-to(p-mobile) {
+    margin: 0;
+    padding: 50px 20px;
+  }
+}

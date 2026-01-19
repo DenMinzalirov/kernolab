@@ -1,0 +1,159 @@
+@import '/src/styles';
+
+.container {
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  padding: 24px;
+
+  @include respond-to-biz(md) {
+    padding: 24px 0;
+
+    align-items: flex-start;
+    background-color: $light-grey;
+  }
+}
+
+.contentWrap {
+  position: relative;
+  background-color: $light-grey;
+  width: 744px;
+  border-radius: 20px;
+  padding: 70px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 840px;
+
+  @include respond-to-biz(md) {
+    padding: 0 15px;
+    width: 100%;
+    border-radius: 0;
+    min-height: 670px;
+    height: 100%;
+  }
+}
+
+.staticSection {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  @include respond-to-biz(md) {
+    gap: 24px;
+  }
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  @include ag-s30-medium;
+  color: $navy;
+  text-align: center;
+
+  @include respond-to-biz(md) {
+    @include ag-s24-reg;
+  }
+}
+
+.subTitle {
+  @include ag-s12-medium;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.switchWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.switchLabel {
+  @include ag-s12-medium;
+  color: $dark-grey;
+}
+
+.switchContainer {
+  display: flex;
+  gap: 8px;
+  padding: 2px;
+  border-radius: 20px;
+  background-color: $dark-grey-20;
+}
+
+.switchBtn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 20px;
+  @include ag-s12;
+  color: $dark-grey;
+  text-align: center;
+}
+.switchBtnActive {
+  background-color: #ffffff;
+  color: $navy;
+}
+
+.sectionAmount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 20px;
+  padding: 12px 24px;
+  background-color: $white;
+
+  @include respond-to-biz(md) {
+    margin-top: 12px;
+  }
+}
+
+.amountText {
+  @include ag-s12;
+  color: $navy;
+}
+
+.amountSubText {
+  @include ag-s30-medium;
+  color: $navy;
+}
+
+.dynamicSection {
+  margin-top: 36px;
+  // TODO дороботать для Deposit секции
+}
+
+.sectionBalance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: $white;
+}
+
+.balanceWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.balanceText {
+  @include ag-s14-0;
+  color: $navy;
+}

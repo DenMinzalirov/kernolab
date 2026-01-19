@@ -1,0 +1,93 @@
+@import '/src/styles';
+
+.selectContainer {
+  position: relative;
+  width: 100%;
+}
+
+.selectDisplay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid $p-ivory;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: $white;
+  -webkit-box-shadow: 0px 1px 2px -1px $p-deep-space-10;
+  -moz-box-shadow: 0px 1px 2px -1px $p-deep-space-10;
+  box-shadow: 0px 1px 2px -1px $p-deep-space-10;
+
+  @include ag-P14;
+  color: $p-deep-space;
+
+  // &.open {
+  //   border-color: $blue;
+  // }
+}
+
+.assetInputIcon {
+  width: 14px;
+  height: 14px;
+  transform: rotate(-90deg);
+}
+.iconTransform {
+  transform: rotate(90deg);
+}
+
+.placeholderText {
+  @include ag-P14;
+  opacity: 30%;
+}
+
+//list row
+.listWrap {
+  position: absolute;
+  top: 71px;
+  width: 100%;
+  max-height: 50dvh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid $p-ivory;
+  border-radius: 10px;
+  background-color: $white;
+  box-shadow: 0px 16px 13.9px 0px #6d6d6d0d;
+  box-shadow: 0px 4px 11.9px 0px #6d6d6d1f;
+  z-index: 1;
+  gap: 5px;
+}
+.listRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  min-height: 62px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $p-bg;
+    border-radius: 10px;
+  }
+}
+.listRowTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.listRowSelectIcon {
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+}
+
+.listRowSelectTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+}

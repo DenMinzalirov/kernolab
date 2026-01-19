@@ -1,0 +1,123 @@
+@import '/src/styles/index';
+
+.dropDownSelectedTextWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include ag-H14;
+  color: $p-deep-space;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+.networksDropdownMain {
+  position: relative;
+  height: 58px;
+  border-radius: 10px;
+  border: 1px solid $p-deep-space-10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #fff;
+
+  &.networksDropdownMainActive {
+    border: 1px solid $p-deep-space;
+  }
+
+  @media (max-width: 767px) {
+    height: 44px;
+    border-radius: 5px;
+  }
+}
+
+.networksDropdownTriangle {
+  transform: rotate(-90deg);
+  width: 17px;
+  margin-right: 12px;
+
+  @media (max-width: 767px) {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+}
+
+.networksDropdownContainer {
+  position: absolute;
+  background-color: #fff;
+  width: 434px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: var(--Deep-Space);
+  border-style: solid;
+  margin-top: 8px;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 369px;
+  overflow-y: auto;
+
+  @media (max-width: 767px) {
+    width: 99%;
+    border-radius: 5px;
+  }
+}
+
+.networksDropdownContainerTrade {
+  width: 99%;
+  max-height: 306px;
+  overflow: auto;
+
+  @media (max-width: 767px) {
+    width: 99%;
+  }
+}
+
+.networksDropdownItem {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding: 10px 13px;
+  cursor: pointer;
+  background-color: $white;
+  @include ag-H14;
+  color: $p-deep-space;
+
+  &:hover {
+    background-color: $p-ivory;
+  }
+
+  @media (max-width: 767px) {
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+.assetIcon {
+  width: 46px;
+  height: 46px;
+  margin-right: 16px;
+  border-radius: 5px;
+
+  @media (max-width: 767px) {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+  }
+}
+
+.dropdownItemAssetIcon {
+  width: 46px;
+  height: 46px;
+  margin-right: 16px;
+  border-radius: 5px;
+
+  @media (max-width: 767px) {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+  }
+}

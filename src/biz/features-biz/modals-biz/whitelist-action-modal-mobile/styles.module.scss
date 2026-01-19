@@ -1,0 +1,92 @@
+@import '/src/styles';
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  gap: 36px;
+  flex-direction: column;
+  padding: 30px 20px 20px 20px;
+
+  border-radius: 20px;
+  background-color: $white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.headerTitleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.headerTitle {
+  @include ag-s14-0;
+  color: $navy;
+
+  text-align: center;
+}
+
+.headerSubTitle {
+  @include ag-s10;
+  color: $dark-grey;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contentRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contentRowSubTextWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.contentRowText {
+  @include ag-s10;
+  color: $dark-grey;
+}
+
+.contentRowSubText {
+  @include ag-s14-0;
+  color: $navy;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.copyBtnIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

@@ -1,0 +1,177 @@
+@import '/src/styles/index';
+
+.containerLayout {
+  display: flex;
+  gap: 5px;
+  align-items: stretch;
+  flex: 1;
+  padding: 23px 30px 30px 30px;
+
+  @include respond-to-xanova(tablet) {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 10px 10px 10px;
+  }
+  @include respond-to-xanova(mobile) {
+    gap: 30px;
+  }
+}
+
+.stepsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 340px;
+  max-width: 340px;
+  background: transparent;
+
+  @include respond-to-xanova(tablet) {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.stepItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &:not(:last-child) {
+    padding-bottom: 48px;
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 34px;
+    width: 1px;
+    height: 40px;
+    background-color: $xanova-black-10;
+  }
+
+  @include respond-to-xanova(tablet) {
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 0;
+    }
+
+    &:not(:last-child)::after {
+      left: 30px;
+      top: 15px;
+      width: 60px;
+      height: 1px;
+    }
+  }
+}
+
+.stepLabel {
+  @include xanova-h14-medium;
+  color: $xanova-black;
+  white-space: nowrap;
+
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+}
+
+.opacity60 {
+  opacity: 0.6;
+}
+
+.stepItemUpcoming {
+}
+
+.stepItemActive {
+}
+
+.stepItemCompleted {
+}
+
+.stepMarker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: $xanova-black;
+  box-sizing: border-box;
+}
+
+.stepMarkerUpcoming {
+  border: 0.75px solid #2c2c2c33;
+  background: transparent;
+}
+
+.stepMarkerActive {
+  border: 9px solid $xanova-black;
+  background: $xanova-white;
+  box-sizing: border-box;
+}
+
+.stepMarkerCompleted {
+  border: 1px solid $xanova-black;
+
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: $xanova-black;
+    mask: url('../../icon-xanova/checkmark-icon.svg') center/contain no-repeat;
+    -webkit-mask: url('../../icon-xanova/checkmark-icon.svg') center/contain no-repeat;
+  }
+}
+
+.stepMarkerNumber {
+  display: none;
+  @include xanova-p16-medium;
+
+  @include respond-to-xanova(tablet) {
+    display: inline-flex;
+  }
+}
+
+.stepItemCompleted:not(:last-child)::after,
+.stepItemActive:not(:last-child)::after {
+  background-color: $xanova-black;
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $xanova-white;
+  border-radius: 30px;
+  padding: 30px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 30px 20px;
+  }
+}
+
+.contentInner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepsWrapper {
+  @include respond-to-xanova(tablet) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}

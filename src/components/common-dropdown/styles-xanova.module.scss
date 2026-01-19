@@ -1,0 +1,67 @@
+@import '/src/styles/index';
+
+.dropDownSelectedText {
+  //@include xanova-p16-regular;
+  //color: $xanova-black-50;
+  //width: 100%;
+  flex-grow: 1;
+}
+
+.networksDropdownMain {
+  position: relative;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid $p-deep-space-10;
+  background-color: transparent;
+  //overflow: auto;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px -1px rgba(17, 12, 34, 0.08);
+  min-width: 189px;
+  padding: 10px 20px;
+}
+
+.networksDropdownTriangle {
+  transform: rotate(-90deg);
+  width: 17px;
+  margin-right: 12px;
+}
+
+.networksDropdownContainer {
+  position: absolute;
+  background-color: $white;
+  //width: 434px;
+  width: 99.5%;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: $p-deep-space;
+  border-style: solid;
+  margin-top: 8px;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 369px;
+  overflow-y: auto;
+}
+
+.networksDropdownContainerTrade {
+  width: 99%;
+  max-height: 306px;
+  overflow: auto;
+}
+
+.networksDropdownItem {
+  border-color: $p-deep-space-10;
+  //border-style: solid;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: $white;
+
+  &:hover {
+    background-color: $p-bg;
+  }
+}

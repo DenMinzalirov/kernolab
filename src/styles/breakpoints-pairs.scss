@@ -1,0 +1,24 @@
+$breakpoint-p-desktop: 1700px;
+$breakpoint-p-desktop-s: 1699px;
+$breakpoint-p-tablet: 1239px;
+$breakpoint-p-mobile: 799px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == p-desktop {
+    @media (min-width: #{$breakpoint-p-desktop}) {
+      @content;
+    }
+  } @else if $breakpoint == p-desktop-s {
+    @media (max-width: #{$breakpoint-p-desktop-s}) {
+      @content;
+    }
+  } @else if $breakpoint == p-tablet {
+    @media (max-width: #{$breakpoint-p-tablet}) {
+      @content;
+    }
+  } @else if $breakpoint == p-mobile {
+    @media (max-width: #{$breakpoint-p-mobile}) {
+      @content;
+    }
+  }
+}

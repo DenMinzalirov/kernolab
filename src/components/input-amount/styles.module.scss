@@ -1,0 +1,138 @@
+@import '/src/styles/index';
+
+.enterAmount {
+  //margin-left: 0.5rem;
+  margin-bottom: 8px;
+  @include ag-P12;
+  color: $p-deep-space;
+}
+
+.withdrawInput {
+  background-color: $white;
+  position: relative;
+  height: 62px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: $p-ivory;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px -1px rgba(17, 12, 34, 0.08);
+}
+
+.focusAmount {
+  border-color: $p-simple-soft-grey;
+}
+
+.assetIcon {
+  width: 46px;
+  border-radius: 10px;
+  margin-left: 6px;
+  margin-right: 12px;
+}
+
+.assetNameWrap {
+  display: flex;
+  align-items: center;
+}
+
+.assetName {
+  @include ag-H18;
+  color: $p-deep-space;
+}
+
+.inputBlock {
+  //margin-right: 14px;
+  //display: flex;
+  //flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+  padding: 20px;
+}
+
+.input {
+  @include ag-P18;
+  border: 0;
+  //text-align: right;
+  color: $p-deep-space;
+  //width: 100%;
+
+  ::placeholder {
+    color: $p-deep-space-20;
+    //opacity: 0.5;
+    //@include ag-P18;
+    //
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+
+  &.inputError {
+    color: $p-system-red;
+  }
+
+  @include respond-to(p-mobile) {
+    width: 100%; // TODO: Не убирать — нужен для сжатия input на мобильной версии
+  }
+}
+
+.inputText {
+  @include ag-H18;
+}
+
+.currencyBlock {
+  @include ag-P10;
+  color: $p-deep-space-80;
+  //align-self: end;
+  margin-top: 5px;
+  cursor: pointer;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+}
+
+.balanceWrap {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  // margin-bottom: 20px;
+  gap: 8px;
+}
+
+.balance {
+  //margin-left: 12px;
+  @include ag-P12;
+  color: $p-deep-space-80;
+
+  &.error {
+    color: $p-system-red;
+  }
+}
+
+.maxBtn {
+  @include ag-P11;
+  background-color: $p-deep-space;
+  padding: 7px 15px;
+  border-radius: 10px;
+  color: $white;
+  cursor: pointer;
+}
+
+.assetNameMax {
+  @include ag-H18;
+  color: $p-system-green;
+  cursor: pointer;
+
+  flex-shrink: 0;
+  text-align: right;
+  width: 40px;
+  margin-right: 16px;
+}
+
+.errorIcon {
+  width: 14px;
+  height: 14px;
+}

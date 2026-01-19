@@ -1,0 +1,16 @@
+@import 'src/styles/index';
+
+.titleWrap {
+  margin-bottom: 50px;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  margin-top: 12px;
+}

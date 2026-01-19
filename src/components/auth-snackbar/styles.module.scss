@@ -1,0 +1,56 @@
+@import '/src/styles/index';
+
+.firstBlock {
+  width: 50%;
+}
+
+.secondBlock {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+}
+
+.snackWrap {
+  margin: 24px;
+  background-color: #ffe5e5;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 636px;
+}
+
+.title {
+  @include set-font($size: 0.875rem, $weight: 600, $family: 'Lexend');
+  color: #ff0000;
+}
+
+.description {
+  @include set-font($size: 0.75rem, $weight: 400, $family: 'Lexend');
+  color: #445374;
+  margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  .firstBlock {
+    width: auto;
+  }
+
+  .snackWrap {
+    margin-top: 80px;
+    padding: 13px;
+    min-width: 291px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    font-size: 8px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,42 @@
+@import '/src/styles/index';
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  min-height: 25px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  color: $xanova-black;
+  background-color: $xanova-black-10;
+  @include xanova-p12-regular;
+  white-space: nowrap;
+}
+
+.submitted {
+  background-color: $xanova-green-30;
+}
+
+.pending {
+  background-color: $xanova-gold-30;
+}
+
+.rejected,
+.cancelled,
+.inactive,
+.canceled {
+  background-color: $xanova-red-30;
+}
+
+.completed {
+  background-color: $xanova-black-10;
+}
+
+.payedOut {
+  background-color: $xanova-green-30;
+}
+
+.default {
+  background-color: $xanova-black-10;
+}

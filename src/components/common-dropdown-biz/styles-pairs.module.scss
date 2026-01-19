@@ -1,0 +1,83 @@
+@import '/src/styles/index';
+
+.dropDownSelectedText {
+  flex-grow: 1;
+}
+
+.networksDropdownMain {
+  position: relative;
+  height: 62px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid $p-deep-space-10;
+  background-color: $white;
+  overflow: auto;
+
+  box-shadow: 0px 1px 2px -1px rgba(17, 12, 34, 0.08);
+}
+
+.error {
+  border: 1px solid $p-system-red;
+}
+
+.networksDropdownTriangle {
+  transform: rotate(-90deg);
+  width: 17px;
+  margin-right: 12px;
+}
+
+.networksDropdownContainer {
+  position: absolute;
+  background-color: $white;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 18px;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 290px;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+  border: 1px solid $p-ivory;
+
+  -webkit-box-shadow:
+    0px 16px 13.9px 0px #6d6d6d0d,
+    0px 4px 11.9px 0px #6d6d6d1f; /* Для Safari и старых версий Chrome */
+  -moz-box-shadow:
+    0px 16px 13.9px 0px #6d6d6d0d,
+    0px 4px 11.9px 0px #6d6d6d1f; /* Для старых версий Firefox */
+  box-shadow:
+    0px 16px 13.9px 0px #6d6d6d0d,
+    0px 4px 11.9px 0px #6d6d6d1f;
+}
+
+.networksDropdownContainerTrade {
+  width: 99%;
+  max-height: 306px;
+  overflow: auto;
+}
+
+.networksDropdownItem {
+  // height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  // background-color: $white;
+
+  &:hover {
+    background-color: var(--P-BG);
+    // opacity: 0.8;
+  }
+}
+
+.borderColor {
+  border-color: $p-simple-soft-grey;
+}

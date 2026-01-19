@@ -1,0 +1,56 @@
+@import '/src/styles/index';
+
+.inputWrap {
+  display: flex;
+  gap: 12px;
+}
+
+.input {
+  height: 62px;
+  width: 62px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 10px;
+  border-color: rgb(234, 234, 234);
+  border: 1px solid $dark-grey-20;
+  box-sizing: border-box;
+  @include ag-s14-semiB;
+
+  @include respond-to-biz(md) {
+    min-width: 40px;
+    max-width: 62px;
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: $dark-grey-50;
+  }
+
+  &:focus-visible {
+    outline: $blue 1px solid;
+  }
+
+  &:-moz-placeholder {
+    // Firefox 4–18
+    color: $dark-grey-50;
+  }
+
+  &::-moz-placeholder {
+    // Firefox
+    color: $dark-grey-50;
+  }
+
+  &:-ms-input-placeholder {
+    // Internet Explorer
+    color: $dark-grey-50;
+  }
+
+  &::-webkit-input-placeholder {
+    // Chrome, Safari
+    color: $dark-grey-50;
+  }
+}
+
+.error {
+  border: 1px solid $s-red;
+}

@@ -1,0 +1,510 @@
+@import '/src/styles/index';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  flex-grow: 1;
+}
+
+.wrapperXanova {
+  background-color: transparent;
+  gap: 24px;
+  border-radius: 30px;
+  width: 100%;
+
+  @include respond-to-xanova(tablet) {
+    gap: 27px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond-to-xanova(tablet) {
+    padding: 0 10px;
+  }
+}
+
+.title {
+  margin: 0;
+  @include xanova-h20-semiBold;
+  color: $xanova-black;
+  flex-shrink: 0;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h16-semiBold;
+  }
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  width: 50%;
+  justify-content: end;
+}
+
+.searchBar {
+  min-width: 180px;
+  max-width: 240px;
+  width: 100%;
+}
+
+.mobileSearchInput {
+  height: 36px;
+}
+
+.filtersTriggerButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid $xanova-black-10;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  @include xanova-p14-regular;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+
+  &:hover {
+    border-color: $xanova-black-60;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $xanova-black;
+    outline-offset: 2px;
+  }
+}
+
+.filtersTriggerButtonActive {
+  background-color: $xanova-gold-50;
+  border-color: transparent;
+  color: $xanova-black;
+}
+
+.filtersTriggerIcon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableContainer {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+
+  thead {
+    background-color: transparent;
+
+    th {
+      @include xanova-p12-regular;
+      color: $xanova-black-60;
+      padding: 0 10px 12px;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.15s ease;
+      white-space: nowrap;
+
+      &:hover td {
+        background-color: $xanova-black-10;
+      }
+    }
+
+    td {
+      padding: 0 10px;
+      @include xanova-p12-regular;
+      color: $xanova-black;
+      vertical-align: middle;
+      background-color: transparent;
+
+      &:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+    }
+  }
+}
+
+.emptyState {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  @include xanova-p12-regular;
+  color: $xanova-black-60;
+}
+
+.loadingState {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+@include respond-to-xanova(tablet) {
+  .tableContainer {
+    overflow: visible;
+  }
+
+  .tabletTable {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tabletHeader {
+    display: grid;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+    color: $xanova-black-60;
+    @include xanova-p12-regular;
+  }
+
+  .tabletHeaderCell {
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .tabletHeaderCellAlignCenter {
+    text-align: center;
+  }
+
+  .tabletHeaderCellAlignRight {
+    text-align: right;
+  }
+
+  .tabletBody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cardRow {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background: transparent;
+    overflow: hidden;
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .cardRow:hover {
+    background-color: $xanova-black-10;
+  }
+
+  .cardRowExpandable {
+    cursor: pointer;
+  }
+
+  .cardRow:focus-visible {
+    outline: 2px solid $xanova-black;
+    outline-offset: 2px;
+  }
+
+  .cardRowExpanded {
+    border-color: $xanova-black-10;
+    background-color: transparent;
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .cardRowExpanded:hover {
+    background-color: $xanova-white-10;
+  }
+
+  .tabletRowMain {
+    display: grid;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .cardRowExpanded .tabletRowMain {
+    padding: 0;
+  }
+
+  .tabletRowCell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    @include xanova-p12-regular;
+    color: $xanova-black;
+  }
+
+  .tabletRowCellAlignCenter {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .tabletRowCellAlignRight {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .tabletRowCellContent {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cardRowArrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+    color: $xanova-black-60;
+  }
+
+  .cardRowExpanded .cardRowArrow {
+    transform: rotate(180deg);
+  }
+
+  .cardDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cardDetailsItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cardDetailsLabel {
+    @include xanova-p12-medium;
+    color: $xanova-black-60;
+    flex-shrink: 0;
+  }
+
+  .cardDetailsDots {
+    flex: 1;
+    height: 10px;
+    border-bottom: 1px dashed $xanova-black-20;
+  }
+
+  .cardDetailsValue {
+    @include xanova-p12-regular;
+    color: $xanova-black;
+    text-align: right;
+  }
+}
+
+@include respond-to-xanova(mobile) {
+  .wrapper {
+    gap: 12px;
+  }
+
+  .wrapperXanova {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .wrapperMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobileTitle {
+    @include xanova-p16-regular;
+    font-weight: 600;
+  }
+
+  .mobileBody {
+    background-color: $xanova-bg;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobileSearch {
+    width: 100%;
+  }
+
+  .mobileSearchBar {
+    min-width: 0;
+    max-width: none;
+  }
+
+  .mobileTable {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobileRowCard {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 10px;
+    background: $xanova-white-50;
+    padding: 10px;
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .cardRowExpandable {
+    cursor: pointer;
+  }
+
+  .mobileRowCard:focus-visible {
+    outline: 2px solid $xanova-black;
+    outline-offset: 2px;
+  }
+
+  .cardRowExpanded:hover {
+    background-color: $xanova-white-50;
+  }
+
+  .mobileRowMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobileRowCollapsedSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileRowDivider {
+    width: 100%;
+    height: 1px;
+    background-color: $xanova-black-10;
+    margin-bottom: 12px;
+  }
+
+  .mobileRowCollapsedDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobileRowCollapsedLabel {
+    @include xanova-p12-medium;
+    color: $xanova-black;
+    flex-shrink: 0;
+  }
+
+  .mobileRowCollapsedValue {
+    @include xanova-p12-regular;
+    color: $xanova-black-60;
+    text-align: right;
+  }
+
+  .mobileRowInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .mobileRowPrimary {
+    @include xanova-p14-regular;
+    font-weight: 600;
+    color: $xanova-black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobileRowSecondary {
+    @include xanova-p12-regular;
+    color: $xanova-black-60;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobileRowStatus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .mobileRowStatusContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cardDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cardDetailsItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cardDetailsLabel {
+    @include xanova-p12-medium;
+    color: $xanova-black-60;
+    flex-shrink: 0;
+  }
+
+  .cardDetailsDots {
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dashed $xanova-black-20;
+  }
+
+  .cardDetailsValue {
+    @include xanova-p12-regular;
+    color: $xanova-black;
+    text-align: right;
+  }
+
+  .mobileFiltersTriggerButton {
+    height: 32px;
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,82 @@
+@import '/src/styles/index';
+
+.metricCard {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: $xanova-bg;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(tablet) {
+    flex: 1 1 0;
+    height: 82px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 32%;
+    min-width: 150px;
+    flex-direction: column-reverse;
+  }
+
+  @include respond-to-xanova(mobile) {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+}
+
+// Skeleton
+.metricCardSkeleton {
+  gap: 12px;
+}
+
+.metricCardSkeletonBar {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 200px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.08);
+  animation: metricCardSkeletonPulse 1.4s ease-in-out infinite;
+}
+
+.metricCardSkeletonBarLarge {
+  block-size: 32px;
+}
+
+.metricCardSkeletonBarSmall {
+  block-size: 16px;
+  inline-size: 60%;
+  max-inline-size: 120px;
+}
+
+.metricCardTitle {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+}
+
+.metricCardValue {
+  @include xanova-h40-medium;
+  color: $xanova-black;
+
+  @include respond-to-xanova(tablet) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.metricCardSubText {
+  @include xanova-p12-regular;
+  color: $xanova-black;
+}
+
+@keyframes metricCardSkeletonPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

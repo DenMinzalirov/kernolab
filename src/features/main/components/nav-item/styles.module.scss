@@ -1,0 +1,89 @@
+@import '/src/styles';
+
+.linkItem {
+  display: flex;
+  max-height: 54px;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: $p-bg;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+
+  &.active {
+    background-color: $p-deep-space;
+  }
+
+  &:not(.active):hover {
+    background-color: $p-ivory;
+  }
+}
+
+.navIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  @include ag-H16;
+  margin-left: 16px;
+}
+
+.soonImg {
+  margin-left: auto;
+}
+
+//mobile
+.mobileMenuItem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobileMenuItemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mobileMenuItemButton {
+  display: flex;
+  cursor: pointer;
+}
+
+.mobileMenuItemTitle {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.mobileMenuItemSubTitle {
+  @include ag-P16;
+  color: $p-deep-space;
+  cursor: pointer;
+}
+
+.mobileMenuItemToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
+}
+
+.mobileMenuItemToggleOpen {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.width30 {
+  width: 30px;
+}

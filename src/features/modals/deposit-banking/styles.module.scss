@@ -1,0 +1,74 @@
+@import '/src/styles/index';
+
+.content {
+  min-width: 792px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to(p-mobile) {
+    min-width: auto;
+  }
+}
+
+.contentWrap {
+  width: 487px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    width: auto;
+  }
+}
+
+.transfer {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+}
+
+.transferDescription {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-top: 16px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 23.5px;
+}
+
+.infoListRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  cursor: pointer;
+
+  @include respond-to(p-mobile) {
+    gap: 20px;
+  }
+}
+
+.infoListRowTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.infoListRowTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.infoListRowSubTitle {
+  @include ag-H18;
+  color: $p-deep-space;
+
+  @include respond-to(p-mobile) {
+    @include ag-H14;
+  }
+}

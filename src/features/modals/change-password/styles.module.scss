@@ -1,0 +1,150 @@
+@import '/src/styles/index';
+
+.container {
+  width: 775px;
+  height: 845px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closeWrap {
+  display: flex;
+  align-self: end;
+}
+
+.closeIcon {
+  margin-top: 33px;
+  margin-right: 33px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+  margin-bottom: 1rem;
+  min-width: 440px;
+}
+
+.content {
+  //width: 100%;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  //max-width: 440px;
+  padding: 100px 167px;
+}
+
+.formMobileContent {
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  text-align: center;
+  line-height: 27px;
+  margin-bottom: 40px;
+}
+
+.hintPassword {
+  position: absolute;
+  min-width: 110px;
+  background-color: $p-deep-space;
+  top: 0;
+  right: -136px;
+  border-radius: 10px;
+  color: $white;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hintPassword::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -10px;
+  margin-top: -10px;
+  /* половина высоты треугольника */
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid $p-deep-space;
+  /* цвет треугольника */
+}
+
+.hidePasswordHint {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.fadeOut {
+  opacity: 1;
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.heightOut {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  animation: heightOut 1s ease-out forwards;
+}
+
+.mobileHintContainer {
+  display: none;
+}
+
+.errorWrap {
+  margin-top: 12px;
+  margin-left: 8px;
+  //height: 5px;
+  margin-bottom: 10px;
+}
+
+.errorText {
+  @include ag-P16;
+  color: $p-system-red;
+}
+
+@keyframes heightOut {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+
+  to {
+    height: 0;
+    width: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

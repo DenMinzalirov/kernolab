@@ -1,0 +1,22 @@
+@import '/src/styles/index';
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.title {
+  @include ag-s30-medium;
+  color: $navy;
+  margin-bottom: 12px;
+}
+
+.description {
+  @include ag-s12-medium;
+  color: $dark-grey;
+}

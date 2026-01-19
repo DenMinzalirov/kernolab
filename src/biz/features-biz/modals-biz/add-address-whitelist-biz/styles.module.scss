@@ -1,0 +1,46 @@
+@import '/src/styles/index';
+
+.containerModal {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  box-sizing: border-box;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: auto;
+  height: 777px;
+
+  background-color: $bg;
+  border-radius: 20px;
+  border: 1px solid $modal-stroke;
+
+  @include respond-to-biz(md) {
+    border: none;
+    background-color: $white;
+    padding: 60px 20px;
+    max-width: 100%;
+  }
+}
+
+.textTitle {
+  @include ag-s24-reg;
+  color: $navy;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.textDescription {
+  @include ag-s12;
+  color: $dark-grey;
+  text-align: center;
+}
+
+.itemWrap {
+  padding: 10px;
+  @include ag-s14-medium;
+  color: $navy;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

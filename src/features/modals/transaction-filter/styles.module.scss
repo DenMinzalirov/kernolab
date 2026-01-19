@@ -1,0 +1,194 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 87vh;
+}
+.title {
+  @include ag-H30;
+  color: $p-deep-space;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.section {
+  margin-bottom: 50px;
+}
+.sectionTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.assetInputWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 0 20px;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.995);
+  }
+}
+.assetInputWrapDisabled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+.assetInputIcon {
+  width: 14px;
+  height: 14px;
+  transform: rotate(-90deg);
+}
+.iconTransform {
+  transform: rotate(90deg);
+}
+.assetInputPlaceholder {
+  @include ag-P14;
+  color: $p-deep-space;
+  opacity: 0.3;
+}
+.assetInputText {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+
+.buttonGroupFilter {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 12px;
+}
+
+.inputDateGroup {
+  display: flex;
+  margin-top: 27px;
+  gap: 12px;
+}
+.inputDateLabel {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  margin-bottom: 12px;
+}
+.inputDate {
+  background-color: $white;
+  border: 0;
+  border-radius: 10px;
+  padding: 17px 20px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  @include ag-H16;
+  color: $p-deep-space;
+  line-height: 170%;
+
+  &::placeholder {
+    @include ag-P16;
+    color: $p-deep-space;
+    opacity: 0.3;
+  }
+}
+.mainBtnGroup {
+  display: flex;
+  gap: 18px;
+}
+.flexGrow1 {
+  flex-grow: 1;
+}
+
+//FilterBar
+.filterBar {
+  display: flex;
+  gap: 12px;
+  //margin: 0 14px;
+  //margin-bottom: 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  flex-wrap: wrap;
+}
+//NavButton
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: $p-ivory;
+  padding: 4px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px -1px #110c2214;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.navButtonTitle {
+  @include ag-P14;
+  color: $p-deep-space;
+  line-height: 24px;
+}
+.navButtonActive {
+  background-color: $p-deep-space;
+}
+.navButtonTitleActive {
+  color: $white;
+}
+
+.horizontalLine {
+  border: none;
+  border-top: 1px solid $p-deep-space-10;
+  margin: 20px 0;
+}
+//SearchAndList
+.fixSectionForSearchAndList {
+  margin-bottom: 5px;
+}
+
+//FilterList
+.filterListWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  height: 45vh;
+  overflow: auto;
+  gap: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 30px 10px #a3a3a340;
+  background-color: $white;
+}
+//ListRow
+.listRowSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 20px 13px 13px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.listRowSelectTitleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.listRowSelectTitle {
+  @include ag-H16;
+  color: $p-deep-space;
+}
+.listRowSelectIcon {
+  width: 37px;
+  height: 37px;
+}

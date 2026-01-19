@@ -1,0 +1,62 @@
+@import '/src/styles/index';
+
+.main {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  padding: 60px;
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: 15px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    max-width: 535px;
+    gap: 24px;
+    padding: 30px 20px;
+  }
+}
+
+.attentionIcon {
+  width: 70px;
+  height: 63px;
+  align-self: center;
+
+  @include respond-to(p-mobile) {
+    width: 50px;
+    height: 45px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include respond-to(p-mobile) {
+    gap: 24px;
+  }
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  text-align: center;
+
+  @include respond-to(p-mobile) {
+    @include ag-H20;
+  }
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  text-align: center;
+}

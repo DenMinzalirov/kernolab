@@ -1,0 +1,181 @@
+@import 'src/styles';
+
+.topUpCardWrap {
+  background-color: $white;
+  display: flex;
+  padding: 60px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    padding: 38px 20px 60px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: $white;
+  }
+}
+
+.formWrap {
+  width: 100%;
+}
+
+.contentWrap {
+  max-width: 420px;
+
+  @include respond-to(p-mobile) {
+    max-width: none;
+  }
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  line-height: 33.6px;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.closeWrap {
+  display: flex;
+  align-self: end;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fiatBalanceAmount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+.topUpFee {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-top: 24px;
+}
+
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+  background-color: $white;
+  padding: 35.5px 60px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    padding: 50px 20px 60px;
+  }
+}
+
+.successContentWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 420px;
+}
+
+.colorRed {
+  color: $p-system-red;
+}
+
+.buttonsWrap {
+  display: flex;
+  margin-top: 60px;
+
+  @include respond-to(p-mobile) {
+    margin-top: 29px;
+  }
+}
+
+.insufficientBtnsWrap {
+  display: flex;
+  width: 100%;
+  margin-top: 60px;
+
+  @include respond-to(p-mobile) {
+    margin-top: 29px;
+  }
+}
+
+.height8 {
+  height: 8px;
+}
+.height53 {
+  height: 53px;
+}
+
+.errorIcon {
+  width: 14px;
+  height: 14px;
+}
+
+// input
+.inputWrap {
+  position: relative;
+  display: flex;
+}
+.input {
+  @include ag-H18;
+  color: $p-deep-space;
+  background-color: $white;
+  padding: 18.5px 20px;
+  border: 1px solid $p-ivory;
+  flex-grow: 1;
+  outline: none;
+  box-sizing: border-box;
+  height: 62px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px -1px rgba(17, 12, 34, 0.08);
+
+  &::placeholder {
+    @include ag-P18;
+    color: $p-deep-space;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    border: 1px solid $p-simple-soft-grey;
+  }
+
+  &:focus-within {
+    outline: 0;
+    border: 1px solid $p-simple-soft-grey;
+  }
+
+  &.inputError {
+    border: 1px solid $p-system-red;
+    color: $p-system-red;
+  }
+}
+.absoluteContent {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  background-color: $white;
+  display: flex;
+  padding: 17px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 10px;
+  gap: 16px;
+}
+
+.btnTitle {
+  @include ag-H18;
+  color: $p-deep-space;
+}
+
+.btnTextMax {
+  @include ag-H18;
+  color: $p-system-green;
+  cursor: pointer;
+}

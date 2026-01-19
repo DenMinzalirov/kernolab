@@ -1,0 +1,222 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 36px;
+  min-height: 0;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 23px;
+  color: $xanova-black;
+
+  @include respond-to-xanova(tablet) {
+    gap: 20px;
+  }
+
+  @include respond-to-xanova(mobile) {
+    padding-bottom: 10px;
+    padding-top: 30px;
+    gap: 20px;
+  }
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.referralProgressLayout {
+  width: 100%;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(tablet) {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 30px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > * {
+      scroll-snap-align: center;
+    }
+  }
+
+  @include respond-to-xanova(mobile) {
+    flex-direction: column-reverse;
+    gap: 20px;
+    overflow: visible;
+    padding: 0 10px;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: auto;
+  }
+}
+
+//
+
+.tierProgressTrackerWrap {
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(tablet) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: $xanova-bg;
+  }
+
+  @include respond-to-xanova(mobile) {
+    order: 1;
+    flex: 1 1 auto;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.contentGutter {
+  padding: 0 30px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 0 10px;
+  }
+}
+
+.mobileCommissionStats {
+  display: none;
+
+  @include respond-to-xanova(tablet) {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  @include respond-to-xanova(mobile) {
+    display: flex;
+    gap: 8px;
+    padding: 0 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.mobileCommissionStatsCard {
+  @include respond-to-xanova(tablet) {
+    flex: 1 1 0;
+    min-width: 150px;
+  }
+
+  @include respond-to-xanova(mobile) {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+}
+
+//
+.commissionsContent {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    'one one two three'
+    'one one four five';
+  gap: 12px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+
+  @include respond-to-xanova(tablet) {
+    display: flex;
+  }
+
+  @include respond-to-xanova(mobile) {
+    padding: 0 10px;
+  }
+}
+
+.gridCard {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+
+  @include respond-to-xanova(tablet) {
+    height: auto;
+  }
+}
+
+.gridCardOne {
+  grid-area: one;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: $xanova-bg;
+  box-sizing: border-box;
+}
+
+.gridCardTwo {
+  grid-area: two;
+}
+
+.gridCardThree {
+  grid-area: three;
+}
+
+.gridCardFour {
+  grid-area: four;
+}
+
+.gridCardFive {
+  grid-area: five;
+}
+
+.gridCardTwo,
+.gridCardThree,
+.gridCardFour,
+.gridCardFive {
+  @include respond-to-xanova(tablet) {
+    display: none;
+  }
+}
+
+.referralProgramBox {
+  display: none;
+
+  @include respond-to-xanova(tablet) {
+    display: block;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.onlyTableAndMobile {
+  display: none;
+
+  @include respond-to-xanova(tablet) {
+    display: flex;
+  }
+}

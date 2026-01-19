@@ -1,0 +1,41 @@
+@import '/src/styles/index';
+
+.containerModal {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  padding: 41.5px 60px 11.5px 60px;
+  box-sizing: border-box;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: auto;
+  position: relative;
+  background-color: $white;
+  border-radius: 15px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    max-width: none;
+    padding: 56px 20px 60px 20px;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  margin-bottom: 8px;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.spacerLarge {
+  height: 65px;
+}
+
+.buttonSpacer {
+  height: 12px;
+}

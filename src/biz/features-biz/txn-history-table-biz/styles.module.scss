@@ -1,0 +1,277 @@
+@import '/src/styles';
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-grey;
+  border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
+
+  @include respond-to-biz(md) {
+    background-color: $light-grey;
+    border-radius: 20px;
+    padding: 10px 0;
+    //mainNavPanel = 64px; footer = 62px; tableContainer (padding = 10px * 2); container (padding = 26.5px * 2, gap = 24px ); filterWrap = 60px
+    max-height: calc(100vh - 64px - 62px - 10px - 10px - 26.5px - 26.5px - 24px - 60px - 20px - 5px);
+    overflow: auto;
+  }
+}
+
+.tableHeader {
+  display: flex;
+  padding: 20px;
+
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.tableRowsWrap {
+  overflow: auto;
+}
+
+.tableRow {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $blue-10;
+  }
+
+  @include respond-to-biz(md) {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0;
+    border-bottom: 0.5px solid $dark-grey-20;
+
+    &:last-child {
+      text-align: end;
+      border: none;
+    }
+  }
+}
+
+.headerText {
+  @include ag-s12;
+  color: $dark-grey;
+
+  &:last-child {
+    text-align: end;
+  }
+}
+
+.dateText {
+  @include ag-s12;
+  color: $dark-grey;
+
+  @include respond-to-biz(md) {
+    @include ag-s10;
+  }
+}
+
+.text {
+  @include ag-s12;
+  color: $navy;
+}
+
+.statusTextMd {
+  @include ag-s10;
+  text-align: end;
+
+  &.green {
+    color: $s-green;
+  }
+  &.darkGrey {
+    color: $dark-grey;
+  }
+}
+
+.statusBadgeWrap {
+  display: flex;
+  justify-content: end;
+}
+
+.statusBadge {
+  @include ag-s10;
+  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+
+  &Green {
+    background: $lg-green-20-white-100;
+    color: $s-green;
+  }
+  &Red {
+    background: $lg-red-20-white-100;
+    color: $s-red;
+  }
+  &Yellow {
+    background: $lg-yellow-20-white-100;
+    color: $s-yellow;
+  }
+}
+
+.placeholder {
+  height: 219px;
+  display: flex;
+  flex-direction: column;
+  gap: 17.86px;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to-biz(md) {
+    height: 263px;
+  }
+}
+
+.placeholderText {
+  @include ag-s14-0;
+  color: $dark-grey;
+}
+
+.detailsModal {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 60px;
+  border-radius: 20px;
+  background-color: $bg;
+  border: 1px solid $modal-stroke;
+
+  @include respond-to-biz(md) {
+    width: 345px;
+    padding: 40px 20px 20px 20px;
+    gap: 36px;
+    border: none;
+    background-color: $white;
+  }
+}
+
+.detailsModalContent {
+  width: 415px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include respond-to-biz(md) {
+    width: 100%;
+    gap: 24px;
+  }
+}
+
+.detailsModalTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.detailsModalTitle {
+  @include ag-s24-reg;
+  color: $navy;
+}
+.detailsModalAmountText {
+  @include ag-s18-med;
+  color: $navy;
+}
+.detailsModalRowsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detailsModalRow {
+  display: flex;
+  justify-content: space-between;
+}
+.detailsModalRowText {
+  @include ag-s12-semiB;
+  color: $navy;
+}
+.detailsModalRowSubText {
+  @include ag-s12;
+  color: $dark-grey;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  width: 15px;
+  cursor: pointer;
+}
+.rowLoading {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.greenColor {
+  color: $s-green;
+}
+
+.heightAuto {
+  height: auto;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.loaderTrigger {
+  width: 100%;
+  font-size: 1px;
+  visibility: hidden;
+}
+//Txn history Table cell
+.cell1 {
+  flex: 1;
+
+  @include respond-to-biz(lg) {
+    flex: 0.8;
+  }
+}
+.cell2 {
+  flex: 1;
+
+  @include respond-to-biz(lg) {
+    flex: 0.7;
+  }
+}
+.cell3 {
+  flex: 1;
+
+  @include respond-to-biz(lg) {
+    flex: 0.9;
+  }
+}
+.cell4 {
+  flex: 2;
+}
+.cell5 {
+  flex: 1;
+
+  @include respond-to-biz(lg) {
+    flex: 0.8;
+  }
+}
+
+.hideMdAndDown {
+  @include respond-to-biz(md) {
+    display: none;
+  }
+}
+
+.showMdAndDown {
+  display: none;
+
+  @include respond-to-biz(md) {
+    display: flex;
+  }
+}

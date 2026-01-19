@@ -1,0 +1,32 @@
+@import '/src/styles/index';
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  padding: 60px;
+  width: 535px;
+  gap: 50px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: $bg;
+  border: 1px solid $modal-stroke;
+
+  @include respond-to-biz(md) {
+    width: 345px;
+    padding: 30px 20px 20px 20px;
+    border: none;
+    background-color: $white;
+  }
+}
+
+.title {
+  @include ag-s24-reg;
+  color: $navy;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  @include ag-s12;
+  color: $dark-grey;
+}

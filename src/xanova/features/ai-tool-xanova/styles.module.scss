@@ -1,0 +1,181 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 23px 30px 30px 30px;
+  flex: 1;
+
+  @include respond-to-xanova(tablet) {
+    padding: 23px 10px 30px 10px;
+  }
+  @include respond-to-xanova(mobile) {
+    padding: 20px 10px 10px 10px;
+  }
+}
+
+.content {
+  background-color: $xanova-white;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 30px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+
+  @include respond-to-xanova(mobile) {
+    padding: 20px;
+  }
+}
+
+.title {
+  @include xanova-h30-semiBold;
+  color: $xanova-black;
+
+  @include respond-to-xanova(mobile) {
+    @include xanova-h20-semiBold;
+  }
+}
+
+.subTitle {
+  @include xanova-p16-regular;
+  color: $xanova-black-60;
+  text-align: center;
+}
+
+.flexVerticalCenterGap4 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+//approve
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin: 14px 0;
+}
+
+.infoRow {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.infoText {
+  @include xanova-p16-regular;
+  color: $xanova-black-50;
+}
+
+.infoSubText {
+  @include xanova-p16-medium;
+  color: $xanova-black;
+}
+
+.buttonsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.contactSupport {
+  @include xanova-h14-medium;
+  color: $xanova-black;
+  align-self: center;
+
+  margin-top: 19px;
+
+  a {
+    color: $xanova-black;
+    text-decoration: underline;
+  }
+}
+//
+
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $xanova-white;
+  width: 100%;
+  flex: 1;
+  border-radius: 30px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(mobile) {
+    align-items: normal;
+  }
+}
+
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include respond-to-xanova(mobile) {
+    height: 100%;
+  }
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include respond-to-xanova(mobile) {
+    margin-bottom: auto;
+  }
+}
+
+.checkboxGroupLabel {
+  @include xanova-p14-regular;
+  color: $xanova-black;
+  margin-bottom: 4px;
+}
+
+.checkboxWrap {
+  width: 100%;
+}
+
+.red {
+  color: $xanova-red;
+}
+
+.containerSuccess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $xanova-white;
+  width: 100%;
+  flex: 1;
+  border-radius: 30px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  @include respond-to-xanova(mobile) {
+    padding: 19px;
+  }
+}
+
+.statusPillWrap {
+  margin-bottom: 8px;
+}

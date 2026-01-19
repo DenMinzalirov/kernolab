@@ -1,0 +1,48 @@
+@import '/src/styles/index';
+
+.container {
+  display: flex;
+  max-width: 540px;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  background-color: $white;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  @include respond-to(p-mobile) {
+    padding: 60px 20px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 415px;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.title {
+  @include ag-H24;
+  text-align: center;
+  color: $p-deep-space;
+  margin-bottom: 12px;
+
+  @include respond-to(p-mobile) {
+    @include ag-H20;
+  }
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  text-align: center;
+}
+
+.btnWrap {
+  width: 100%;
+  max-width: 440px;
+}

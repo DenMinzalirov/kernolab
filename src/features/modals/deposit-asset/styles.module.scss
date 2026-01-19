@@ -1,0 +1,24 @@
+@import '/src/styles/index';
+
+.title {
+  @include ag-H30;
+  text-align: center;
+  color: $p-deep-space;
+  margin-bottom: 2rem;
+}
+
+.content {
+  width: 436px;
+  position: relative;
+}
+
+.chooseNetwork {
+  @include ag-H16;
+  color: $p-deep-space-80;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.bankName {
+  margin-left: 20px;
+}

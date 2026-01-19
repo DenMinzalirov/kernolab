@@ -1,0 +1,68 @@
+@import '/src/styles/index';
+
+.closeWrap {
+  display: flex;
+  align-self: end;
+}
+
+.closeIcon {
+  margin-top: 33px;
+  margin-right: 33px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.content {
+  width: 440px;
+}
+
+.summaryBlockTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-bottom: 6px;
+}
+
+.cryptoAmount {
+  @include ag-H24;
+  color: $p-deep-space;
+  margin-bottom: 8px;
+  display: flex;
+}
+.daysLeft {
+  @include ag-H24;
+  color: $p-deep-space;
+  display: flex;
+}
+
+.currencyAmount {
+  @include ag-P16;
+  color: $p-deep-space-80;
+  margin-bottom: 26px;
+}
+
+.conversion {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.divider {
+  border-bottom: 1px solid $p-ivory;
+  margin: 26px 0;
+}
+
+.dot2 {
+  background-color: $p-deep-space;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  margin: 0 12px;
+  align-self: center;
+}
+
+.btnMobileClose {
+  display: none;
+}
+
+.closeBtn {
+  display: none;
+}

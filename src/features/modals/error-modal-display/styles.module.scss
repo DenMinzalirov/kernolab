@@ -1,0 +1,29 @@
+@import '/src/styles/index';
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  padding: 60px;
+  width: 535px;
+  gap: 16px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 290px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    padding: 50px 20px 60px;
+  }
+}
+
+.title {
+  @include ag-H24;
+  color: $p-deep-space;
+  margin-bottom: 8px;
+}
+
+.description {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}

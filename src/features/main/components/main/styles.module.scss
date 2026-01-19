@@ -1,0 +1,18 @@
+@import '/src/styles';
+
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  height: 100dvh;
+  position: relative;
+  // overflow-x: hidden;
+
+  @include respond-to(p-tablet) {
+    flex-direction: column;
+  }
+
+  @include respond-to(p-mobile) {
+    height: auto;
+  }
+}

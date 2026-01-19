@@ -1,0 +1,41 @@
+@import '/src/styles';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  @include set-font($size: 12px, $weight: 600, $family: 'Inter');
+  line-height: 17.7px;
+  color: #445374;
+}
+.timerBlock {
+  display: flex;
+  padding: 8px 10px;
+  border-radius: 10px;
+  gap: 16px;
+}
+
+.timerUnit {
+  @include set-font($size: 14px, $weight: 600, $family: 'Lexend');
+  line-height: 24px;
+}
+.red {
+  color: #ff3b30;
+}
+.redBg {
+  background-color: rgba(255, 59, 48, 0.1);
+}
+.primary {
+  color: var(--mainBlue);
+}
+.primaryBg {
+  background-color: rgba(61, 92, 245, 0.1);
+}

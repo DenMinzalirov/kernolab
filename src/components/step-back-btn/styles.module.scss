@@ -1,0 +1,9 @@
+@import '/src/styles/index';
+
+.stepBackBtn {
+  width: 47% !important;
+
+  @include respond-to(p-mobile) {
+    width: 20% !important;
+  }
+}

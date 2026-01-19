@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outFile": "tsc/index.js",
+    "module": "AMD",
+    "declaration": true,
+    "target": "ES6",
+    "lib": [
+      "DOM",
+      "ESNext",
+      "DOM.Iterable"
+    ],
+    "noImplicitAny": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "strictPropertyInitialization": false,
+    "composite": true
+  },
+  "exclude": [
+    "node_modules",
+    "tsc"
+  ],
+  "include": [
+    "src",
+    "src/**/*.json",
+    "package.json"
+  ]
+}

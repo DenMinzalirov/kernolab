@@ -1,0 +1,34 @@
+@import '/src/styles/index';
+
+.container {
+  width: 775px;
+  height: 845px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+}
+
+.closeWrap {
+  display: flex;
+  align-self: end;
+}
+
+.completedText {
+  @include ag-H30;
+  max-width: 423px;
+  text-align: center;
+  margin-top: 30px;
+  align-self: center;
+}
+
+.closeBtn {
+  display: none;
+}
+
+.closeIcon {
+  margin-top: 33px;
+  margin-right: 33px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}

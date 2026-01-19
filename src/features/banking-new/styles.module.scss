@@ -1,0 +1,597 @@
+@import '/src/styles';
+
+.bankingWrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  height: 100%;
+  max-width: 2700px;
+  background-color: $p-bg;
+}
+
+.headerWrap {
+  margin: 20px 20px 10px 20px;
+
+  @include respond-to(p-mobile) {
+    margin: 12px 12px 8px;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.balanceWrap {
+  min-width: 644px;
+  margin-right: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(p-mobile) {
+    min-width: auto;
+    margin: 12px;
+  }
+}
+
+.fiatBalanceCard {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px #a3a3a30d;
+  padding: 20px 25px;
+  min-height: 150px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @include respond-to(p-mobile) {
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    gap: 30px;
+    min-height: auto;
+    //box-sizing: border-box;
+  }
+}
+
+.balanceTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.balance {
+  @include ag-H24;
+  color: $p-deep-space;
+}
+
+.divider {
+  border-bottom: 1px solid rgba(38, 40, 50, 0.1);
+  //margin: 24px 0 32px;
+  width: 100%;
+}
+
+.cardWrap {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(p-mobile) {
+    flex-grow: 1;
+    height: auto;
+  }
+}
+
+.transferWrap {
+  //max-width: 1032px;
+  //min-width: 530px;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px #a3a3a30d;
+  //margin-right: 24px;
+  flex-grow: 2;
+  padding: 100px 40px;
+  //margin-bottom: 20px;
+
+  @include respond-to(p-mobile) {
+    padding: 50px 20px;
+    min-height: 685px;
+    display: flex;
+  }
+}
+
+.item {
+  display: flex;
+  margin: 24px 0;
+  padding: 0 24px;
+}
+
+.icon {
+  margin-right: 36px;
+}
+
+.itemDate {
+  @include set-font($size: 0.75rem, $weight: 400, $family: 'Inter');
+  color: #99a1b2;
+  line-height: 15px;
+}
+
+.itemAmount {
+  @include set-font($size: 1rem, $weight: 600, $family: 'Inter');
+  color: #445374;
+  line-height: 20px;
+  margin-left: auto;
+}
+
+.btnTitle {
+  @include ag-H16;
+}
+
+.freeHistoryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 350px;
+  margin: 150px auto 0;
+  padding: 24px;
+}
+
+.freeHistory {
+  @include ag-H24;
+  color: $p-deep-space;
+  margin-top: 52px;
+}
+
+.freeHistoryDescription {
+  @include ag-P14;
+  color: $p-deep-space-80;
+}
+
+.freeHistoryDescriptionThree {
+  text-align: center;
+  max-width: 440px;
+  align-self: center;
+}
+
+.freeHistoryDescriptionFive {
+  text-align: center;
+}
+
+.stepContentContainer {
+  width: 440px;
+  margin: 0 auto 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+    margin: 0;
+    align-self: center;
+  }
+}
+
+.stepAddressContainer {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 58px auto 40px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+  }
+}
+
+.addressTwoFieldsWrap {
+  display: flex;
+  gap: 20px;
+}
+
+.enterAmount {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-bottom: 12px;
+  margin-left: 0.5rem;
+}
+
+.currencyType {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background-color: $white;
+  display: flex;
+  padding: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  gap: 15px;
+}
+
+.enterAmountTwo {
+  margin-top: 36px;
+}
+
+.countryDropDownWrap {
+  position: relative;
+  margin-bottom: 48px;
+  width: 434px;
+
+  @include respond-to(p-desktop-s) {
+    width: auto;
+  }
+}
+
+.inputBlock {
+  @include set-font($size: 18px, $weight: 500, $family: 'Inter');
+  color: #445374;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  background-color: rgba(61, 92, 245, 0.1);
+  height: 62px;
+}
+
+.input {
+  @include set-font($size: 1.125rem, $weight: 500, $family: 'Inter');
+  border: 0;
+  width: 30px;
+  background-color: rgba(154, 149, 206, 0);
+  color: #445374;
+  margin-left: 12px;
+}
+
+.fiatBalanceAmount {
+  @include ag-P12;
+  color: $p-deep-space-80;
+  margin-top: 1rem;
+  margin-bottom: 8px;
+}
+
+// STEPS
+.btnHeight {
+  flex-grow: 1;
+  max-height: 211px;
+
+  @include respond-to(p-desktop-s) {
+    max-height: 75px;
+  }
+
+  @include respond-to(p-mobile) {
+    max-height: none;
+  }
+}
+
+.mainStepContainer {
+  max-width: 440px;
+  margin: 0 auto 100px;
+  padding-top: 50px;
+
+  @include respond-to(p-desktop-s) {
+    padding-top: 0;
+  }
+}
+
+.stepContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: var(--Deep-Space);
+    opacity: 0.2;
+    height: 4px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+.stepWrapper {
+  position: relative;
+}
+
+.stepStyle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to(p-mobile) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.stepCount {
+  font-size: 19px;
+  color: #f3e7f3;
+}
+
+.stepsLabelContainer {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.stepNumber {
+  display: none;
+  @include ag-H12;
+  color: $white;
+
+  @include respond-to(p-mobile) {
+    display: block;
+  }
+}
+
+.stepLabel {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.stepLabelActive {
+  opacity: 1;
+  @include ag-P12;
+  color: $p-deep-space;
+}
+
+.checkMark {
+  font-size: 26px;
+  font-weight: 600;
+  color: #4a154b;
+  background-color: red;
+  -ms-transform: scaleX(-1) rotate(-46deg);
+  /* IE 9 */
+  -webkit-transform: scaleX(-1) rotate(-46deg);
+  /* Chrome, Safari, Opera */
+  transform: scaleX(-1) rotate(-46deg);
+}
+
+.activeLine {
+  position: absolute;
+  background-color: var(--Deep-Space);
+  height: 4px;
+  top: 42%;
+  transition: 0.4s ease;
+  margin: 0 5px;
+}
+
+.summaryBlock {
+  margin-left: 5px;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.summaryTitle {
+  @include ag-P12;
+  color: $p-deep-space-80;
+}
+
+.summaryData {
+  @include ag-H12;
+  color: $p-deep-space;
+  margin-top: 4px;
+}
+
+.summaryConfirmed {
+  @include ag-H12;
+  color: $p-system-green;
+}
+
+/* Customize Check Box + the label (the container) */
+.containerTermsWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.container {
+  @include flex(center, row);
+  @include ag-P12;
+  box-sizing: border-box;
+  max-width: 255px;
+  width: 100%;
+  position: relative;
+  padding-left: 44px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: $p-deep-space-80;
+  height: 20px;
+
+  @include respond-to(p-mobile) {
+    margin-left: 0;
+  }
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 6px;
+  background-color: $p-deep-space-20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  background-color: $p-deep-space-80;
+}
+
+.fiatTransactionWeb {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.fiatTransactionMobile {
+  display: none;
+}
+
+.cardImg {
+  height: 191px;
+  width: 306px;
+
+  @include respond-to(p-mobile) {
+    height: 157px;
+    width: 253px;
+  }
+}
+
+.cardImgTwo {
+  height: 191px;
+  width: 302px;
+  margin-top: 24px;
+
+  @include respond-to(p-mobile) {
+    display: none;
+  }
+}
+
+.orderBtn {
+  max-width: 440px;
+}
+
+.cardTitle {
+  margin: 24px;
+}
+
+.cardTitleSubmitted {
+  // height: 68px;
+}
+
+.cardStartPageWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+  max-width: 466px;
+  align-self: center;
+  margin: auto;
+}
+
+.cardImgStartPage {
+  width: 453px;
+  height: 282px;
+
+  @include respond-to(p-mobile) {
+    width: 253px;
+    height: 158px;
+  }
+}
+
+.stepThreeBtnWrap {
+  display: flex;
+  margin-top: 48px;
+}
+
+.stepFourBtnWrap {
+  display: flex;
+  margin-top: 48px;
+  gap: 10px;
+}
+
+.bankName {
+  display: flex;
+  gap: 10px;
+  @include ag-H14;
+  padding-left: 8px;
+}
+
+.errorBox {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $system-red;
+  @include ag-p12;
+}
+
+.fiatBtnWrap {
+  gap: 12px;
+
+  @include respond-to(p-mobile) {
+    width: 100%;
+  }
+}
+
+.fiatBtn {
+  min-width: 230px;
+
+  @include respond-to(p-mobile) {
+    min-width: auto;
+  }
+}
+
+.termsLink {
+  color: $p-system-green;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: $p-system-green;
+  }
+
+  &:visited {
+    color: $p-system-green;
+  }
+}

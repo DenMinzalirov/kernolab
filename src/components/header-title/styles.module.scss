@@ -1,0 +1,71 @@
+@import '/src/styles';
+
+.headerWrap {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  @include respond-to(p-tablet) {
+    display: none;
+  }
+}
+
+.headerWrapBackBtn {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.title {
+  @include ag-H34;
+  color: $p-deep-space;
+}
+
+.backBtn {
+  display: flex;
+  background-color: $p-ivory;
+  padding: 4px 12px;
+  border-radius: 100px;
+  gap: 8px;
+  max-height: 27px;
+  box-sizing: border-box;
+  @include ag-P12;
+  color: $p-simple-grey;
+  cursor: pointer;
+}
+
+.backBtnSubText {
+  @include ag-P12;
+  color: $p-deep-space;
+}
+
+.actionBtnGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.transactionsBtn {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: $white;
+  padding: 0 16px;
+
+  @include ag-H16;
+  color: $p-deep-space-80;
+}
+
+.launchBtn {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: $white;
+  padding: 0 16px;
+  @include ag-H16;
+  color: $p-deep-space-80;
+}
