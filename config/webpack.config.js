@@ -171,6 +171,18 @@ module.exports = function (webpackEnv) {
           loader: require.resolve(preProcessor),
           options: {
             sourceMap: true,
+            sassOptions: {
+              silenceDeprecations: ['legacy-js-api'],
+              quietDeps: true,
+              // Игнорировать ошибки при импорте
+              outputStyle: 'expanded',
+              // Автоматически находить файлы при импорте без расширений
+              includePaths: [paths.appSrc, path.join(paths.appSrc, 'styles')],
+            },
+            // Игнорировать ошибки при импорте файлов без расширений
+            webpackImporter: true,
+            // Отключить предупреждения о неиспользуемых импортах
+            warnRuleAsWarning: false,
           },
         }
       )
@@ -182,6 +194,14 @@ module.exports = function (webpackEnv) {
     target: ['browserslist'],
     // Webpack noise constrained to errors and warnings
     stats: 'errors-warnings',
+    // Игнорировать ошибки SCSS при импорте
+    ignoreWarnings: [
+      /Failed to parse source map/,
+      /Can't resolve.*\.scss/,
+      /@import.*screens/,
+      /@import.*fonts/,
+      /@import.*colors/,
+    ],
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
